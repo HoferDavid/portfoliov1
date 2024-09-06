@@ -6,6 +6,8 @@ header {
     position: fixed;
     top: 0px;
     background-color: $background;
+    padding: clamp(8px, 2dvh, 48px) clamp(12px, 5dvw, 96px);
+    max-width: 1440px;
 
     > img {
         height: 40px;

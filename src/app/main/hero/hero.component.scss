@@ -1,13 +1,10 @@
 @use "./../../../app/shared/scss/templates/" as *;
 
 section {
-    height: 100dvh;
-
-    @include dFlex();
-
-
+  height: 100dvh;
+  @include dFlex();
 }
 
 h1 {
-    color: $text;
+  color: $text;
 }

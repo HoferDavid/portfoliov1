@@ -1,0 +1,9 @@
+@use './../variables' as *;
+
+@mixin dFlex($jc: center, $ai: center, $fd: row, $gap: 0) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-direction: $fd;
+    gap: $gap;
+}

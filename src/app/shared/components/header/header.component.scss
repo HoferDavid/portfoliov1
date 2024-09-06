@@ -1,0 +1,14 @@
+@use "./../../scss/templates/" as *;
+
+header {
+    width: 100%;
+    @include dFlex(space-between);
+    position: fixed;
+    top: 0px;
+    background-color: $background;
+
+    > img {
+        height: 40px;
+        width: 40px;
+    }
+}

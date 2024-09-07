@@ -19,7 +19,6 @@ body {
   justify-content: center;
   flex-direction: column;
   padding: 0 clamp(12px, 8dvw, 96px);
-  -webkit-overflow-scrolling: touch;
 }
 
 a {
@@ -46,7 +45,7 @@ a {
 
 
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 4px;
   height: 6px;
 }
 
@@ -56,7 +55,7 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #e70202;
+  background-color: $highlight;
 }
 
 @supports not selector(::-webkit-scrollbar) {

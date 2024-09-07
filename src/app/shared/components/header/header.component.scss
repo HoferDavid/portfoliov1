@@ -6,11 +6,35 @@ header {
     position: sticky;
     top: 0px;
     background-color: $background;
-    padding: 1rem;
+    padding: 1rem 0;
     max-width: 1440px;
 
     > img {
         height: 40px;
         width: 40px;
     }
+}
+
+.menuContainer {
+    @include dFlex($gap: 16px);
+
+    > .languages {
+        display: flex;
+        gap: 8px;
+
+        span:hover {
+            color: $highlight;
+            cursor: pointer;
+        }
+
+        > div {
+            width: 1px;
+            height: 20px;
+            background-color: $highlight;
+        }
+    }
+}
+
+.activeLanguage {
+    color: $highlight;
 }

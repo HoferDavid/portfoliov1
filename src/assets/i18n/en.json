@@ -1,0 +1,18 @@
+{
+    "menu": {
+        "navLinks": {
+            "about": "About Me",
+            "skills": "My Skills",
+            "portfolio": "Portfolio",
+            "contact": "Contact"
+        }
+    },
+    "about": {
+        "title": "About Me",
+        "intro": "Hi, I am David",
+        "text": "",
+        "home": "Living in Beautiful South Tyrol",
+        "remote": "Open to work Remote",
+        "button": "Let's Talk"
+    }
+}

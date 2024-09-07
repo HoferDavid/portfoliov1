@@ -1,0 +1,18 @@
+{
+    "menu": {
+        "navLinks": {
+            "about": "Über mich",
+            "skills": "Meine Skills",
+            "portfolio": "Portfolio",
+            "contact": "Kontakt"
+        }
+    },
+    "about": {
+        "title": "Über mich",
+        "intro": "Hi, ich bin David",
+        "text": "",
+        "home": "Wohnhaft im Wunderschönen Südtirol",
+        "remote": "Interessiert Remote zu arbeiten",
+        "button": "Lass uns reden"
+    }
+}

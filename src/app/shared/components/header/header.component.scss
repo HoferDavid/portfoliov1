@@ -1,40 +1,81 @@
 @use "./../../scss/templates/" as *;
 
 header {
-    width: 100%;
-    @include dFlex(space-between);
-    position: sticky;
-    top: 0px;
-    background-color: $background;
-    padding: 1rem 0;
-    max-width: 1440px;
+  width: 100%;
+  @include dFlex(space-between);
+  position: sticky;
+  top: 0px;
+  background-color: $background;
+  padding: 1rem 0;
+  max-width: 1440px;
 
-    > img {
-        height: 40px;
-        width: 40px;
-    }
+  > img {
+    height: 40px;
+    width: 40px;
+  }
 }
 
 .menuContainer {
-    @include dFlex($gap: 16px);
+  @include dFlex($gap: 16px);
 
-    > .languages {
-        display: flex;
-        gap: 8px;
+  > .languages {
+    display: flex;
+    gap: 8px;
 
-        span:hover {
-            color: $highlight;
-            cursor: pointer;
-        }
-
-        > div {
-            width: 1px;
-            height: 20px;
-            background-color: $highlight;
-        }
+    span:hover {
+      color: $highlight;
+      cursor: pointer;
     }
+
+    > div {
+      width: 1px;
+      height: 20px;
+      background-color: $highlight;
+    }
+  }
+  > button {
+    border: none;
+    padding: 0;
+    background-color: unset;
+  }
 }
 
 .activeLanguage {
-    color: $highlight;
+  color: $highlight;
 }
+
+[popover] {
+  height: calc(100dvh - $headerHeight);
+  // height: calc(100%);
+  width: 100%;
+  max-width: 1440px;
+  background-color: $background;
+  border: none;
+  margin: 0 auto;
+  padding: 0 clamp(12px, 8dvw, 96px);
+  position: fixed;
+  top: $headerHeight;
+
+
+  &:popover-open {
+    opacity: 1;
+    animation: slide 200ms ease-out;
+  }
+  opacity: 0;
+  transition: transform 0.5s, display 0.5s, opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes slide {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+
+
+
+

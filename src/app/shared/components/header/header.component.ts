@@ -1,10 +1,11 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { PopoverComponent } from './popover/popover.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [TranslateModule],
+  imports: [TranslateModule, PopoverComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })

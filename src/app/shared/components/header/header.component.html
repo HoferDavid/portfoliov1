@@ -8,7 +8,11 @@
             <span (click)="switchLanguage('de')"[class.activeLanguage]="activeLanguage === 'de'">de</span>
         </div>
 
-        <button>burger</button>
+        <button popovertarget="popover">
+            click
+        </button>
+
+        <app-popover id="popover" popover="manual"></app-popover>
     </div>
 
 </header>

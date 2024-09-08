@@ -8,6 +8,7 @@ header {
   background-color: $background;
   padding: 1rem 0;
   max-width: 1440px;
+  z-index: 1000;
 
   > img {
     height: 40px;
@@ -51,6 +52,38 @@ header {
   color: $highlight;
 }
 
+// [popover] {
+//   height: calc(100dvh - $headerHeight);
+//   // height: calc(100%);
+//   width: 100%;
+//   max-width: 1440px;
+//   background-color: $background;
+//   border: none;
+//   margin: 0 auto;
+//   padding: 0 clamp(12px, 8dvw, 96px);
+//   position: fixed;
+//   top: $headerHeight;
+
+//   &:popover-open {
+//     opacity: 1;
+//     animation: slide 200ms ease-out;
+//   }
+//   opacity: 0;
+//   transition: transform 0.5s, display 0.5s,
+//     opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+// }
+
+// @keyframes slide {
+//   from {
+//     opacity: 0;
+//     transform: translateY(2rem);
+//   }
+//   to {
+//     opacity: 1;
+//     transform: translateY(0rem);
+//   }
+// }
+
 [popover] {
   height: calc(100dvh - $headerHeight);
   // height: calc(100%);
@@ -63,22 +96,38 @@ header {
   position: fixed;
   top: $headerHeight;
 
-  &:popover-open {
-    opacity: 1;
-    animation: slide 200ms ease-out;
-  }
   opacity: 0;
-  transition: transform 0.5s, display 0.5s,
-    opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  visibility: hidden;  /* Start unsichtbar */
+  transition: opacity 0.5s ease-in-out, visibility 0s 0.5s;  /* Sichtbarkeit wird verzögert */
 }
 
-@keyframes slide {
+
+[popover]:popover-open {
+  animation: fadein 0.5s forwards;
+  visibility: visible;  /* Sichtbar, wenn geöffnet */
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+@keyframes fadein {
   from {
     opacity: 0;
-    transform: translateY(2rem);
   }
   to {
     opacity: 1;
-    transform: translateY(0rem);
+  }
+}
+
+[popover]:closed {
+  animation: fadeout 0.5s forwards;
+  transition: opacity 0.5s, visibility 0s 0.5s; /* Verzögere das Unsichtbarwerden */
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }

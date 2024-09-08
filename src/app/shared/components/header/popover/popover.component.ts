@@ -8,5 +8,4 @@ import { Component } from '@angular/core';
   styleUrl: './popover.component.scss'
 })
 export class PopoverComponent {
-
 }

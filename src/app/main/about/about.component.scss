@@ -1,0 +1,18 @@
+@use "./../../../app/shared/scss/templates/" as *;
+
+section {
+    margin: 3rem 0;
+
+    > .imgContainer {
+        background-image: url(./../../../assets/img/photo.png);
+        width: $photo;
+        height: $photo;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+
+.infoContainer {
+    @include dFlex($jc: flex-start, $gap: 8px);
+}

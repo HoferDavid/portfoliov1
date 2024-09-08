@@ -1,1 +1,33 @@
-<p>about works!</p>
+<section>
+  <h2>{{ "about.title" | translate }}</h2>
+
+  <div>
+    <p>
+      <span>{{ "about.intro" | translate }}</span><br>
+      {{ "about.paragraph1.part1" | translate }}
+      {{ "about.paragraph1.highlight" | translate }}
+      {{ "about.paragraph1.part2" | translate }} <br>
+
+      {{ "about.paragraph2.highlight" | translate }}
+      {{ "about.paragraph2.part2" | translate }} <br>
+
+      {{ "about.paragraph3.part1" | translate }}
+      {{ "about.paragraph3.highlight" | translate }}
+      {{ "about.paragraph3.part2" | translate }} <br><br>
+      {{ "about.outro" | translate }}
+    </p>
+
+    <div class="infoContainer">
+        <img src="/assets/icons/home.svg" alt="">
+        {{ "about.home" | translate }}
+    </div>
+
+    <div class="infoContainer">
+        <img src="/assets/icons/remote.svg" alt="">
+        {{ "about.remote" | translate }}
+    </div>
+  </div>
+
+  <div class="imgContainer"></div>
+
+</section>

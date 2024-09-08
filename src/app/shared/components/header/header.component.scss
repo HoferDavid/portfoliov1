@@ -21,10 +21,12 @@ header {
   > .languages {
     display: flex;
     gap: 8px;
+    transition: 0.2s;
 
     span:hover {
       color: $highlight;
       cursor: pointer;
+      transform: scale(1.1);
     }
 
     > div {
@@ -37,6 +39,11 @@ header {
     border: none;
     padding: 0;
     background-color: unset;
+    transition: 0.2s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }
 
@@ -56,13 +63,13 @@ header {
   position: fixed;
   top: $headerHeight;
 
-
   &:popover-open {
     opacity: 1;
     animation: slide 200ms ease-out;
   }
   opacity: 0;
-  transition: transform 0.5s, display 0.5s, opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: transform 0.5s, display 0.5s,
+    opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 @keyframes slide {
@@ -75,7 +82,3 @@ header {
     transform: translateY(0rem);
   }
 }
-
-
-
-

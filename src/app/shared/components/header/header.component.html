@@ -1,6 +1,7 @@
 <header>
     <img src="/assets/img/dhlogo.png" alt="">
 
+    
     <div class="menuContainer">
         <div class="languages">
             <span (click)="switchLanguage('en')" [class.activeLanguage]="activeLanguage === 'en'">eng</span>
@@ -8,11 +9,16 @@
             <span (click)="switchLanguage('de')"[class.activeLanguage]="activeLanguage === 'de'">de</span>
         </div>
 
+
         <button popovertarget="popover">
-            click
+            <app-burger-menu></app-burger-menu>
         </button>
+
 
         <app-popover id="popover" popover="manual"></app-popover>
     </div>
+
+
+
 
 </header>

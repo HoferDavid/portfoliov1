@@ -12,10 +12,10 @@ section {
     display: flex;
     align-items: center;
     text-align: center;
-    color: $text;
+    color: $primary;
     font-family: 'Syne';
     font-weight: 800;
-    font-size: $headerFs;
+    font-size: $headlineFs;
   }
 }
 
@@ -32,13 +32,17 @@ section {
 
   > .stroke {
     height: 2px;
-    background-color: $text;
+    background-color: $primary;
     flex-grow: 1;
 
     @media (max-width: 425px) {
       display: none;
     }
   }
+}
+
+button {
+  @include button();
 }
 
 .cta {

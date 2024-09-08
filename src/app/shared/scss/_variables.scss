@@ -1,11 +1,16 @@
 $background: #FFFCF3;
-$text: #1b1830;
+$primary: #1b1830;
 $details: #f1dbc7;
 $highlight: #FF9900;
+// $btnHover: #f1dbc7;
 
-$headerFs: clamp(32px, 8vw, 128px);
-$nameFs: clamp(24px, 4vw, 48px);
+$headerHeight: 5rem;
 
-$headerHeight: 4rem;
+$headlineFs: clamp(2rem, 6vw, 8rem);
+$nameFs: clamp(1.5rem, 4vw, 3rem);
+$sectionHeaderFs: clamp(1.5rem, 4vw, 4.875rem);
+$sectionTextFs: clamp(1rem, 2vw, 1.375rem);
 
 $photo: clamp(16rem, 40vw, 24rem);
+
+$border: 4px solid $primary;

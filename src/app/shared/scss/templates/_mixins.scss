@@ -1,9 +1,40 @@
-@use './../variables' as *;
+@use "./../variables" as *;
 
 @mixin dFlex($jc: center, $ai: center, $fd: row, $gap: 0) {
-    display: flex;
-    justify-content: $jc;
-    align-items: $ai;
-    flex-direction: $fd;
-    gap: $gap;
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-direction: $fd;
+  gap: $gap;
+}
+
+@mixin button() {
+  border: $border;
+  padding: 20px 60px;
+  background-color: $background;
+  cursor: pointer;
+  @include sectionText();
+
+  &:hover {
+    background-color: $details;
+    font-weight: 700;
+    box-shadow: 5px 5px 15px 0px $details;
+    transition: 0.125s ease-in-out, box-shadow 0.675s ease-out;
+    padding: 20px 80px;
+  }
+}
+
+@mixin sectionHeader() {
+  font-family: "Syne";
+  font-size: $sectionHeaderFs;
+  font-weight: 800;
+  line-height: 78px;
+}
+
+@mixin sectionText() {
+  font-family: "Overpass";
+  font-size: $sectionTextFs;
+//   line-height: 24px;
+line-height: clamp(1.5rem, 3vw, 1.65rem);
+  font-weight: 400;
 }

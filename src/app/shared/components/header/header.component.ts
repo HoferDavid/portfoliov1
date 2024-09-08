@@ -8,16 +8,24 @@ import { BurgerMenuComponent } from './burger-menu/burger-menu.component';
   standalone: true,
   imports: [TranslateModule, PopoverComponent, BurgerMenuComponent],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-
   activeLanguage: string = 'en';
+  isPopoverOpen = false;
 
   constructor(public translate: TranslateService) {}
 
   switchLanguage(language: string) {
     this.activeLanguage = language;
     this.translate.use(language);
+  }
+
+  togglePopover() {
+    this.isPopoverOpen = !this.isPopoverOpen;
+  }
+
+  closePopover() {
+    this.isPopoverOpen = false;
   }
 }

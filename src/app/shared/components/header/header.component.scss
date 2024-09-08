@@ -52,82 +52,56 @@ header {
   color: $highlight;
 }
 
-// [popover] {
-//   height: calc(100dvh - $headerHeight);
-//   // height: calc(100%);
-//   width: 100%;
-//   max-width: 1440px;
-//   background-color: $background;
-//   border: none;
-//   margin: 0 auto;
-//   padding: 0 clamp(12px, 8dvw, 96px);
-//   position: fixed;
-//   top: $headerHeight;
-
-//   &:popover-open {
-//     opacity: 1;
-//     animation: slide 200ms ease-out;
-//   }
-//   opacity: 0;
-//   transition: transform 0.5s, display 0.5s,
-//     opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-// }
-
-// @keyframes slide {
-//   from {
-//     opacity: 0;
-//     transform: translateY(2rem);
-//   }
-//   to {
-//     opacity: 1;
-//     transform: translateY(0rem);
-//   }
-// }
-
-[popover] {
+.popover-container {
   height: calc(100dvh - $headerHeight);
-  // height: calc(100%);
+  position: fixed;
+  top: $headerHeight;
+  left: 0;
+  right: 0;
   width: 100%;
   max-width: 1440px;
   background-color: $background;
-  border: none;
-  margin: 0 auto;
   padding: 0 clamp(12px, 8dvw, 96px);
-  position: fixed;
-  top: $headerHeight;
-
   opacity: 0;
-  visibility: hidden;  /* Start unsichtbar */
-  transition: opacity 0.5s ease-in-out, visibility 0s 0.5s;  /* Sichtbarkeit wird verzögert */
+  visibility: hidden;
+  transform: scale(0.95);
+  pointer-events: none;
 }
 
-
-[popover]:popover-open {
-  animation: fadein 0.5s forwards;
-  visibility: visible;  /* Sichtbar, wenn geöffnet */
-  opacity: 1;
-  transition: opacity 0.5s;
+.popover-open {
+  animation: fadeInScale 0.5s forwards ease-in-out;
+  pointer-events: all;
 }
 
-@keyframes fadein {
-  from {
+.popover-close {
+  animation: fadeOutScale 0.5s forwards ease-in-out;
+  pointer-events: none;
+}
+
+@keyframes fadeInScale {
+  0% {
     opacity: 0;
+    transform: scale(0.95);
+    visibility: visible;
   }
-  to {
+  100% {
     opacity: 1;
+    transform: scale(1);
+    visibility: visible;
   }
 }
 
-[popover]:closed {
-  animation: fadeout 0.5s forwards;
-  transition: opacity 0.5s, visibility 0s 0.5s; /* Verzögere das Unsichtbarwerden */
-}
-
-@keyframes fadeout {
-  from {
+@keyframes fadeOutScale {
+  0% {
     opacity: 1;
+    transform: scale(1);
+    visibility: visible;
   }
-  to {
+  99% {
     opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    visibility: hidden;
   }
 }

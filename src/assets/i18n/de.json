@@ -65,7 +65,9 @@
       "mail": "E-Mail: ",
       "mailaddress": "info@davidhofer.com",
       "mailText": "Hey David, I have an idea to discuss!"
-    }
+    },
+    "github": "https://github.com/HoferDavid",
+    "linkedin": "https://www.linkedin.com/in/davidhofer-dev"
   },
   "imprint": {
     "title": "Impressum"

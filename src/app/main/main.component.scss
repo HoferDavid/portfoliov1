@@ -1,0 +1,6 @@
+@use "./../../app/shared/scss/templates/" as *;
+
+main {
+    padding: $mainPadding;
+    width: 100%;
+}

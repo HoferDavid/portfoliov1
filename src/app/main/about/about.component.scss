@@ -1,13 +1,7 @@
 @use "./../../../app/shared/scss/templates/" as *;
 
 section {
-  margin: 3rem 0;
-  width: 100%;
-  padding: $mainPadding;
-
-  > h2 {
-    @include sectionHeader();
-  }
+  padding: $sectionPaddingTopBottom;
 
   > .imgContainer {
     background-image: url(./../../../assets/img/photo.png);

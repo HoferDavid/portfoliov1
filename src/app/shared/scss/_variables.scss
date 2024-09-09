@@ -9,7 +9,6 @@ $headlineFs: clamp(2rem, 6vw, 8rem);
 $nameFs: clamp(1.5rem, 4vw, 3rem);
 $sectionHeaderFs: clamp(1.5rem, 4vw, 4.875rem);
 $sectionTextFs: clamp(1rem, 2vw, 1.375rem);
-// $footerTitle:
 
 $photo: clamp(16rem, 40vw, 24rem);
 
@@ -17,3 +16,5 @@ $border: 4px solid $primary;
 
 $mainPadding: 0 clamp(0.75rem, 4vw, 6rem);
 $footerPadding: clamp(0.75rem, 2vw, 2rem) clamp(0.75rem, 4vw, 6rem);
+
+$sectionPaddingTopBottom: clamp(1rem, 2vw, 2rem) 0;

@@ -1,9 +1,9 @@
 
 <footer>
 
-    <div class="title">
+    <h2>
         {{ "contact.title" | translate }}
-    </div>
+    </h2>
 
     <div class="intro">
         {{ "contact.intro" | translate }}
@@ -14,12 +14,7 @@
     </div>
 
 
-
-
-
     <app-contact></app-contact>
-
-
 
 
     <div class="bottomContainer">
@@ -27,15 +22,13 @@
 
         <div class="links">
             <div class="socialContainer">
-                <a href="https://github.com/HoferDavid" target="_blank"><img src="/assets/icons/github.svg" alt=""></a>
+                <a [href]="( 'myData.github' | translate )" target="_blank"><img src="/assets/icons/github.svg" alt="" rel="noopener noreferrer"></a>
                 <a [href]="'mailto:' + ( 'myData.mail.mailaddress' | translate ) + '?subject=' + ( 'myData.mail.mailText' | translate )"><img src="/assets/icons/mail.svg" alt=""></a>
-                <a href="https://www.linkedin.com/in/davidhofer-dev" target="_blank"><img src="/assets/icons/linkedin.svg" alt=""></a>
+                <a [href]="('myData.linkedin' | translate )" target="_blank"><img src="/assets/icons/linkedin.svg" alt="" rel="noopener noreferrer"></a>
             </div>
 
             <a href="imprint" class="imprint">{{ "imprint.title" | translate }}</a>
         </div>
-
-
     </div>
 
 </footer>

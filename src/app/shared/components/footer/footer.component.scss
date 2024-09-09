@@ -2,19 +2,14 @@
 
 footer {
   padding: $footerPadding;
-  // position: relative;
-  // width: 100%;
-  // display: flex;
   background-color: $primary;
   color: $background;
 
+  width: 100%;
+  margin: 0 auto;
+
   clip-path: polygon(0 0, 100% clamp(3rem, 8vw, 12rem), 100% 100%, 0 100%);
   margin-top: calc(0px - clamp(3rem, 8vw, 12rem));
-
-  > .title {
-    @include sectionHeader();
-    margin-top: clamp(1rem, 3vw, 4rem);
-  }
 
   > .intro {
     color: $highlight;

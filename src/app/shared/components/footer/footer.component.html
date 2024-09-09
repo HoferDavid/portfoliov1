@@ -27,11 +27,12 @@
 
         <div class="links">
             <div class="socialContainer">
-                <img src="./../../../../assets/icons/github.svg" alt="">
-                <img src="./../../../../assets/icons/mail.svg" alt="">
-                <img src="./../../../../assets/icons/linkedin.svg" alt="">
+                <a href="https://github.com/HoferDavid" target="_blank"><img src="/assets/icons/github.svg" alt=""></a>
+                <a [href]="'mailto:' + ( 'myData.mail.mailaddress' | translate ) + '?subject=' + ( 'myData.mail.mailText' | translate )"><img src="/assets/icons/mail.svg" alt=""></a>
+                <a href="https://www.linkedin.com/in/davidhofer-dev" target="_blank"><img src="/assets/icons/linkedin.svg" alt=""></a>
             </div>
-            {{ "imprint.title" | translate }}
+
+            <a href="imprint" class="imprint">{{ "imprint.title" | translate }}</a>
         </div>
 
 

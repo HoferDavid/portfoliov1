@@ -1,1 +1,15 @@
-<p>imprint works!</p>
+<section>
+    <h2>{{ "imprint.title" | translate }}</h2>
+
+    <address>
+        <strong>{{ "myData.name" | translate }}</strong><br>
+        <strong>{{ "myData.address" | translate }}</strong><br>
+        <strong>{{ "myData.city" | translate }}</strong><br>
+        <strong>{{ "myData.country" | translate }}</strong><br><br>
+
+        <span>{{ "myData.mail.mail" | translate }}<a [href]="'mailto:' + ( 'myData.mail.mailaddress' | translate ) + '?subject=' + ( 'myData.mail.mailText' | translate )">{{ "myData.mail.mailaddress" | translate }}</a></span><br>
+        <span>{{ "myData.phone.phone" | translate }}<a [href]="'tel:+ ' + ( 'myData.phone.phoneNumber' | translate )">{{ "myData.phone.phoneNumber" | translate }}</a></span><br>
+    </address>
+
+
+</section>

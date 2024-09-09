@@ -57,8 +57,15 @@
     "address": "Josef Weingartnerstrasse 79",
     "city": "39022 Algund",
     "country": "Südtirol/ Italien",
-    "phone": "+39 3408959151",
-    "mail": "info@davidhofer.com"
+    "phone": {
+      "phone": "Telefon: ",
+      "phoneNumber": "+39 3408959151"
+    },
+    "mail": {
+      "mail": "E-Mail: ",
+      "mailaddress": "info@davidhofer.com",
+      "mailText": "Hey David, I have an idea to discuss!"
+    }
   },
   "imprint": {
     "title": "Impressum"

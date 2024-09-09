@@ -35,11 +35,17 @@ footer {
 
   .socialContainer {
     display: flex;
+    align-items: flex-end;
     gap: 16px;
   }
 
-  > img {
+  > a img {
     height: 24px;
     width: 24px;
+  }
+
+  > .imprint {
+    cursor: pointer;
+    color: $background;
   }
 }

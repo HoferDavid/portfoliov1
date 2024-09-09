@@ -1,0 +1,14 @@
+@use "./../../app/shared/scss/templates/" as *;
+
+section {
+  height: calc(100dvh - $headerHeight);
+  padding: $mainPadding;
+
+  > h2 {
+    @include sectionHeader();
+  }
+}
+
+address {
+    font-style: normal;
+}

@@ -5,11 +5,12 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { HttpClientModule } from '@angular/common/http';
+import { ImprintComponent } from './legal/imprint/imprint.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HeaderComponent, FooterComponent, TranslateModule, HttpClientModule],
+  imports: [CommonModule, RouterOutlet, HeaderComponent, FooterComponent, TranslateModule, HttpClientModule, ImprintComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

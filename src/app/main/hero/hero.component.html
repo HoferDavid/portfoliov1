@@ -16,7 +16,7 @@
 
     <div class="cta">
 
-        <a class="mail" href="mailto:info@davidhofer.com?subject=Hey David, I have an idea to discuss!">info&#64;davidhofer.com</a>
+        <a class="mail" [href]="'mailto:' + ( 'myData.mail.mailaddress' | translate ) + '?subject=' + ( 'myData.mail.mailText' | translate )">{{ "myData.mail.mailaddress" | translate }}</a>
 
         <div class="scrolldownContainer">
             <div class="arrowContainer">

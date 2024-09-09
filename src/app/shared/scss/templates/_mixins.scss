@@ -34,7 +34,6 @@
 @mixin sectionText() {
   font-family: "Overpass";
   font-size: $sectionTextFs;
-//   line-height: 24px;
-line-height: clamp(1.5rem, 3vw, 1.65rem);
+  line-height: clamp(1.5rem, 3vw, 1.65rem);
   font-weight: 400;
 }

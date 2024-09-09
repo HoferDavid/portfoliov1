@@ -21,11 +21,14 @@ export class HeaderComponent {
     this.translate.use(language);
   }
 
+
+
   togglePopover() {
     this.isPopoverOpen = !this.isPopoverOpen;
   }
 
-  closePopover() {
-    this.isPopoverOpen = false;
-  }
+  // closePopover() {
+  //   this.isPopoverOpen = false;
+  //   this.pageWrapper?.classList.remove('scrollDisable');
+  // }
 }

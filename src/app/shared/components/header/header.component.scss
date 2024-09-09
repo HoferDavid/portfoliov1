@@ -6,7 +6,7 @@ header {
   position: sticky;
   top: 0px;
   background-color: $background;
-  padding: 1.25rem 0;
+  padding: 1.25rem clamp(12px, 8dvw, 96px);
   max-width: 1440px;
   z-index: 1000;
 
@@ -56,11 +56,12 @@ header {
   height: calc(100dvh - $headerHeight);
   position: fixed;
   top: $headerHeight;
+  margin: 0 auto;
   left: 0;
   right: 0;
   width: 100%;
   max-width: 1440px;
-  background-color: $background;
+  background-color: red;
   padding: 0 clamp(12px, 8dvw, 96px);
   opacity: 0;
   visibility: hidden;

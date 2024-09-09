@@ -1,0 +1,45 @@
+@use "./../../../../app/shared/scss/templates/" as *;
+
+footer {
+  padding: $footerPadding;
+  // position: relative;
+  // width: 100%;
+  // display: flex;
+  background-color: $primary;
+  color: $background;
+
+  clip-path: polygon(0 0, 100% clamp(3rem, 8vw, 12rem), 100% 100%, 0 100%);
+  margin-top: calc(0px - clamp(3rem, 8vw, 12rem));
+
+  > .title {
+    @include sectionHeader();
+    margin-top: clamp(1rem, 3vw, 4rem);
+  }
+
+  > .intro {
+    color: $highlight;
+  }
+}
+
+.bottomContainer {
+  @include dFlex($jc: space-between);
+
+  > img {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.links {
+  @include dFlex($fd: column, $gap: 8px);
+
+  .socialContainer {
+    display: flex;
+    gap: 16px;
+  }
+
+  > img {
+    height: 24px;
+    width: 24px;
+  }
+}

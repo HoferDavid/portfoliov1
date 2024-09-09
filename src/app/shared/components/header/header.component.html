@@ -1,25 +1,32 @@
 <header>
-    <img src="/assets/img/dhlogo.png" alt="">
+  <img src="/assets/img/dhlogo.png" alt="" />
 
-
-    <div class="menuContainer">
-        <div class="languages">
-            <span (click)="switchLanguage('en')" [class.activeLanguage]="activeLanguage === 'en'">eng</span>
-            <div class="stroke"></div>
-            <span (click)="switchLanguage('de')"[class.activeLanguage]="activeLanguage === 'de'">de</span>
-        </div>
-
-
-        <button (click)="togglePopover()">
-            <app-burger-menu></app-burger-menu>
-        </button>
-
-        <div [class.popover-open]="isPopoverOpen" [class.popover-close]="!isPopoverOpen" class="popover-container" id="popover">
-            <app-popover></app-popover>
-        </div>
+  <div class="menuContainer">
+    <div class="languages">
+      <span
+        (click)="switchLanguage('en')"
+        [class.activeLanguage]="activeLanguage === 'en'"
+        >eng</span
+      >
+      <div class="stroke"></div>
+      <span
+        (click)="switchLanguage('de')"
+        [class.activeLanguage]="activeLanguage === 'de'"
+        >de</span
+      >
     </div>
 
+    <button (click)="togglePopover()">
+      <app-burger-menu></app-burger-menu>
+    </button>
 
-
-
+    <div
+      [class.popover-open]="isPopoverOpen"
+      [class.popover-close]="!isPopoverOpen"
+      class="popover-container"
+      id="popover"
+    >
+      <app-popover></app-popover>
+    </div>
+  </div>
 </header>

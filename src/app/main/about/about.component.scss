@@ -3,6 +3,7 @@
 section {
   margin: 3rem 0;
   width: 100%;
+  padding: $mainPadding;
 
   > h2 {
     @include sectionHeader();

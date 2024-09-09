@@ -1,3 +1,40 @@
-<p>footer works!</p>
+
+<footer>
+
+    <div class="title">
+        {{ "contact.title" | translate }}
+    </div>
+
+    <div class="intro">
+        {{ "contact.intro" | translate }}
+    </div>
+
+    <div>
+        {{ "contact.description" | translate }}
+    </div>
 
 
+
+
+
+    <app-contact></app-contact>
+
+
+
+
+    <div class="bottomContainer">
+        <img src="/assets/img/dhlogo.png" alt="">
+
+        <div class="links">
+            <div class="socialContainer">
+                <img src="./../../../../assets/icons/github.svg" alt="">
+                <img src="./../../../../assets/icons/mail.svg" alt="">
+                <img src="./../../../../assets/icons/linkedin.svg" alt="">
+            </div>
+            {{ "imprint.title" | translate }}
+        </div>
+
+
+    </div>
+
+</footer>

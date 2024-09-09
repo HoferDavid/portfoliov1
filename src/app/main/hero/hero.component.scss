@@ -3,6 +3,7 @@
 section {
   height: calc(100dvh - $headerHeight);
   @include dFlex($jc: space-evenly, $fd: column);
+  padding: $mainPadding;
 }
 
 .atf {

@@ -10,4 +10,16 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class SkillsComponent {
 
+  techStack = [
+    { name: 'Angular', icon: 'angular' },
+    { name: 'TypeScript', icon: 'typescript' },
+    { name: 'JavaScript', icon: 'javascript' },
+    { name: 'Firebase', icon: 'firebase' },
+    { name: 'Git', icon: 'git' },
+    { name: 'Rest-Api', icon: 'api' },
+    { name: 'Material Design', icon: 'material' },
+    { name: 'Scrum', icon: 'scrum' },
+    { name: 'CSS', icon: 'css' },
+    { name: 'HTML', icon: 'html' },
+  ]
 }

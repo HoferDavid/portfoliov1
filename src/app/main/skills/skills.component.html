@@ -1,7 +1,16 @@
 <section>
-    <h2>{{ "skills.title" | translate }}</h2>
+  <fieldset>
+    <legend>
+      <h2>{{ "skills.title" | translate }}</h2>
+    </legend>
 
+    <div class="iconContainer">
+      @for(tech of techStack; track tech) {
+        <figure><img src="/assets/icons/{{ tech.icon }}.svg" alt="{{ tech.name }}"/>
+            <figcaption>{{ tech.name }}</figcaption>
+        </figure>
+      }
+    </div>
 
-
-
+  </fieldset>
 </section>

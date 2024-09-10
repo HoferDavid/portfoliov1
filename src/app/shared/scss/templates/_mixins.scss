@@ -37,3 +37,10 @@
   line-height: clamp(1.5rem, 3vw, 1.65rem);
   font-weight: 400;
 }
+
+@mixin skillsCaption() {
+  font-family: "Overpass";
+  font-size: 1rem;
+  line-height: 19.2px;
+  font-weight: 700;
+}

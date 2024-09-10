@@ -34,16 +34,21 @@
   },
   "portfolio": {
     "title": "Portfolio",
-    "intro": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae nobis voluptatibus doloribus nesciunt tenetur consequatur, repudiandae doloresofficiis ut officia labore saepe aliquid,  alias in mollitia nihil!",
+    "paragraph1": {
+      "part1": "Meine neuesten Projekte geben dir einen Einblick in meine Fähigkeiten. Hier findest du einige meiner spannendsten Arbeiten. Schau sie dir an und wirf einen Blick auf den Code!",
+      "part2": "Diese Website wurde mit dem Angular-Framework entwickelt. Neugierig auf den Code? Hier entlang: ",
+      "highlight": "Website Codebase",
+      "url": "https://github.com/HoferDavid/portfoliov1"
+  },
     "projects": {
       "join": {
-        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae nobis voluptatibus doloribus nesciunt tenetur consequatur, repudiandae doloresofficiis ut officia labore saepe aliquid,  alias in mollitia nihil!"
+        "description": "Kanban-basiertes Tool für Projektmanagement, gestaltet zur Optimierung des Arbeitsablaufs und zur Förderung der Teamzusammenarbeit."
       },
       "polloloco": {
-        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae nobis voluptatibus doloribus nesciunt tenetur consequatur, repudiandae doloresofficiis ut officia labore saepe aliquid,  alias in mollitia nihil!"
+        "description": "Objektorientiertes Jump-and-Run Game: Sammle mit Pepe Münzen und Tabasco-Flaschen, um die verrückte Henne zu besiegen!"
       },
       "pokedex": {
-        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae nobis voluptatibus doloribus nesciunt tenetur consequatur, repudiandae doloresofficiis ut officia labore saepe aliquid,  alias in mollitia nihil!"
+        "description": "PokeAPI-gestützte Pokemon-Datenbank, um deine Kindheit wieder zum Leben zu erwecken!"
       }
     }
   },

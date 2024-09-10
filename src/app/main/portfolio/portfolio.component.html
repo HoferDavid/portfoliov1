@@ -1,5 +1,23 @@
 <section>
+    
     <h2>{{ "portfolio.title" | translate }}</h2>
+
+    @for (project of projects; track project.name; let i = $index) {
+        <div>0{{ i + 1}}/0{{ projects.length }}</div>
+
+
+        <div>
+            <img src="{{ project.media }}" alt="">
+        </div>
+
+
+
+        <div>
+            <h3>{{ project.name }}</h3>
+            <span>{{ project.tech }}</span>
+            <p>{{ project.description | translate }}</p>
+        </div>
+    }
 
 
 

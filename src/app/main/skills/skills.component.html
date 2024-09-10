@@ -6,7 +6,7 @@
 
     <div class="iconContainer">
       @for(tech of techStack; track tech) {
-        <figure><img src="/assets/icons/{{ tech.icon }}.svg" alt="{{ tech.name }}"/>
+        <figure><img draggable="false" src="/assets/icons/{{ tech.icon }}.svg" alt="{{ tech.name }}"/>
             <figcaption>{{ tech.name }}</figcaption>
         </figure>
       }

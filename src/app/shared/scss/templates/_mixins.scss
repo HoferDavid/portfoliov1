@@ -10,17 +10,17 @@
 
 @mixin button() {
   border: $border;
-  padding: 20px 60px;
+  padding: clamp(1rem, 1vw, 1.25rem) clamp(2rem, 6vw, 4rem);
   background-color: $background;
+  box-shadow: 5px 5px 15px 0px $details;
   cursor: pointer;
   @include sectionText();
 
   &:hover {
     background-color: $details;
     font-weight: 700;
-    box-shadow: 5px 5px 15px 0px $details;
     transition: 0.125s ease-in-out, box-shadow 0.675s ease-out;
-    padding: 20px 80px;
+    padding: clamp(1rem, 1vw, 1.25rem) clamp(2rem, 5vw, 6rem);
   }
 }
 
@@ -34,15 +34,15 @@
 @mixin sectionText() {
   font-family: "Overpass";
   font-size: $sectionTextFs;
-  line-height: clamp(1.5rem, 3vw, 1.65rem);
   font-weight: 400;
+  // line-height: clamp(1.5rem, 3vw, 1.65rem);
 }
 
 @mixin skillsCaption() {
   font-family: "Overpass";
   font-size: 1rem;
-  line-height: 19.2px;
   font-weight: 700;
+  // line-height: 19.2px;
 }
 
 @mixin projectNumber() {

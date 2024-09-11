@@ -50,11 +50,35 @@ button {
   @include dFlex($jc: space-between);
 
   > a {
+    @include sectionText();
     transform: rotate(180deg);
     writing-mode: vertical-rl;
+    color: $highlight;
+    display: inline-block;
+    position: relative;
+    transition: 0.2s;
 
     &:hover {
       color: $highlight;
+    }
+
+    &:after {
+      content: '';
+      writing-mode: vertical-rl;
+      position: absolute;
+      width: 2px;
+      transform: scaleY(0);
+      height: 100%;
+      bottom: 0;
+      left: 0;
+      background-color: $highlight;
+      transform-origin: top left;
+      transition: transform 0.25s ease-out;
+    }
+
+    &:hover::after {
+      transform: scaleY(1);
+      transform-origin: bottom left;
     }
   }
 
@@ -68,11 +92,12 @@ button {
 
       > img {
         height: 120px;
-        // animation: scrollArrow 3s infinite;
+        animation: scrollArrow 2.5s infinite;
       }
     }
 
     > .arrowText {
+      @include sectionText();
       display: flex;
       flex-direction: column;
       text-align: center;

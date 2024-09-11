@@ -53,9 +53,28 @@
     }
   },
   "contact": {
-    "title": "Sag Hey!",
+    "title": "Sag Hi!",
     "intro": "Du hast ein Projekt, bei dem ich helfen kann?",
-    "description": "Lass uns über deine Ideen sprechen und wie wir sie realisieren."
+    "description": "Lass uns über deine Ideen sprechen und wie wir sie realisieren.",
+    "contactForm": {
+      "name": {
+        "placeholder": "Dein Name",
+        "validation": "Name ist erforderlich."
+      },
+      "mail": {
+        "placeholder": "Deine E-Mail",
+        "validation": "E-Mail ist erforderlich."
+      },
+      "message": {
+        "placeholder": "Deine Nachricht",
+        "validation": "Nichts zu sagen? Bitte gib eine Nachricht ein :)"
+      },
+      "privacy": {
+        "part1": "Ich habe die ",
+        "part2": " gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu."
+      },
+      "button": "Senden"
+    }
   },
   "myData": {
     "name": "David Hofer",

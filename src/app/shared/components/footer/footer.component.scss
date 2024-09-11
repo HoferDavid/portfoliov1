@@ -9,11 +9,18 @@ footer {
   margin: 0 auto;
 
   clip-path: polygon(0 0, 100% clamp(3rem, 8vw, 12rem), 100% 100%, 0 100%);
-  margin-top: calc(0px - clamp(3rem, 8vw, 12rem));
+  // margin-top: calc(0px - clamp(3rem, 8vw, 12rem));
 
   > .intro {
     color: $highlight;
   }
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .bottomContainer {

@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-import { ContactComponent } from './contact/contact.component';
+import { ContactformComponent } from './contactform/contactform.component';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [TranslateModule, ContactComponent],
+  imports: [TranslateModule, ContactformComponent],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })

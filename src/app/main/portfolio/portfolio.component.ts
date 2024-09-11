@@ -18,7 +18,7 @@ export class PortfolioComponent {
       description: 'portfolio.projects.join.description',
       media: './assets/img/join.png',
       github: 'https://github.com/HoferDavid/join-kanban',
-      website: 'https://davidhofer.com/join/'
+      website: 'https://join.davidhofer.com/'
     },
     {
       name: 'El Pollo Loco',
@@ -26,7 +26,7 @@ export class PortfolioComponent {
       description: 'portfolio.projects.polloloco.description',
       media: './assets/img/epl.png',
       github: 'https://github.com/HoferDavid/elpolloloco',
-      website: 'https://davidhofer.com/elpolloloco/'
+      website: 'https://elpolloloco.davidhofer.com/'
     },
     {
       name: 'PokeDex',
@@ -34,7 +34,7 @@ export class PortfolioComponent {
       description: 'portfolio.projects.pokedex.description',
       media: './assets/img/pokedex.png',
       github: 'https://github.com/HoferDavid/pokedex',
-      website: 'https://davidhofer.com/pokedex/'
+      website: 'https://pokedex.davidhofer.com'
     }
   ]
 }

@@ -17,5 +17,10 @@ $border: 4px solid $primary;
 $mainPadding: 0 clamp(0.75rem, 4vw, 6rem);
 $footerPadding: clamp(0.75rem, 2vw, 2rem) clamp(0.75rem, 4vw, 6rem);
 $sectionPaddingTopBottom: clamp(1rem, 2vw, 2rem) 0;
+$singleProjectPadding: clamp(1rem, 2vw, 2rem) 0;
+
+$portfolioMediaSize: clamp(12.5rem, 20vw, 25rem);
+
+
 
 $skillIcons: clamp(3.75rem, 7vw, 8rem);

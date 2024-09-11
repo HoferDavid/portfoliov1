@@ -1,25 +1,36 @@
 <section>
-    
+
     <h2>{{ "portfolio.title" | translate }}</h2>
 
+    <div class="textContainer">
+        <p>{{ "portfolio.paragraph1.part1" | translate }}</p><br>
+        <span>{{ "portfolio.paragraph1.part2" | translate }}</span>
+        <a [href]="( 'portfolio.paragraph1.url' | translate )" target="_blank">{{ "portfolio.paragraph1.highlight" | translate }}</a>
+    </div>
+
+
+
     @for (project of projects; track project.name; let i = $index) {
-        <div>0{{ i + 1}}/0{{ projects.length }}</div>
 
+        <div class="singleProject">
 
-        <div>
-            <img src="{{ project.media }}" alt="">
+            <div class="number">0{{ i + 1}}/0{{ projects.length }}</div>
+
+            <div class="project">
+                <div class="media">
+                    <img src="{{ project.media }}" alt="">
+                </div>
+
+                <div class="info">
+                    <h3>{{ project.name }}</h3>
+                    <span>{{ project.tech }}</span>
+                    <p>{{ project.description | translate }}</p>
+                </div>
+            </div>
+
         </div>
 
-
-
-        <div>
-            <h3>{{ project.name }}</h3>
-            <span>{{ project.tech }}</span>
-            <p>{{ project.description | translate }}</p>
-        </div>
     }
-
-
 
 
 </section>

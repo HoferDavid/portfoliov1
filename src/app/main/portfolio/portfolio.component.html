@@ -5,7 +5,7 @@
     <div class="textContainer">
         <p>{{ "portfolio.paragraph1.part1" | translate }}</p><br>
         <span>{{ "portfolio.paragraph1.part2" | translate }}</span>
-        <a [href]="( 'portfolio.paragraph1.url' | translate )" target="_blank">{{ "portfolio.paragraph1.highlight" | translate }}</a>
+        <a [href]="( 'portfolio.paragraph1.url' | translate )" target="_blank" rel="noopener noreferrer">{{ "portfolio.paragraph1.highlight" | translate }}</a>
     </div>
 
 
@@ -22,9 +22,14 @@
                 </div>
 
                 <div class="info">
-                    <h3>{{ project.name }}</h3>
+                    <div>{{ project.name }}</div>
                     <span>{{ project.tech }}</span>
                     <p>{{ project.description | translate }}</p>
+                </div>
+
+                <div>
+                    <a class="projectBtn" href="{{ project.github }}" target="_blank" rel="noopener noreferrer">Github</a>
+                    <a class="projectBtn" href="{{ project.website }}" target="_blank" rel="noopener noreferrer">Live</a>
                 </div>
             </div>
 

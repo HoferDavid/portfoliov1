@@ -44,3 +44,21 @@
   line-height: 19.2px;
   font-weight: 700;
 }
+
+@mixin projectNumber() {
+  font-family: "Syne";
+  font-size: $projectNumberFs;
+  font-weight: 700;
+}
+
+@mixin projectHeader() {
+  font-family: "Syne";
+  font-size: $projectHeaderFs;
+  font-weight: 800;
+}
+
+@mixin projectTech() {
+  font-family: "Overpass";
+  font-size: $projectTechFs;
+  font-weight: 400;
+}

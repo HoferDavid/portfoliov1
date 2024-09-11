@@ -9,6 +9,9 @@ $headlineFs: clamp(2rem, 6vw, 8rem);
 $nameFs: clamp(1.5rem, 4vw, 3rem);
 $sectionHeaderFs: clamp(1.5rem, 5vw, 4.875rem);
 $sectionTextFs: clamp(1rem, 2vw, 1.375rem);
+$projectNumberFs: clamp(1.5rem, 2vw, 3rem);
+$projectHeaderFs: clamp(2rem, 2vw, 3rem);
+$projectTechFs: clamp(1.25rem, 1.5vw, 1.5rem);
 
 $photo: clamp(16rem, 40vw, 24rem);
 
@@ -19,7 +22,7 @@ $footerPadding: clamp(0.75rem, 2vw, 2rem) clamp(0.75rem, 4vw, 6rem);
 $sectionPaddingTopBottom: clamp(1rem, 2vw, 2rem) 0;
 $singleProjectPadding: clamp(1rem, 2vw, 2rem) 0;
 
-$portfolioMediaSize: clamp(12.5rem, 20vw, 25rem);
+$portfolioMediaSize: clamp(12.5rem, 30vw, 25rem);
 
 
 

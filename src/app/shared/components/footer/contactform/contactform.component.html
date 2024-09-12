@@ -3,19 +3,20 @@
 
       <input [(ngModel)]="contactData.name" #name="ngModel" type="text" id="name" name="name" [placeholder]="( 'contact.contactForm.name.placeholder' | translate )" required>
       @if (!name.valid && name.touched) {
-        <span>{{ 'contact.contactForm.name.validation' | translate  }}</span>
+        <span class="validationText">{{ 'contact.contactForm.name.validation' | translate  }}</span>
       }
 
       <input [(ngModel)]="contactData.email" #email="ngModel" type="email" id="email" name="email" [placeholder]="( 'contact.contactForm.mail.placeholder' | translate )" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
       @if (!email.valid && email.touched) {
-        <span>{{ 'contact.contactForm.mail.validation' | translate  }}</span>
+        <span class="validationText">{{ 'contact.contactForm.mail.validation' | translate  }}</span>
       }
 
       <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" id="message" name="message" [placeholder]="( 'contact.contactForm.message.placeholder' | translate )" style="height:200px" required></textarea>
       @if (!message.valid && message.touched) {
         <!-- @if (!message.valid && message.touched && !message.disabled) { -->
-        <span>{{ 'contact.contactForm.message.validation' | translate  }}</span>
+        <span class="validationText">{{ 'contact.contactForm.message.validation' | translate  }}</span>
       }
+
 
       <div class="privacyContainer">
         <img src="./../../../../../assets/icons/checkbox.svg" alt="">

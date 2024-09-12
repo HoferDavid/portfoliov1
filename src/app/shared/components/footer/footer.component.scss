@@ -11,10 +11,8 @@ footer {
   display: flex;
   flex-direction: column;
 
-  .title {
-    font-family: "Syne";
-    font-size: clamp(3rem, 5vw, 5rem);
-    font-weight: 800;
+  .sectionHeader {
+    @include sectionHeader();
   }
 }
 

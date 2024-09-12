@@ -24,41 +24,52 @@
   }
 }
 
+@mixin header() {
+  font-family: "Syne";
+  font-size: clamp(2.2rem, 9vw, 8rem);
+  font-weight: 800;
+  color: $primary;
+}
+
+@mixin subheaderName() {
+  font-family: "Overpass";
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-weight: 700;
+  color: $highlight;
+}
+
 @mixin sectionHeader() {
   font-family: "Syne";
-  font-size: $sectionHeaderFs;
+  font-size: clamp(2rem, 10vw, 4.875rem);
   font-weight: 800;
-  // line-height: 78px;
 }
 
 @mixin sectionText() {
   font-family: "Overpass";
-  font-size: $sectionTextFs;
+  font-size: clamp(1rem, 2vw, 1.375rem);;
   font-weight: 400;
-  // line-height: clamp(1.5rem, 3vw, 1.65rem);
+}
+
+@mixin projectNumber() {
+  font-family: "Syne";
+  font-size: clamp(1.5rem, 2vw, 3rem);
+  font-weight: 700;
+}
+
+@mixin projectHeader() {
+  font-family: "Syne";
+  font-size: clamp(2rem, 2vw, 3rem);
+  font-weight: 800;
+}
+
+@mixin projectTech() {
+  font-family: "Overpass";
+  font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+  font-weight: 400;
 }
 
 @mixin skillsCaption() {
   font-family: "Overpass";
   font-size: 1rem;
   font-weight: 700;
-  // line-height: 19.2px;
-}
-
-@mixin projectNumber() {
-  font-family: "Syne";
-  font-size: $projectNumberFs;
-  font-weight: 700;
-}
-
-@mixin projectHeader() {
-  font-family: "Syne";
-  font-size: $projectHeaderFs;
-  font-weight: 800;
-}
-
-@mixin projectTech() {
-  font-family: "Overpass";
-  font-size: $projectTechFs;
-  font-weight: 400;
 }

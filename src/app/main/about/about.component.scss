@@ -4,46 +4,50 @@ section {
   padding: $sectionPaddingTopBottom;
   display: flex;
   flex-direction: column;
-  gap: clamp(2rem, 2vw, 3rem);
 
-  > .wrapper {
+  .sectionHeader {
+    @include sectionHeader();
+    margin-bottom: clamp(2rem, 2vw, 3rem);
+  }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+
+  .textContainer {
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
+    flex: 1;
     gap: 2rem;
-    align-items: center;
+  }
 
-    @media (min-width: 768px) {
-      flex-direction: row;
-      align-items: flex-start;
-      gap: 3rem;
-    }
-
-    > .textContainer {
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-      gap: 3rem;
-    }
-
-    > .imgContainer {
-      background-image: url(./../../../assets/img/photo.jpg);
-      width: $photo;
-      height: $photo;
-      background-size: cover;
-      background-position: center;
-    }
+  .imgContainer {
+    background-image: url(./../../../assets/img/photo.jpg);
+    width: $photo;
+    height: $photo;
+    background-size: cover;
+    background-position: center;
   }
 }
 
 p {
   @include sectionText();
 
-  > span:first-of-type {
+  span:first-of-type {
     font-weight: 700;
   }
 
-  > span {
+  span {
     color: $highlight;
   }
 }
@@ -51,7 +55,11 @@ p {
 .infoContainer {
   @include sectionText();
 
-  > .singleInfo {
+  .singleInfo {
     @include dFlex($jc: flex-start, $gap: 8px);
+
+    span {
+      padding-top: 4px;
+    }
   }
 }

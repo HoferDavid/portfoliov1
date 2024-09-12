@@ -1,5 +1,5 @@
 <section>
-  <h2>{{ "about.title" | translate }}</h2>
+  <h2 class="sectionHeader">{{ "about.title" | translate }}</h2>
 
   <div class="wrapper">
 
@@ -22,14 +22,14 @@
       </p>
 
       <div class="infoContainer">
-        <div class="singleInfo">
-          <img draggable="false" src="./assets/icons/home.svg" alt="" />
-          {{ "about.home" | translate }}
-        </div>
 
         <div class="singleInfo">
+          <img draggable="false" src="./assets/icons/home.svg" alt="" />
+          <span>{{ "about.home" | translate }}</span>
+        </div>
+        <div class="singleInfo">
           <img draggable="false" src="./assets/icons/remote.svg" alt="" />
-          {{ "about.remote" | translate }}
+          <span>{{ "about.remote" | translate }}</span>
         </div>
       </div>
     </div>

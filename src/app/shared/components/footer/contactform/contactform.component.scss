@@ -4,12 +4,12 @@ form {
   display: flex;
   flex-direction: column;
   max-width: 40rem;
-  gap: 1.5rem;
+  // gap: 1.5rem;
 }
 
 input[type="text"], [type="email"], textarea {
   width: 100%;
-  padding: 12px;
+  padding: 0.75rem;
   resize: none;
   background-color: transparent;
   border: 0;
@@ -18,16 +18,25 @@ input[type="text"], [type="email"], textarea {
   font-size: 1rem;
   font-family: "Overpass";
   color: $background;
+  margin-top: 1.5rem;
 
   &::placeholder {
     color: $background;
   }
 }
 
+.validationText {
+  color: red;
+  font-size: 0.75rem;
+  padding-left: 0.75rem;
+  margin-top: 0.5rem;
+}
+
 .privacyContainer {
   display: flex;
   gap: 8px;
   font-size: 0.875rem;
+  margin-top: 1.5rem;
 }
 
 .privacy {
@@ -51,11 +60,3 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #45a049;
 }
-
-
-
-
-
-// span {
-//   color: red;
-// }

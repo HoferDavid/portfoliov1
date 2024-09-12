@@ -4,52 +4,52 @@ section {
   padding: $sectionPaddingTopBottom;
   display: flex;
   flex-direction: column;
-  //   gap: clamp(2rem, 2vw, 3rem);
 
-  > h2 {
+  .sectionHeader {
+    @include sectionHeader();
     margin-bottom: clamp(2rem, 2vw, 3rem);
   }
+}
 
-  > .textContainer {
-    max-width: 60rem;
+.textContainer {
+  max-width: 60rem;
 
-    > span {
-      @include sectionText();
-    }
-
-    > a {
-      @include sectionText();
-      color: $highlight;
-      display: inline-block;
-      position: relative;
-      transition: 0.2s;
-
-      &:after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        transform: scaleX(0);
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color: $highlight;
-        transform-origin: bottom right;
-        transition: transform 0.25s ease-out;
-      }
-
-      &:hover::after {
-        transform: scaleX(1);
-        transform-origin: bottom left;
-      }
-    }
+  span {
+    @include sectionText();
   }
 
-  > .projectContainer {
-    display: flex;
-    flex-direction: column;
-    gap: clamp(3rem, 8vw, 8rem);
-    margin-top: clamp(3rem, 8vw, 8rem);
+  a {
+    @include sectionText();
+    color: $highlight;
+    display: inline-block;
+    position: relative;
+    transition: 0.2s;
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: $highlight;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
   }
+}
+
+.projectContainer {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.5rem, 4vw, 4rem);
+  margin-top: clamp(1.5rem, 4vw, 4rem);
 }
 
 .singleProject {
@@ -57,14 +57,14 @@ section {
   display: flex;
   flex-direction: column;
 
-  > .number {
+  .number {
     width: 100%;
     display: flex;
     justify-content: flex-end;
     @include projectNumber();
   }
 
-  > .project {
+  .project {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -73,23 +73,27 @@ section {
     @media (min-width: 992px) {
       flex-direction: row;
     }
-
-    > .media {
-      display: flex;
-      justify-content: center;
-    }
   }
 
   &:nth-of-type(odd) {
-    > .number {
+    .number {
       justify-content: flex-start;
     }
 
-    > .project {
+    .project {
       @media (min-width: 992px) {
         flex-direction: row-reverse;
       }
     }
+  }
+}
+
+.media {
+  display: flex;
+  justify-content: center;
+
+  img {
+    height: $portfolioMediaSize;
   }
 }
 
@@ -100,7 +104,7 @@ section {
   gap: clamp(1rem, 2vw, 2rem);
   max-width: 30rem;
 
-  > .infoText {
+  .infoText {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -109,12 +113,12 @@ section {
       @include projectHeader();
     }
 
-    > span {
+    span {
       @include projectTech();
       color: $highlight;
     }
 
-    > p {
+    p {
       font-size: 1rem;
       font-weight: 400;
     }
@@ -126,11 +130,7 @@ section {
   width: 100%;
   justify-content: space-between;
 
-  > .projectBtn {
+  .projectBtn {
     @include button();
   }
-}
-
-img {
-  height: $portfolioMediaSize;
 }

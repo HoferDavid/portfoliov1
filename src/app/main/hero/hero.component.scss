@@ -8,14 +8,11 @@ section {
 .atf {
   @include dFlex($fd: column);
 
-  > h1 {
+  h1 {
     display: flex;
     align-items: center;
     text-align: center;
-    color: $primary;
-    font-family: 'Syne';
-    font-weight: 800;
-    font-size: $headlineFs;
+    @include header();
   }
 }
 
@@ -25,12 +22,10 @@ section {
   align-items: center;
   justify-content: center;
   gap: 8%;
-  font-size: $nameFs;
-  font-weight: 700;
-  color: $highlight;
   padding: 0 4%;
+  @include subheaderName();
 
-  > .stroke {
+  .stroke {
     height: 2px;
     background-color: $primary;
     flex-grow: 1;
@@ -48,60 +43,59 @@ button {
 .cta {
   width: 100%;
   @include dFlex($jc: space-between);
+}
 
-  > a {
-    @include sectionText();
-    transform: rotate(180deg);
-    writing-mode: vertical-rl;
+a {
+  @include sectionText();
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
+  color: $highlight;
+  display: inline-block;
+  position: relative;
+  transition: 0.2s;
+
+  &:hover {
     color: $highlight;
-    display: inline-block;
-    position: relative;
-    transition: 0.2s;
+  }
 
-    &:hover {
-      color: $highlight;
-    }
+  &:after {
+    content: "";
+    writing-mode: vertical-rl;
+    position: absolute;
+    width: 2px;
+    transform: scaleY(0);
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: $highlight;
+    transform-origin: top left;
+    transition: transform 0.25s ease-out;
+  }
 
-    &:after {
-      content: '';
-      writing-mode: vertical-rl;
-      position: absolute;
-      width: 2px;
-      transform: scaleY(0);
-      height: 100%;
-      bottom: 0;
-      left: 0;
-      background-color: $highlight;
-      transform-origin: top left;
-      transition: transform 0.25s ease-out;
-    }
+  &:hover::after {
+    transform: scaleY(1);
+    transform-origin: bottom left;
+  }
+}
 
-    &:hover::after {
-      transform: scaleY(1);
-      transform-origin: bottom left;
+.scrolldownContainer {
+  @include dFlex($fd: column, $gap: 8px);
+
+  .arrowContainer {
+    overflow: hidden;
+    height: 120px;
+
+    img {
+      height: 120px;
+      // animation: scrollArrow 2.5s infinite;
     }
   }
 
-  > .scrolldownContainer {
-    @include dFlex($fd: column, $gap: 8px);
-
-
-    > .arrowContainer {
-      overflow: hidden;
-      height: 120px;
-
-      > img {
-        height: 120px;
-        // animation: scrollArrow 2.5s infinite;
-      }
-    }
-
-    > .arrowText {
-      @include sectionText();
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-    }
+  .arrowText {
+    @include sectionText();
+    display: flex;
+    flex-direction: column;
+    text-align: center;
   }
 }
 

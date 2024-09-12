@@ -4,7 +4,7 @@
       <fieldset>
         <legend>{{ 'contact.contactForm.name.placeholder' | translate }}</legend>
         <div class="inputWrapper">
-          <input [(ngModel)]="contactData.name" #name="ngModel" minlength="3" maxlength="50" type="text" id="name" name="name" [placeholder]="( 'contact.contactForm.name.placeholder' | translate )" required>
+          <input [(ngModel)]="contactData.name" #name="ngModel" minlength="3" maxlength="50" type="text" id="name" name="name" [placeholder]="( 'contact.contactForm.name.placeholder' | translate )" required autocomplete="off">
           <img *ngIf="name.touched" [src]="name.valid ? 'assets/icons/checkmark.png' : 'assets/icons/exclamationmark.png'" class="statusIcon" alt="">
         </div>
       </fieldset>
@@ -12,11 +12,10 @@
         <span class="validationText">{{ 'contact.contactForm.name.validation' | translate }}</span>
       }
 
-
       <fieldset>
         <legend>{{ 'contact.contactForm.mail.placeholder' | translate }}</legend>
         <div class="inputWrapper">
-          <input [(ngModel)]="contactData.email" #email="ngModel" maxlength="40" type="email" id="email" name="email" [placeholder]="( 'contact.contactForm.mail.placeholder' | translate )" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+          <input [(ngModel)]="contactData.email" #email="ngModel" maxlength="40" type="email" id="email" name="email" [placeholder]="( 'contact.contactForm.mail.placeholder' | translate )" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" autocomplete="off">
           <img *ngIf="email.touched" [src]="email.valid ? 'assets/icons/checkmark.png' : 'assets/icons/exclamationmark.png'" class="statusIcon" alt="">
         </div>
       </fieldset>
@@ -24,11 +23,10 @@
         <span class="validationText">{{ 'contact.contactForm.mail.validation' | translate }}</span>
       }
 
-
       <fieldset>
         <legend>{{ 'contact.contactForm.message.placeholder' | translate }}</legend>
         <div class="inputWrapper">
-          <textarea #message="ngModel" minlength="5" maxlength="2000" [(ngModel)]="contactData.message" id="message" name="message" [placeholder]="( 'contact.contactForm.message.placeholder' | translate )" style="height:200px" required></textarea>
+          <textarea #message="ngModel" minlength="5" maxlength="2000" [(ngModel)]="contactData.message" id="message" name="message" [placeholder]="( 'contact.contactForm.message.placeholder' | translate )" style="height:200px" required autocomplete="off"></textarea>
           <img *ngIf="message.touched" [src]="message.valid ? 'assets/icons/checkmark.png' : 'assets/icons/exclamationmark.png'" class="statusIcon" alt="">
         </div>
       </fieldset>
@@ -38,14 +36,15 @@
       }
 
 
-      <div class="privacyContainer">
-        <img src="./../../../../../assets/icons/checkbox.svg" alt="">
+      <label class="privacyContainer">
+        <input type="checkbox" [(ngModel)]="isChecked" name="agreement" (change)="onCheckboxChange()">
+        <img [src]="isChecked ? 'assets/icons/checkboxChecked.svg' : 'assets/icons/checkbox.svg'" alt="checkbox">
         <div>
           <span>{{ 'contact.contactForm.privacy.part1' | translate }}</span>
           <a class="privacy" href="privacy">{{ 'privacy.title' | translate }}</a>
           <span>{{ 'contact.contactForm.privacy.part2' | translate }}</span>
         </div>
-      </div>
+      </label>
 
 
       <input type="submit" value="Submit" [value]="( 'contact.contactForm.button' | translate )">

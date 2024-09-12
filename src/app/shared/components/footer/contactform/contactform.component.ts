@@ -1,17 +1,21 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
-import { FormsModule, NgForm } from '@angular/forms';
+import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contactform',
   standalone: true,
-  imports: [FormsModule, TranslateModule, CommonModule],
+  imports: [FormsModule, TranslateModule, CommonModule, ReactiveFormsModule],
   templateUrl: './contactform.component.html',
   styleUrl: './contactform.component.scss'
 })
 export class ContactformComponent {
+
+  constructor() {
+    console.log('ischecked is: ', this.isChecked);
+  }
 
   http = inject(HttpClient)
 
@@ -54,4 +58,30 @@ export class ContactformComponent {
     }
   }
 
+
+
+  isChecked: boolean = false;
+
+  onCheckboxChange() {
+    // Optional: Führe zusätzliche Logik beim Ändern des Checkbox-Status aus
+    console.log('Checkbox status changed. ischecked is', this.isChecked);
+  }
+
+  onSubmittest() {
+    if (this.isChecked) {
+      this.handleChecked();
+    } else {
+      this.handleUnchecked();
+    }
+  }
+
+  handleChecked() {
+    console.log('Checkbox is checked');
+    // Weitere Logik für den gecheckten Zustand
+  }
+
+  handleUnchecked() {
+    console.log('Checkbox is not checked');
+    // Weitere Logik für den nicht-gecheckten Zustand
+  }
 }

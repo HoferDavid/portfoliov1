@@ -76,24 +76,6 @@ input[type="text"], [type="email"], textarea {
   }
 }
 
-.validationText {
-  color: red;
-  font-size: 0.75rem;
-  padding-left: 0.75rem;
-  margin-top: 0.5rem;
-}
-
-.privacyContainer {
-  display: flex;
-  gap: 8px;
-  font-size: 0.875rem;
-  margin-top: 1.5rem;
-
-  .privacy {
-    color: $highlight;
-  }
-}
-
 .inputWrapper {
   position: relative;
   display: flex;
@@ -106,6 +88,29 @@ input[type="text"], [type="email"], textarea {
   margin-top: 0.75rem;
 }
 
+.validationText {
+  color: red;
+  font-size: 0.75rem;
+  padding-left: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.privacyContainer {
+  display: flex;
+  gap: 8px;
+  font-size: 0.875rem;
+  margin-top: 1.5rem;
+  align-items: center;
+  cursor: pointer;
+
+  input {
+    display: none;
+  }
+
+  .privacy {
+    color: $highlight;
+  }
+}
 
 
 

@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
@@ -6,7 +7,7 @@ import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-contactform',
   standalone: true,
-  imports: [FormsModule, TranslateModule],
+  imports: [FormsModule, TranslateModule, CommonModule],
   templateUrl: './contactform.component.html',
   styleUrl: './contactform.component.scss'
 })
@@ -39,6 +40,7 @@ export class ContactformComponent {
         .subscribe({
           next: (response) => {
             // Add more functions here
+            console.log('something wrong');
             ngForm.resetForm();
           },
           error: (error) => {
@@ -48,8 +50,8 @@ export class ContactformComponent {
         });
         // If wanted it's possible to delete else if after testing
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
       ngForm.resetForm();
     }
   }
+
 }

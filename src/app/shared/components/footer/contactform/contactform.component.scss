@@ -17,23 +17,34 @@ input[type="text"], [type="email"], textarea {
   outline: none;
   font-size: 1rem;
   font-family: "Overpass";
+  color: $background;
 
   &::placeholder {
     color: $background;
   }
+}
 
+.privacyContainer {
+  display: flex;
+  gap: 8px;
+  font-size: 0.875rem;
+}
+
+.privacy {
+  color: $highlight;
 }
 
 
 
 /* Style the submit button with a specific background color etc */
 input[type="submit"] {
-  background-color: #94eecd;
-  color: rgb(0, 0, 0);
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  // @include button();
+  // background-color: #94eecd;
+  // color: rgb(0, 0, 0);
+  // padding: 12px 20px;
+  // border: none;
+  // border-radius: 4px;
+  // cursor: pointer;
 }
 
 /* When moving the mouse over the submit button, add a darker green color */
@@ -41,6 +52,10 @@ input[type="submit"]:hover {
   background-color: #45a049;
 }
 
-span {
-  color: red;
-}
+
+
+
+
+// span {
+//   color: red;
+// }

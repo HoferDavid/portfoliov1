@@ -4,15 +4,17 @@ footer {
   padding: $footerPadding;
   background-color: $primary;
   color: $background;
-
   width: 100%;
   margin: 0 auto;
-
   clip-path: polygon(0 0, 100% clamp(3rem, 8vw, 12rem), 100% 100%, 0 100%);
-  // margin-top: calc(0px - clamp(3rem, 8vw, 12rem));
+  gap: clamp(2rem, 2vw, 3rem);
+  display: flex;
+  flex-direction: column;
 
-  > .intro {
-    color: $highlight;
+  .title {
+    font-family: "Syne";
+    font-size: clamp(3rem, 5vw, 5rem);
+    font-weight: 800;
   }
 }
 
@@ -21,12 +23,25 @@ footer {
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
+
+  div {
+    text-align: center;
+  }
+
+  .intro {
+    color: $highlight;
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1.25rem;
+  }
 }
 
 .bottomContainer {
   @include dFlex($jc: space-between);
 
-  > img {
+  img {
     height: 40px;
     width: 40px;
   }
@@ -41,12 +56,12 @@ footer {
     gap: 16px;
   }
 
-  > a img {
+  a img {
     height: 24px;
     width: 24px;
   }
 
-  > .imprint {
+  .imprint {
     cursor: pointer;
     color: $background;
   }

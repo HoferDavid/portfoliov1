@@ -17,15 +17,17 @@
         <span>{{ 'contact.contactForm.message.validation' | translate  }}</span>
       }
 
-      <div>
+      <div class="privacyContainer">
         <img src="./../../../../../assets/icons/checkbox.svg" alt="">
-        <span>{{ 'contact.contactForm.privacy.part1' | translate  }}</span>
-        <a href="privacy">{{ 'privacy.title' | translate  }}</a>
-        <span>{{ 'contact.contactForm.privacy.part2' | translate  }}</span>
+        <div>
+          <span>{{ 'contact.contactForm.privacy.part1' | translate  }}</span>
+          <a class="privacy" href="privacy">{{ 'privacy.title' | translate  }}</a>
+          <span>{{ 'contact.contactForm.privacy.part2' | translate  }}</span>
+        </div>
       </div>
 
 
-      <input type="submit" value="Submit">
+      <input type="submit" value="Submi" [value]="( 'contact.contactForm.button' | translate )">
 
     </form>
   </div>

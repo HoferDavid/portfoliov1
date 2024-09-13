@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { PopoverComponent } from './popover/popover.component';
 import { BurgerMenuComponent } from './burger-menu/burger-menu.component';
+import { ScrollService } from '../../../services/scroll.service';
 
 @Component({
   selector: 'app-header',
@@ -14,7 +15,8 @@ export class HeaderComponent {
   activeLanguage: string = 'en';
   isPopoverOpen = false;
 
-  constructor(public translate: TranslateService) {}
+  constructor(public translate: TranslateService, private scrollService: ScrollService) {}
+
 
   switchLanguage(language: string) {
     this.activeLanguage = language;
@@ -22,10 +24,15 @@ export class HeaderComponent {
   }
 
 
+  scrollToSection(fragment: string) {
+    this.scrollService.scrollToFragment(fragment);
+  }
+
 
   togglePopover() {
     this.isPopoverOpen = !this.isPopoverOpen;
   }
+
 
   // closePopover() {
   //   this.isPopoverOpen = false;

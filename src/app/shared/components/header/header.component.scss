@@ -12,16 +12,15 @@ header {
   max-width: 1440px;
   z-index: 1000;
 
-  > img {
-    height: 40px;
-    width: 40px;
+  .logo {
+    @include logo();
   }
 }
 
 .menuContainer {
   @include dFlex($gap: 16px);
 
-  > .languages {
+  .languages {
     display: flex;
     gap: 8px;
     transition: 0.2s;
@@ -32,13 +31,14 @@ header {
       transform: scale(1.1);
     }
 
-    > div {
+    div {
       width: 1px;
       height: 20px;
       background-color: $highlight;
     }
   }
-  > button {
+
+  button {
     border: none;
     padding: 0;
     background-color: unset;

@@ -42,9 +42,8 @@ footer {
 .bottomContainer {
   @include dFlex($jc: space-between);
 
-  img {
-    height: 40px;
-    width: 40px;
+  .logo {
+    @include logo();
   }
 }
 
@@ -65,6 +64,21 @@ footer {
   .imprint {
     cursor: pointer;
     color: $background;
+    @include underlineHighlight();
+
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  }
+}
+
+.socialContainer {
+  transition: 0.2s;
+
+  a:hover {
+    transform: scale(1.1);
+    filter: brightness(0) saturate(100%) invert(66%) sepia(34%) saturate(4288%) hue-rotate(359deg) brightness(101%) contrast(105%);
   }
 }
 

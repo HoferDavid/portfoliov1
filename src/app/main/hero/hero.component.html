@@ -1,4 +1,4 @@
-<section>
+<section #heroSection id="heroSection">
 
     <div class="atf">
         <h1>Frontend <br>
@@ -13,11 +13,11 @@
 
     <button>{{ "about.button" | translate }}</button>
 
-    
+
     <div class="cta">
         <a class="mail" [href]="'mailto:' + ( 'myData.mail.mailaddress' | translate ) + '?subject=' + ( 'myData.mail.mailText' | translate )">{{ "myData.mail.mailaddress" | translate }}</a>
 
-        <div class="scrolldownContainer">
+        <div class="scrolldownContainer" (click)="scrollToSection('#footerSection')">
             <div class="arrowContainer">
                 <img draggable="false" src="./assets/icons/arrowHero.svg" alt="">
             </div>

@@ -8,6 +8,16 @@
   gap: $gap;
 }
 
+@mixin logo() {
+  cursor: pointer;
+  height: 4rem;
+  transition: 0.2s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
 @mixin button() {
   border: $border;
   padding: clamp(1rem, 1vw, 1.25rem) clamp(2rem, 6vw, 4rem);
@@ -21,6 +31,25 @@
     font-weight: 700;
     transition: 0.125s ease-in-out, box-shadow 0.675s ease-out;
     padding: clamp(1rem, 1vw, 1.25rem) clamp(2rem, 5vw, 6rem);
+  }
+}
+
+@mixin underlineHighlight() {
+  display: inline-block;
+  position: relative;
+  transition: 0.2s;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: $highlight;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
   }
 }
 

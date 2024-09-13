@@ -1,5 +1,4 @@
-
-<footer>
+<footer #footerSection id="footerSection">
 
     <h2 class="sectionHeader">{{ "contact.title" | translate }}</h2>
 
@@ -17,23 +16,23 @@
     </div>
 
 
-    <div class="arrow">
+    <a class="arrow" (click)="scrollToSection('#heroSection')" draggable="false">
         <img src="assets/icons/arrowFooter.svg" alt="" />
-    </div>
+    </a>
 
 
     <div class="bottomContainer">
-        <img draggable="false" src="./assets/img/dhlogo.png" alt="">
+        <img class="logo" (click)="scrollToSection('#heroSection')" src="./assets/img/dhlogo.png" draggable="false" alt="logo">
 
-            <div class="links">
-                <div class="socialContainer">
-                    <a [href]="( 'myData.github' | translate )" target="_blank" rel="noopener noreferrer"><img draggable="false" src="./assets/icons/github.svg" alt=""></a>
-                    <a [href]="'mailto:' + ( 'myData.mail.mailaddress' | translate ) + '?subject=' + ( 'myData.mail.mailText' | translate )"><img draggable="false" src="./assets/icons/mail.svg" alt=""></a>
-                    <a [href]="('myData.linkedin' | translate )" target="_blank" rel="noopener noreferrer"><img draggable="false" src="./assets/icons/linkedin.svg" alt=""></a>
-                </div>
-
-                <a href="imprint" class="imprint">{{ "imprint.title" | translate }}</a>
+        <div class="links">
+            <div class="socialContainer">
+                <a [href]="( 'myData.github' | translate )" target="_blank" rel="noopener noreferrer"><img draggable="false" src="./assets/icons/github.svg" alt=""></a>
+                <a [href]="'mailto:' + ( 'myData.mail.mailaddress' | translate ) + '?subject=' + ( 'myData.mail.mailText' | translate )"><img draggable="false" src="./assets/icons/mail.svg" alt=""></a>
+                <a [href]="('myData.linkedin' | translate )" target="_blank" rel="noopener noreferrer"><img draggable="false" src="./assets/icons/linkedin.svg" alt=""></a>
             </div>
+
+            <a href="imprint" class="imprint">{{ "imprint.title" | translate }}</a>
+        </div>
     </div>
 
 </footer>

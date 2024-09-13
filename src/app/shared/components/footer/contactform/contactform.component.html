@@ -38,7 +38,7 @@
   <label class="privacyContainer">
     <input type="checkbox" formControlName="checkbox" (change)="onCheckboxChange()">
     <img [src]="registrationForm.get('checkbox')?.value ? 'assets/icons/checkboxChecked.svg' : 'assets/icons/checkbox.svg'"
-         alt="checkbox">
+         alt="checkbox" draggable="false">
     <div>
       <span>{{ 'contact.contactForm.privacy.part1' | translate }}</span>
       <a class="privacy" href="privacy">{{ 'privacy.title' | translate }}</a>
@@ -48,9 +48,4 @@
 
   <button type="submit" [disabled]="!registrationForm.valid || !registrationForm.get('checkbox')?.value">{{ 'contact.contactForm.button' | translate }}</button>
 
-
 </form>
-
-
-
-  <!-- <div class="arrow" (click)="scrollToSection('home', 0)"> -->

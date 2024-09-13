@@ -1,5 +1,4 @@
 <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
-
   <fieldset>
     <legend>{{ 'contact.contactForm.name.placeholder' | translate }}</legend>
     <div class="inputWrapper">
@@ -47,7 +46,11 @@
     </div>
   </label>
 
-
   <button type="submit" [disabled]="!registrationForm.valid || !registrationForm.get('checkbox')?.value">{{ 'contact.contactForm.button' | translate }}</button>
 
+
 </form>
+
+
+
+  <!-- <div class="arrow" (click)="scrollToSection('home', 0)"> -->

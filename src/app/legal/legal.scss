@@ -5,8 +5,8 @@ section {
   padding-top: clamp(1rem, 4vw, 6rem);
   height: fit-content;
 
-  > h2 {
-    @include sectionHeader();
+  h2 {
+    @include legalHeader();
     padding: clamp(1rem, 4vw, 6rem) 0;
   }
 }

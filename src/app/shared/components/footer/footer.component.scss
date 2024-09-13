@@ -1,7 +1,9 @@
 @use "./../../../../app/shared/scss/templates/" as *;
 
 footer {
-  padding: $footerPadding;
+  padding: $mainPadding;
+  padding-top: clamp(3rem, 4vw, 6rem);
+  padding-bottom: clamp(3rem, 4vw, 6rem);
   background-color: $primary;
   color: $background;
   width: 100%;
@@ -10,6 +12,7 @@ footer {
   gap: clamp(2rem, 2vw, 3rem);
   display: flex;
   flex-direction: column;
+  position: relative;
 
   .sectionHeader {
     @include sectionHeader();
@@ -28,7 +31,7 @@ footer {
 
   .intro {
     color: $highlight;
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 3vw, 2rem);
   }
 
   .description {
@@ -62,5 +65,23 @@ footer {
   .imprint {
     cursor: pointer;
     color: $background;
+  }
+}
+
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  bottom: clamp(10rem, 13vw, 15rem);
+  right: clamp(0.75rem, 7vw, 6rem);
+
+  img {
+    height: 100%;
+    transform-origin: bottom;
+    transform: translateY(25%);
+    transition: all 0.325s ease-in-out;
+
+    &:hover {
+      transform: translateY(0);
+    }
   }
 }

@@ -20,7 +20,7 @@
 
 @mixin button() {
   border: $border;
-  padding: clamp(1rem, 1vw, 1.25rem) clamp(2rem, 6vw, 4rem);
+  padding: clamp(1rem, 1vw, 1.25rem) clamp(2rem, 5vw, 4rem);
   background-color: $background;
   box-shadow: 5px 5px 15px 0px $details;
   cursor: pointer;
@@ -30,7 +30,7 @@
     background-color: $details;
     font-weight: 700;
     transition: 0.125s ease-in-out, box-shadow 0.675s ease-out;
-    padding: clamp(1rem, 1vw, 1.25rem) clamp(2rem, 5vw, 6rem);
+    padding: clamp(1rem, 1vw, 1.25rem) clamp(2rem, 6vw, 5rem);
   }
 }
 

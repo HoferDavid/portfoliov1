@@ -41,6 +41,13 @@ footer {
 
 .bottomContainer {
   @include dFlex($jc: space-between);
+}
+
+.logoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
 
   .logo {
     @include logo();
@@ -53,7 +60,7 @@ footer {
   .socialContainer {
     display: flex;
     align-items: flex-end;
-    gap: 16px;
+    gap: 1rem;
   }
 
   a img {

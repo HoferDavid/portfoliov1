@@ -1,7 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
-import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
+import {
+  FormBuilder,
+  FormsModule,
+  NgForm,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -9,21 +15,19 @@ import { TranslateModule } from '@ngx-translate/core';
   standalone: true,
   imports: [FormsModule, TranslateModule, CommonModule, ReactiveFormsModule],
   templateUrl: './contactform.component.html',
-  styleUrl: './contactform.component.scss'
+  styleUrl: './contactform.component.scss',
 })
 export class ContactformComponent {
+  fb = inject(FormBuilder);
 
-  constructor() {
-    console.log('ischecked is: ', this.isChecked);
-  }
+  registrationForm = this.fb.group({
+    name: ['', [Validators.required, Validators.minLength(3)]],
+    email: ['', [Validators.required, Validators.email]],
+    message: ['', [Validators.required, Validators.minLength(5)]],
+    checkbox: [false, [Validators.requiredTrue]],
+  });
 
-  http = inject(HttpClient)
-
-  contactData = {
-    name: '',
-    email: '',
-    message: ''
-  }
+  http = inject(HttpClient);
 
   mailTest = false; // After testing set to false or delete it
 
@@ -38,50 +42,43 @@ export class ContactformComponent {
     },
   };
 
-  onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+  onSubmit() {
+    if (this.registrationForm.valid) {
+      this.http
+        .post(this.post.endPoint, this.post.body(this.registrationForm.value))
         .subscribe({
           next: (response) => {
             // Add more functions here
-            console.log('something wrong');
-            ngForm.resetForm();
+            console.log('send ok');
+            this.registrationForm.reset();
           },
           error: (error) => {
             console.error(error);
           },
           complete: () => console.info('send post complete'),
         });
-        // If wanted it's possible to delete else if after testing
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-      ngForm.resetForm();
     }
   }
-
-
-
-  isChecked: boolean = false;
 
   onCheckboxChange() {
-    // Optional: Führe zusätzliche Logik beim Ändern des Checkbox-Status aus
-    console.log('Checkbox status changed. ischecked is', this.isChecked);
-  }
-
-  onSubmittest() {
-    if (this.isChecked) {
-      this.handleChecked();
-    } else {
-      this.handleUnchecked();
-    }
-  }
-
-  handleChecked() {
-    console.log('Checkbox is checked');
-    // Weitere Logik für den gecheckten Zustand
-  }
-
-  handleUnchecked() {
-    console.log('Checkbox is not checked');
-    // Weitere Logik für den nicht-gecheckten Zustand
+    console.log('Checkbox status changed:', this.registrationForm.get('checkbox')?.value);
   }
 }
+
+// onSubmittest() {
+//   if (this.isChecked) {
+//     this.handleChecked();
+//   } else {
+//     this.handleUnchecked();
+//   }
+// }
+
+// handleChecked() {
+//   console.log('Checkbox is checked');
+//   // Weitere Logik für den gecheckten Zustand
+// }
+
+// handleUnchecked() {
+//   console.log('Checkbox is not checked');
+//   // Weitere Logik für den nicht-gecheckten Zustand
+// }

@@ -1,53 +1,53 @@
-<div class="container">
-    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
 
-      <fieldset>
-        <legend>{{ 'contact.contactForm.name.placeholder' | translate }}</legend>
-        <div class="inputWrapper">
-          <input [(ngModel)]="contactData.name" #name="ngModel" minlength="3" maxlength="50" type="text" id="name" name="name" [placeholder]="( 'contact.contactForm.name.placeholder' | translate )" required autocomplete="off">
-          <img *ngIf="name.touched" [src]="name.valid ? 'assets/icons/checkmark.png' : 'assets/icons/exclamationmark.png'" class="statusIcon" alt="">
-        </div>
-      </fieldset>
-      @if (!name.valid && name.touched) {
-        <span class="validationText">{{ 'contact.contactForm.name.validation' | translate }}</span>
-      }
-
-      <fieldset>
-        <legend>{{ 'contact.contactForm.mail.placeholder' | translate }}</legend>
-        <div class="inputWrapper">
-          <input [(ngModel)]="contactData.email" #email="ngModel" maxlength="40" type="email" id="email" name="email" [placeholder]="( 'contact.contactForm.mail.placeholder' | translate )" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" autocomplete="off">
-          <img *ngIf="email.touched" [src]="email.valid ? 'assets/icons/checkmark.png' : 'assets/icons/exclamationmark.png'" class="statusIcon" alt="">
-        </div>
-      </fieldset>
-      @if (!email.valid && email.touched) {
-        <span class="validationText">{{ 'contact.contactForm.mail.validation' | translate }}</span>
-      }
-
-      <fieldset>
-        <legend>{{ 'contact.contactForm.message.placeholder' | translate }}</legend>
-        <div class="inputWrapper">
-          <textarea #message="ngModel" minlength="5" maxlength="2000" [(ngModel)]="contactData.message" id="message" name="message" [placeholder]="( 'contact.contactForm.message.placeholder' | translate )" style="height:200px" required autocomplete="off"></textarea>
-          <img *ngIf="message.touched" [src]="message.valid ? 'assets/icons/checkmark.png' : 'assets/icons/exclamationmark.png'" class="statusIcon" alt="">
-        </div>
-      </fieldset>
-      @if (!message.valid && message.touched) {
-        <!-- @if (!message.valid && message.touched && !message.disabled) { -->
-        <span class="validationText">{{ 'contact.contactForm.message.validation' | translate }}</span>
-      }
+  <fieldset>
+    <legend>{{ 'contact.contactForm.name.placeholder' | translate }}</legend>
+    <div class="inputWrapper">
+      <input id="name" type="text" formControlName="name">
+      <img *ngIf="registrationForm.get('name')?.touched" [src]="registrationForm.get('name')?.valid ? 'assets/icons/checkmark.png' : 'assets/icons/exclamationmark.png'" class="statusIcon" alt="">
+    </div>
+  </fieldset>
+  @if ((registrationForm.get('name')?.errors?.['required'] || registrationForm.get('name')?.errors?.['minlength']) && registrationForm.get('name')?.touched) {
+    <span class="errorMsg">{{ 'contact.contactForm.name.validation' | translate }}</span>
+  }
 
 
-      <label class="privacyContainer">
-        <input type="checkbox" [(ngModel)]="isChecked" name="agreement" (change)="onCheckboxChange()">
-        <img [src]="isChecked ? 'assets/icons/checkboxChecked.svg' : 'assets/icons/checkbox.svg'" alt="checkbox">
-        <div>
-          <span>{{ 'contact.contactForm.privacy.part1' | translate }}</span>
-          <a class="privacy" href="privacy">{{ 'privacy.title' | translate }}</a>
-          <span>{{ 'contact.contactForm.privacy.part2' | translate }}</span>
-        </div>
-      </label>
+  <fieldset>
+    <legend>{{ 'contact.contactForm.mail.placeholder' | translate }}</legend>
+    <div class="inputWrapper">
+      <input id="email" type="email" formControlName="email">
+      <img *ngIf="registrationForm.get('email')?.touched" [src]="registrationForm.get('email')?.valid ? 'assets/icons/checkmark.png' : 'assets/icons/exclamationmark.png'" class="statusIcon" alt="">
+    </div>
+  </fieldset>
+  @if (registrationForm.get('email')?.errors?.['required'] && registrationForm.get('email')?.touched) {
+    <span class="errorMsg">{{ 'contact.contactForm.mail.validation' | translate }}</span>
+  }
 
 
-      <input type="submit" value="Submit" [value]="( 'contact.contactForm.button' | translate )">
+  <fieldset>
+    <legend>{{ 'contact.contactForm.message.placeholder' | translate }}</legend>
+    <div class="inputWrapper">
+      <input id="message" type="text" formControlName="message">
+      <img *ngIf="registrationForm.get('message')?.touched" [src]="registrationForm.get('message')?.valid ? 'assets/icons/checkmark.png' : 'assets/icons/exclamationmark.png'" class="statusIcon" alt="">
+    </div>
+  </fieldset>
+  @if ((registrationForm.get('message')?.errors?.['required'] || registrationForm.get('message')?.errors?.['minlength']) && registrationForm.get('message')?.touched) {
+    <span class="errorMsg">{{ 'contact.contactForm.message.validation' | translate }}</span>
+  }
 
-    </form>
-  </div>
+
+  <label class="privacyContainer">
+    <input type="checkbox" formControlName="checkbox" (change)="onCheckboxChange()">
+    <img [src]="registrationForm.get('checkbox')?.value ? 'assets/icons/checkboxChecked.svg' : 'assets/icons/checkbox.svg'"
+         alt="checkbox">
+    <div>
+      <span>{{ 'contact.contactForm.privacy.part1' | translate }}</span>
+      <a class="privacy" href="privacy">{{ 'privacy.title' | translate }}</a>
+      <span>{{ 'contact.contactForm.privacy.part2' | translate }}</span>
+    </div>
+  </label>
+
+
+  <button type="submit" [disabled]="!registrationForm.valid || !registrationForm.get('checkbox')?.value">{{ 'contact.contactForm.button' | translate }}</button>
+
+</form>

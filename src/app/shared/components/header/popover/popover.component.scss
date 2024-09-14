@@ -1,5 +1,7 @@
 @use "./../../../../../app/shared/scss/templates/" as *;
 
+$navUnderlineWidth: 4px;
+
 section {
   display: flex;
   flex-direction: column;
@@ -9,15 +11,6 @@ section {
   justify-content: space-between;
   padding: 0 $sectionPaddingVertical $sectionPaddingVertical
     $sectionPaddingVertical;
-}
-
-nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  @include navbarHeaders();
-  padding-bottom: $sectionPaddingVertical;
-  padding-top: clamp(3rem, 6vw, 6rem);
 }
 
 .bottom {
@@ -97,5 +90,103 @@ a {
     margin-top: 1rem;
     clip-path: none;
     padding-top: 1rem;
+  }
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include navbarHeaders();
+  padding: clamp(3rem, 6vw, 6rem) 0;
+  gap: 2rem;
+
+  span {
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+      color: $highlight;
+    }
+
+    &::before {
+      content: "";
+      //   position: absolute;
+      //   top: 50%;
+      //   left: 50%;
+      //   transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    &::before {
+      width: 100%;
+      height: 100%;
+      border: $navUnderlineWidth $primary solid;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      //   width: calc(100% + 0.5rem);
+      //   height: calc(100% + 0.5rem);
+      //   opacity: 1;
+      bottom: -$navUnderlineWidth;
+      border-bottom: $navUnderlineWidth solid $primary;
+      animation-name: fadeOut;
+      animation-duration: 200ms;
+      animation-fill-mode: both;
+      animation-timing-function: ease-in-out;
+    }
+
+    &:active::before,
+    &:hover::after {
+      opacity: 1;
+    }
+
+    &:hover::after {
+      animation-name: fadeIn;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    height: 50%;
+    width: 12.5%;
+    left: -$navUnderlineWidth;
+  }
+
+  30% {
+    height: $navUnderlineWidth;
+    width: 60%;
+    left: -$navUnderlineWidth;
+  }
+
+  100% {
+    height: $navUnderlineWidth;
+    width: 30%;
+    left: calc(70% + $navUnderlineWidth);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    height: $navUnderlineWidth;
+    width: 30%;
+    left: 70%;
+  }
+
+  70% {
+    height: $navUnderlineWidth;
+    width: 60%;
+    left: -$navUnderlineWidth;
+  }
+
+  100% {
+    border-left: $navUnderlineWidth solid $primary;
+    height: 50%;
+    width: 12.5%;
+    left: -$navUnderlineWidth;
   }
 }

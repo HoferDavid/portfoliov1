@@ -1,32 +1,26 @@
 
 <section>
 
-    <p>popover works!</p>
-    <p>popover works!</p>
-    <p>popover works!</p>
+    <nav>
+        <span>{{ 'menu.navLinks.about' | translate }}</span>
+        <span>{{ 'menu.navLinks.skills' | translate }}</span>
+        <span>{{ 'menu.navLinks.portfolio' | translate }}</span>
+        <span>{{ 'menu.navLinks.contact' | translate }}</span>
+    </nav>
 
 
-    <p>popover works!</p>
-    <p>popover works!</p>
-    <p>popover works!</p>
-    <p>popover works!</p>
-    <p>popover works!</p>
-    <p>popover works!</p>
-    <p>popover works!</p>
+    <div class="bottom">
 
-    <p>popover works!</p>
-    <p>popover works!</p>
-        <p>popover works!</p>
-        <p>popover works!</p>
-        <p>popover works!</p>
-        <p>popover works!</p>
+        <div class="contact">
+            <h2 class="sectionHeader">{{ "contact.title" | translate }}</h2>
+            <a class="mail" [href]="'mailto:' + ( 'myData.mail.mailaddress' | translate ) + '?subject=' + ( 'myData.mail.mailText' | translate )">{{ "myData.mail.mailaddress" | translate }}</a>
+        </div>
 
-        <p>popover works!</p>
-        <p>popover works!</p>
-        <p>popover works!</p>
-        <p>popover works!</p>
-        <p>popover works!</p>    <p>popover works!</p>
-
-
+        <div class="socialContainer">
+            <a [href]="( 'myData.github' | translate )" target="_blank" rel="noopener noreferrer"><img draggable="false" src="./assets/icons/github.svg" alt=""></a>
+            <a [href]="'mailto:' + ( 'myData.mail.mailaddress' | translate ) + '?subject=' + ( 'myData.mail.mailText' | translate )"><img draggable="false" src="./assets/icons/mail.svg" alt=""></a>
+            <a [href]="('myData.linkedin' | translate )" target="_blank" rel="noopener noreferrer"><img draggable="false" src="./assets/icons/linkedin.svg" alt=""></a>
+        </div>
+    </div>
 
 </section>

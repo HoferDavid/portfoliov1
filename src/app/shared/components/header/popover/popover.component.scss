@@ -1,0 +1,90 @@
+@use "./../../../../../app/shared/scss/templates/" as *;
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    max-width: 1440px;
+    margin: 0 auto;
+    gap: 800px;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: $sectionPaddingVertical;
+    @include navbarHeaders();
+    gap: 2rem;
+}
+
+
+.bottom {
+    padding: $mainPaddingHorizontal;
+    padding-top: clamp(3rem, 4vw, 6rem);
+    // padding-bottom: clamp(3rem, 4vw, 6rem);
+    background-color: $primary;
+    color: $background;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    clip-path: polygon(0 0, 100% clamp(3rem, 8vw, 10rem), 100% 100%, 0 100%);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+}
+
+.sectionHeader {
+    @include sectionHeader();
+}
+
+a {
+    color: $background;
+}
+
+.bottomContainer {
+    @include dFlex($jc: space-between);
+  }
+
+  .logoContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+
+    .logo {
+      @include logo();
+    }
+  }
+
+  .socialContainer {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+  }
+
+  a img {
+    height: 24px;
+    width: 24px;
+  }
+
+  .imprint {
+    cursor: pointer;
+    color: $background;
+    @include underlineHighlight();
+
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  }
+
+  .socialContainer {
+    transition: 0.2s;
+
+    a:hover {
+      transform: scale(1.1);
+      filter: brightness(0) saturate(100%) invert(66%) sepia(34%) saturate(4288%) hue-rotate(359deg) brightness(101%) contrast(105%);
+    }
+  }

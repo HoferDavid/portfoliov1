@@ -14,7 +14,8 @@ import { CommonModule } from '@angular/common';
 })
 export class HeaderComponent {
   activeLanguage: string = 'en';
-  isPopoverOpen = false;
+  isPopoverOpen = true; // change to false
+  // private scrollPosition = 0;
 
   constructor(public translate: TranslateService, private scrollService: ScrollService) {}
 
@@ -32,5 +33,23 @@ export class HeaderComponent {
 
   togglePopover() {
     this.isPopoverOpen = !this.isPopoverOpen;
+    if (this.isPopoverOpen) {
+      document.body.classList.add('popover-open');
+    } else {
+      document.body.classList.remove('popover-open');
+    }
   }
 }
+
+// togglePopover() {
+//   this.isPopoverOpen = !this.isPopoverOpen;
+//   if (this.isPopoverOpen) {
+//     this.scrollPosition = window.pageYOffset;
+//     document.body.classList.add('popover-open');
+//     document.body.style.top = `-${this.scrollPosition}px`;
+//   } else {
+//     document.body.classList.remove('popover-open');
+//     document.body.style.top = '';
+//     window.scrollTo(0, this.scrollPosition);
+//   }
+// }

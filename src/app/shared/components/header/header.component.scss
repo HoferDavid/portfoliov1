@@ -1,6 +1,5 @@
 @use "./../../scss/templates/" as *;
 
-
 header {
   width: 100%;
   @include dFlex(space-between);
@@ -57,24 +56,22 @@ header {
 .popover-container {
   position: fixed;
   top: var(--headerHeight);
-  height: calc(100vh - var(--headerHeight));
   left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
   background-color: $background;
   z-index: $zIndexPopover;
   transition: opacity 125ms, visibility 125ms;
   opacity: 0;
   visibility: hidden;
-  display: flex;
-  flex-direction: column;
-  // justify-content: space-between;
-  // align-items: center;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 
   &.popover-open {
     opacity: 1;
     visibility: visible;
     pointer-events: all;
-    animation: fadeInScale 125ms forwards ease-in-out;
   }
 
   &.popover-close {

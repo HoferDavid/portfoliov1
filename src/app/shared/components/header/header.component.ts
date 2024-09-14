@@ -3,11 +3,12 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { PopoverComponent } from './popover/popover.component';
 import { BurgerMenuComponent } from './burger-menu/burger-menu.component';
 import { ScrollService } from '../../../services/scroll.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [TranslateModule, PopoverComponent, BurgerMenuComponent],
+  imports: [TranslateModule, PopoverComponent, BurgerMenuComponent, CommonModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
@@ -32,10 +33,4 @@ export class HeaderComponent {
   togglePopover() {
     this.isPopoverOpen = !this.isPopoverOpen;
   }
-
-
-  // closePopover() {
-  //   this.isPopoverOpen = false;
-  //   this.pageWrapper?.classList.remove('scrollDisable');
-  // }
 }

@@ -23,6 +23,7 @@
   padding: clamp(1rem, 1vw, 1.25rem) clamp(2rem, 5vw, 4rem);
   background-color: $background;
   box-shadow: 5px 5px 15px 0px $details;
+  color: $primary;
   cursor: pointer;
   @include sectionText();
 

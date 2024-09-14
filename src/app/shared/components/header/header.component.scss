@@ -1,16 +1,16 @@
 @use "./../../scss/templates/" as *;
 
+
 header {
   width: 100%;
   @include dFlex(space-between);
   position: sticky;
-  top: 0px;
+  top: 0;
   background-color: $background;
-  padding: $mainPadding;
-  padding-top: clamp(1.25rem, 4vw, 6rem);
-  padding-bottom: clamp(1.25rem, 4vw, 6rem);
+  padding: $sectionPaddingVertical $mainPaddingHorizontal;
   max-width: 1440px;
-  z-index: 1000;
+  z-index: $zIndexHeader;
+  height: var(--headerHeight);
 
   .logo {
     @include logo();
@@ -55,30 +55,33 @@ header {
 }
 
 .popover-container {
-  height: calc(100dvh - $headerHeight);
   position: fixed;
-  top: $headerHeight;
-  margin: 0 auto;
+  top: var(--headerHeight);
+  height: calc(100vh - var(--headerHeight));
   left: 0;
-  right: 0;
   width: 100%;
-  max-width: 1440px;
-  background-color: red;
-  padding: 0 clamp(12px, 8dvw, 96px);
+  background-color: $background;
+  z-index: $zIndexPopover;
+  transition: opacity 125ms, visibility 125ms;
   opacity: 0;
   visibility: hidden;
-  transform: scale(0.95);
-  pointer-events: none;
-}
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-.popover-open {
-  animation: fadeInScale 0.5s forwards ease-in-out;
-  pointer-events: all;
-}
+  &.popover-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    animation: fadeInScale 125ms forwards ease-in-out;
+  }
 
-.popover-close {
-  animation: fadeOutScale 0.5s forwards ease-in-out;
-  pointer-events: none;
+  &.popover-close {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
 }
 
 @keyframes fadeInScale {

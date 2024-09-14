@@ -1,7 +1,7 @@
 @use "./../../../../app/shared/scss/templates/" as *;
 
 footer {
-  padding: $mainPadding;
+  padding: $mainPaddingHorizontal;
   padding-top: clamp(3rem, 4vw, 6rem);
   padding-bottom: clamp(3rem, 4vw, 6rem);
   background-color: $primary;

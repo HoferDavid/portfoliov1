@@ -1,8 +1,4 @@
-<button
-  class="menu"
-  onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
-  aria-label="Main Menu"
->
+<button [class.opened]="isOpened" [attr.aria-expanded]="isOpened" aria-label="Main Menu" class="menu">
   <svg width="40" height="40" viewBox="0 0 100 100">
     <path
       class="line line1"

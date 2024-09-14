@@ -1,7 +1,7 @@
 @use "./../../../app/shared/scss/templates/" as *;
 
 section {
-  padding: $sectionPaddingTopBottom;
+  padding: $sectionPaddingVertical;
   display: flex;
   flex-direction: column;
 
@@ -33,8 +33,8 @@ section {
 
   .imgContainer {
     background-image: url(./../../../assets/img/photo.jpg);
-    width: $photo;
-    height: $photo;
+    width: $photoSize;
+    height: $photoSize;
     background-size: cover;
     background-position: center;
   }

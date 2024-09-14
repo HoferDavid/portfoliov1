@@ -1,7 +1,7 @@
 @use "./../../../app/shared/scss/templates/" as *;
 
 section {
-  padding: $sectionPaddingTopBottom;
+  padding: $sectionPaddingVertical;
 }
 
 fieldset {
@@ -36,7 +36,7 @@ legend {
     width: clamp(5rem, 8vw, 12rem);
 
     img {
-      height: $skillIcons;
+      height: $skillIconSize;
     }
 
     figcaption {

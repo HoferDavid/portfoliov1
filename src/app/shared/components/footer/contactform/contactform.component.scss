@@ -4,12 +4,12 @@ form {
   display: flex;
   flex-direction: column;
   max-width: 40rem;
-  // position: relative;
 }
 
 fieldset {
   position: relative;
   padding: 0;
+  border-bottom-color: $background;
   border: 1px solid transparent;
   margin-top: 1.25rem;
 
@@ -24,11 +24,17 @@ fieldset {
     pointer-events: none;
   }
 
+  &:focus-within {
+    border-color: $background;
+  }
+
   legend {
-    display: none;
+    left: 0.5rem;
+    font-size: 0.75rem;
     opacity: 0;
     margin-left: 0.5rem;
     padding: 0 0.25rem;
+    pointer-events: none;
   }
 
   &:focus-within legend {
@@ -49,6 +55,11 @@ fieldset {
 
   &:focus-within {
     border: 1px solid $background;
+
+    input::placeholder,
+    textarea::placeholder {
+      opacity: 0;
+    }
   }
 
   &:has(input:not(:placeholder-shown)),
@@ -59,6 +70,10 @@ fieldset {
   legend.has-overflow {
     margin-bottom: 0.875rem;
   }
+}
+
+textarea {
+  min-height: 8rem;
 }
 
 input[type="text"],
@@ -137,11 +152,10 @@ button:not(:disabled) {
   opacity: 100%;
   color: $highlight;
   border-color: $highlight;
-  box-shadow: 1px 1px 5px 0px #f1dbc7;
   cursor: pointer;
 
   &:hover {
-    transition: 0.125s ease-in-out, box-shadow 0.675s ease-out;
+    transition: 0.125s ease-in-out, box-shadow 1px 1px 5px 0px #f1dbc7;
     padding: clamp(1rem, 1vw, 1.25rem) clamp(2rem, 5vw, 6rem);
   }
 }

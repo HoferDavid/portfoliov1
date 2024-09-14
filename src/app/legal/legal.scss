@@ -2,16 +2,37 @@
 
 section {
   padding: $mainPadding;
-  padding-top: clamp(1rem, 4vw, 6rem);
   height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2rem, 2vh, 3rem);
 
   h2 {
     @include legalHeader();
-    padding: clamp(1rem, 4vw, 6rem) 0;
   }
 }
 
 address {
   font-style: normal;
   padding-bottom: clamp(6rem, 12vw, 18rem);
+}
+
+.arrow {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  cursor: pointer;
+
+  img {
+    display: flex;
+    height: 100%;
+    transform: rotate(-90deg) translateY(25%);
+    transform-origin: bottom;
+    transition: all 0.325s ease-in-out;
+    filter: brightness(0) saturate(100%) invert(66%) sepia(34%) saturate(4288%) hue-rotate(359deg) brightness(101%) contrast(105%);
+
+    &:hover {
+      transform: rotate(-90deg) translateY(0);
+    }
+  }
 }

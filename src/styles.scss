@@ -9,11 +9,7 @@
 
 body {
   background-color: $background;
-  background-image: radial-gradient(
-    circle at 50px 50px,
-    $details 1.5px,
-    transparent 0
-  );
+  background-image: radial-gradient(circle at 3rem 3rem, $details 0.1rem, transparent 0);
   background-size: 100px 100px;
   font-family: "Overpass";
   width: 100%;

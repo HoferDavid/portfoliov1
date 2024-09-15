@@ -1,7 +1,7 @@
 @use "./../../app/shared/scss/templates/" as *;
 
 main {
-    padding: $mainPaddingHorizontal;
+    padding: 0 $mainPaddingHorizontal;
     width: 100%;
     display: flex;
     flex-direction: column;

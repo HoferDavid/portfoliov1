@@ -10,23 +10,25 @@
   "about": {
     "title": "Über mich",
     "intro": "Hi, ich bin David!",
+    "slogan": "\"[...]Für jedes Problem gibt es eine Lösung![...]\"",
     "paragraph1": {
-        "part1": "Als leidenschaftlicher Front-End Entwickler bringe ich ein ",
-        "highlight": "geschultes Auge für Details",
+        "part1": "Als leidenschaftlicher Front-End-Entwickler bringe ich ein geschultes Auge für ",
+        "highlight": "Details",
         "part2": "und eine tiefe Faszination für interaktives Webdesign mit."
     },
     "paragraph2": {
-        "highlight": "Meine Projekterfahrungen, ",
-        "part2": "sowohl im Team als auch eigenständig, helfen mir, den Entwicklungsprozess effizient voranzubringen. Durch meine Programmierfähigkeiten bin ich in der Lage, ästhetische Designs zu realisieren, die gleichzeitig funktional sind."
+      "part1": "Meine ",
+        "highlight": "Projekterfahrungen",
+        "part2": " sowohl im Team als auch eigenständig, ermöglichen es mir, den Entwicklungsprozess effizient voranzutreiben und großartige Nutzererfahrungen zu schaffen, die nachhaltig und zugänglich sind."
     },
     "paragraph3": {
-        "part1": "Ich arbeite daran, ",
-        "highlight": "großartige Nutzererfahrungen ",
-        "part2": "zu schaffen, die nachhaltig und zugänglich sind."
+        "part1": "Dank meiner ",
+        "highlight": "Programmierfähigkeiten",
+        "part2": " strebe ich danach, innovative Lösungen zu entwickeln, die den Bedürfnissen der Nutzer gerecht werden."
     },
     "outro": "Wenn Du denkst, dass ich gut zu Deinen Projekten passe, dann melde Dich gerne bei mir!",
     "home": "Wohnhaft in Südtirol",
-    "remote": "Remote Arbeit möglich",
+    "remote": "Offen für Remote Positionen",
     "button": "Let's talk"
   },
   "skills": {
@@ -35,7 +37,7 @@
   "portfolio": {
     "title": "Portfolio",
     "paragraph1": {
-      "part1": "Meine neuesten Projekte geben dir einen Einblick in meine Fähigkeiten. Hier findest du einige meiner spannendsten Arbeiten. Schau sie dir an und wirf einen Blick auf den Code!",
+      "part1": "In meinen Projekten setze ich auf Angular, TypeScript und JavaScript, um ansprechende und funktionale Benutzeroberflächen zu gestalten.",
       "part2": "Diese Website wurde mit dem Angular-Framework entwickelt. Neugierig auf den Code? Hier entlang: ",
       "highlight": "Website Codebase!",
       "url": "https://github.com/HoferDavid/portfoliov1"

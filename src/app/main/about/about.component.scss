@@ -44,11 +44,12 @@ section {
 p {
   @include sectionText();
 
-  span:first-of-type {
+  .intro {
     font-weight: 700;
+    color: $highlight;
   }
 
-  span {
+  .highlight {
     color: $highlight;
   }
 }

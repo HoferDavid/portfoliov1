@@ -11,4 +11,8 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class PrivacyComponent {
 
+  ngOnInit() {
+    window.scrollTo(0, 0);
+  }
+
 }

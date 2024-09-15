@@ -10,4 +10,8 @@ import { RouterModule } from '@angular/router';
   styleUrl: './../legal.scss'
 })
 export class ImprintComponent {
+
+  ngOnInit() {
+    window.scrollTo(0, 0);
+  }
 }

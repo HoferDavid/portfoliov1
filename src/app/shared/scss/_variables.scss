@@ -9,6 +9,10 @@ $headerHeight: clamp(4rem, 8vw, 8rem);
 $popoverTopSpacing: clamp(1.3rem, 4vw, 6rem);
 $mainPaddingHorizontal: clamp(0.75rem, 7vw, 6rem);
 $sectionPaddingVertical: clamp(1rem, 2vw, 2rem);
+$footerPaddingVertical: clamp(3rem, 4vw, 6rem);
+
+$gapBigInSection: clamp(4rem, 4vw, 4rem);
+$gapSmallInSection: clamp(2rem, 2vw, 3rem);
 
 // Other measurements
 $border: 4px solid $primary;

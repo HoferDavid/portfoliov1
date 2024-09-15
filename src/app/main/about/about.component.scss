@@ -4,10 +4,11 @@ section {
   // padding: $sectionPaddingVertical;
   display: flex;
   flex-direction: column;
+  gap: $gapSmallInSection;
 
   .sectionHeader {
     @include sectionHeader();
-    margin-bottom: clamp(2rem, 2vw, 3rem);
+    // margin-bottom: clamp(2rem, 2vw, 3rem);
   }
 }
 

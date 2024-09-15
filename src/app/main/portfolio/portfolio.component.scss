@@ -4,10 +4,11 @@ section {
   // padding: $sectionPaddingVertical;
   display: flex;
   flex-direction: column;
+  gap: $gapSmallInSection;
 
   .sectionHeader {
     @include sectionHeader();
-    margin-bottom: clamp(2rem, 2vw, 3rem);
+    // margin-bottom: $gapSmallInSection;
   }
 }
 
@@ -33,8 +34,8 @@ section {
 .projectContainer {
   display: flex;
   flex-direction: column;
-  gap: clamp(1.5rem, 4vw, 4rem);
-  margin-top: clamp(1.5rem, 4vw, 4rem);
+  gap: $gapBigInSection;
+  // margin-top: clamp(2rem, 4vw, 6rem);
 }
 
 .singleProject {

@@ -142,6 +142,11 @@ button {
   width: fit-content;
   padding: clamp(1rem, 1vw, 1.25rem) clamp(2rem, 6vw, 4rem);
   margin: clamp(1rem, 2vw, 2rem) 0;
+  transition: 0.2s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 
   @media (min-width: 576px) {
     align-self: center;

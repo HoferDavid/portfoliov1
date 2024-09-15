@@ -1,7 +1,7 @@
 @use "./../../../app/shared/scss/templates/" as *;
 
 section {
-  height: calc(100dvh - $headerHeight);
+  height: calc(100dvh - var(--headerHeight));
   @include dFlex($jc: space-evenly, $fd: column);
 }
 

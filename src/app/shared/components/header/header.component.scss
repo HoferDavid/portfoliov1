@@ -72,6 +72,7 @@ header {
     opacity: 1;
     visibility: visible;
     pointer-events: all;
+    animation: fadeInScale 125ms forwards ease-in-out;
   }
 
   &.popover-close {

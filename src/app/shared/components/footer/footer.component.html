@@ -34,7 +34,7 @@
                 <a [href]="('myData.linkedin' | translate )" target="_blank" rel="noopener noreferrer"><img draggable="false" src="./assets/icons/linkedin.svg" alt=""></a>
             </div>
 
-            <a routerLink="/home" href="imprint" class="imprint">{{ "imprint.title" | translate }}</a>
+            <a [routerLink]="['/imprint']" class="imprint">{{ "imprint.title" | translate }}</a>
         </div>
     </div>
 

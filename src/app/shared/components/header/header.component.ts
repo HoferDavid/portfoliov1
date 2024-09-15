@@ -14,8 +14,8 @@ import { CommonModule } from '@angular/common';
 })
 export class HeaderComponent {
   activeLanguage: string = 'en';
-  isPopoverOpen = true; // change to false
-  // private scrollPosition = 0;
+  isPopoverOpen = false;
+
 
   constructor(public translate: TranslateService, private scrollService: ScrollService) {}
 
@@ -40,6 +40,16 @@ export class HeaderComponent {
     }
   }
 }
+
+
+
+
+
+
+
+
+
+  // private scrollPosition = 0;
 
 // togglePopover() {
 //   this.isPopoverOpen = !this.isPopoverOpen;

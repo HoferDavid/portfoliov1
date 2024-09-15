@@ -5,12 +5,11 @@ $details: #f1dbc7;
 $highlight: #FF9900;
 
 // Spacing and Sizes
-$headerHeight: clamp(4rem, 8vw, 8rem);
+$headerHeight: clamp(4rem, 7vw, 6rem);
 $popoverTopSpacing: clamp(1.3rem, 4vw, 6rem);
 $mainPaddingHorizontal: clamp(0.75rem, 7vw, 6rem);
 $sectionPaddingVertical: clamp(1rem, 2vw, 2rem);
-$footerPaddingVertical: clamp(3rem, 4vw, 6rem);
-
+$footerPadding: clamp(3rem, 7vw, 6rem) clamp(0.75rem, 7vw, 6rem);
 $gapBigInSection: clamp(4rem, 4vw, 4rem);
 $gapSmallInSection: clamp(2rem, 2vw, 3rem);
 

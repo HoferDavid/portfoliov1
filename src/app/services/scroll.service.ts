@@ -5,13 +5,12 @@ import { Injectable } from '@angular/core';
 })
 export class ScrollService {
 
-  scrollToFragment(fragment: string): void {
-
+  scrollToFragment(fragment: string, offset: number = 0): void {
     const element = document.querySelector(fragment);
     if (element) {
       const headerOffset = document.getElementById('headerSection')?.offsetHeight || 0;
       const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-      const scrollPosition = elementPosition - headerOffset;
+      const scrollPosition = elementPosition - headerOffset - offset;
 
       console.log('Header Offset:', headerOffset);
       console.log('Element Position:', elementPosition);

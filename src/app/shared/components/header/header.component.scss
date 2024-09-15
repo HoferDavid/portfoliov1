@@ -53,7 +53,7 @@ header {
   color: $highlight;
 }
 
-.popover-container {
+.popoverContainer {
   position: fixed;
   top: var(--headerHeight);
   left: 0;
@@ -68,14 +68,14 @@ header {
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 
-  &.popover-open {
+  &.popoverOpen {
     opacity: 1;
     visibility: visible;
     pointer-events: all;
     animation: fadeInScale 125ms forwards ease-in-out;
   }
 
-  &.popover-close {
+  &.popoverClose {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;

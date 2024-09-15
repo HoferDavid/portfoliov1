@@ -1,7 +1,7 @@
 @use "./../../../../app/shared/scss/templates/" as *;
 
 footer {
-  padding: $mainPaddingHorizontal $footerPaddingVertical;
+  padding: $footerPadding;
   gap: $gapSmallInSection;
   background-color: $primary;
   color: $background;

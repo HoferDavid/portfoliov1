@@ -27,6 +27,8 @@ export class HeaderComponent {
 
 
   scrollToSection(fragment: string) {
+    this.isPopoverOpen = false;
+    document.body.classList.remove('popoverOpen');
     this.scrollService.scrollToFragment(fragment);
   }
 
@@ -34,9 +36,9 @@ export class HeaderComponent {
   togglePopover() {
     this.isPopoverOpen = !this.isPopoverOpen;
     if (this.isPopoverOpen) {
-      document.body.classList.add('popover-open');
+      document.body.classList.add('popoverOpen');
     } else {
-      document.body.classList.remove('popover-open');
+      document.body.classList.remove('popoverOpen');
     }
   }
 

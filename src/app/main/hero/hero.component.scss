@@ -80,7 +80,6 @@ a {
 
 .scrolldownContainer {
   @include dFlex($fd: column, $gap: 8px);
-  cursor: pointer;
 
   .arrowContainer {
     overflow: hidden;

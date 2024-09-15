@@ -14,9 +14,9 @@ export class PopoverComponent {
 
   constructor(private scrollService: ScrollService, private header: HeaderComponent) {}
 
-  scrollToSection(fragment: string, offset: number = 0) {
+  scrollToSection(fragment: string) {
     this.header.isPopoverOpen = false;
     document.body.classList.remove('popoverOpen');
-    this.scrollService.scrollToFragment(fragment, offset);
+    this.scrollService.scrollToFragment(fragment);
   }
 }

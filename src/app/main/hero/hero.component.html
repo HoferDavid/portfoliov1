@@ -11,13 +11,13 @@
     </div>
 
 
-    <button>{{ "about.button" | translate }}</button>
+    <button (click)="scrollToSection('#footerSection')">{{ "about.button" | translate }}</button>
 
 
     <div class="cta">
         <a class="mail" [href]="'mailto:' + ( 'myData.mail.mailaddress' | translate ) + '?subject=' + ( 'myData.mail.mailText' | translate )">{{ "myData.mail.mailaddress" | translate }}</a>
 
-        <div class="scrolldownContainer" (click)="scrollToSection('#footerSection')">
+        <div class="scrolldownContainer">
             <div class="arrowContainer">
                 <img draggable="false" src="./assets/icons/arrowHero.svg" alt="">
             </div>

@@ -38,6 +38,8 @@ section {
     height: $photoSize;
     background-size: cover;
     background-position: center;
+    position: relative;
+    transform: translateX(200px);
   }
 }
 

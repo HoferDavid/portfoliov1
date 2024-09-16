@@ -16,7 +16,7 @@ export class PortfolioComponent {
       name: 'Join',
       tech: 'JavaScript | Firebase | CSS | HTML',
       description: 'portfolio.projects.join.description',
-      media: './assets/img/join.png',
+      media: './assets/video/join.mp4',
       github: 'https://github.com/HoferDavid/join-kanban',
       website: 'https://join.davidhofer.com/'
     },
@@ -24,7 +24,7 @@ export class PortfolioComponent {
       name: 'El Pollo Loco',
       tech: 'JavaScript | OOP | Canvas | CSS | HTML',
       description: 'portfolio.projects.polloloco.description',
-      media: './assets/img/epl.png',
+      media: './assets/video/epl.mp4',
       github: 'https://github.com/HoferDavid/elpolloloco',
       website: 'https://elpolloloco.davidhofer.com/'
     },
@@ -32,7 +32,7 @@ export class PortfolioComponent {
       name: 'PokeDex',
       tech: 'JavaScript | Rest-Api | CSS | HTML',
       description: 'portfolio.projects.pokedex.description',
-      media: './assets/img/pokedex.png',
+      media: './assets/video/pokedex.mp4',
       github: 'https://github.com/HoferDavid/pokedex',
       website: 'https://pokedex.davidhofer.com'
     }

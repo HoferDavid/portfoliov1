@@ -2,18 +2,51 @@
 
     <a [routerLink]="['/']" class="arrow"><img src="assets/icons/arrowFooter.svg" alt="" /></a>
 
+    <div class="privacy">
+        <h2 [innerHTML]="'privacy.title' | translate"></h2>
 
-    <h2>{{ "privacy.title" | translate }}</h2>
+        <article>
+            <p>{{ "privacy.description.paragraph1" | translate }}</p><br>
+            <p>{{ "privacy.description.paragraph2" | translate }}</p><br>
+            <p>{{ "privacy.description.paragraph3" | translate }}</p><br>
+            <p>{{ "privacy.structure.description" | translate }}</p><br>
+            <ol>
+                <li>{{ "privacy.structure.paragraph1" | translate }}</li>
+                <li>{{ "privacy.structure.paragraph2" | translate }}</li>
+                <li>{{ "privacy.structure.paragraph3" | translate }}</li>
+            </ol>
+        </article>
 
+        <article>
+            <h3>{{ "privacy.section1.title" | translate }}</h3><br>
+            <p>{{ "privacy.section1.description" | translate }}</p><br>
+            <address>
+                <strong>{{ "myData.name" | translate }}</strong><br>
+                <strong>{{ "myData.address" | translate }}</strong><br>
+                <strong>{{ "myData.city" | translate }}</strong><br>
+                <strong>{{ "myData.country" | translate }}</strong><br><br>
+                <span>{{ "myData.mail.mail" | translate }}<a [href]="'mailto:' + ( 'myData.mail.mailaddress' | translate ) + '?subject=' + ( 'myData.mail.mailText' | translate )">{{ "myData.mail.mailaddress" | translate }}</a></span><br>
+                <span>{{ "myData.phone.phone" | translate }}<a [href]="'tel:+ ' + ( 'myData.phone.phoneNumber' | translate )">{{ "myData.phone.phoneNumber" | translate }}</a></span>
+            </address>
+        </article>
 
-    <!-- <address>
-        <strong>{{ "myData.name" | translate }}</strong><br>
-        <strong>{{ "myData.address" | translate }}</strong><br>
-        <strong>{{ "myData.city" | translate }}</strong><br>
-        <strong>{{ "myData.country" | translate }}</strong><br><br>
+        <article>
+            <h3>{{ "privacy.section2.title" | translate }}</h3><br>
+            <p>{{ "privacy.section2.description" | translate }}</p>
+        </article>
 
-        <span>{{ "myData.mail.mail" | translate }}<a [href]="'mailto:' + ( 'myData.mail.mailaddress' | translate ) + '?subject=' + ( 'myData.mail.mailText' | translate )">{{ "myData.mail.mailaddress" | translate }}</a></span><br>
-        <span>{{ "myData.phone.phone" | translate }}<a [href]="'tel:+ ' + ( 'myData.phone.phoneNumber' | translate )">{{ "myData.phone.phoneNumber" | translate }}</a></span><br>
-    </address> -->
+        <article>
+            <h3>{{ "privacy.section3.title" | translate }}</h3><br>
+            <p>{{ "privacy.section3.description" | translate }}</p><br>
+            <h4>{{ "privacy.section3.contactInfo.title" | translate }}</h4><br>
+            <p>{{ "privacy.section3.contactInfo.paragraph1" | translate }}</p><br>
+            <p>{{ "privacy.section3.contactInfo.paragraph2" | translate }}</p><br>
+            <p>{{ "privacy.section3.contactInfo.paragraph3" | translate }}</p><br>
+            <h4>{{ "privacy.section3.linkedin.title" | translate }}</h4><br>
+            <p>{{ "privacy.section3.linkedin.description" | translate }}</p><br>
+            <h4>{{ "privacy.section3.github.title" | translate }}</h4><br>
+            <p>{{ "privacy.section3.github.description" | translate }}</p><br>
+        </article>
+    </div>
 
 </section>

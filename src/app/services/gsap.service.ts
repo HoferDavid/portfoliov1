@@ -16,15 +16,14 @@ export class GsapService {
   }
 
 
-  animateWithScrollTrigger(selector: string, properties: any) {
-    gsap.to(selector, {
-      ...properties,
-      scrollTrigger: {
-        trigger: selector,
-        start: "top bottom",
-        end: "center center",
-        scrub: true
-      }
-    });
-  }
+  // animateWithScrollTrigger(selector: string, properties: any, scrollTriggerOptions: any) {
+  //   gsap.to(selector, {
+  //     ...properties,
+  //     scrollTrigger: {
+  //       trigger: selector,
+  //       ...scrollTriggerOptions
+  //     }
+  //   });
+  // }
+
 }

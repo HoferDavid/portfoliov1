@@ -73,7 +73,8 @@
       },
       "privacy": {
         "part1": "Ich habe die ",
-        "part2": " gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu."
+        "part2": "Datenschutzerklärung",
+        "part3": " gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu."
       },
       "button": "Senden"
     }
@@ -96,10 +97,15 @@
     "linkedin": "https://www.linkedin.com/in/davidhofer-dev"
   },
   "imprint": {
-    "title": "Impressum"
+    "title": "Impressum",
+    "notes": {
+      "title": "Ideen verwirklichen",
+      "paragraph1": "Ich bin fest davon überzeugt, dass wir mit neuen Technologien die Welt positiv verändern und das Leben vieler Menschen verbessern können. Durch innovative Ansätze und den Einsatz moderner Lösungen haben wir die Chance, globale Herausforderungen zu bewältigen, Nachhaltigkeit zu fördern und den Alltag der Menschen zu erleichtern.",
+      "paragraph2": "Wenn du daran interessiert bist, gemeinsam Projekte zu entwickeln, die nicht nur technisch herausragend sind, sondern auch einen echten Mehrwert für die Gesellschaft bieten, freue ich mich auf die Zusammenarbeit."
+    }
   },
   "privacy": {
-    "title": "Datenschutzerklärung",
+    "title": "Datenschutz&shy;erklärung",
     "description": {
       "paragraph1": "Personenbezogene Daten (nachfolgend zumeist nur \"Daten\" genannt) werden von uns nur im Rahmen der Erforderlichkeit sowie zum Zwecke der Bereitstellung eines funktionsfähigen und nutzerfreundlichen Internetauftritts, inklusive seiner Inhalte und der dort angebotenen Leistungen, verarbeitet.",
       "paragraph2": "Gemäß Art. 4 Ziffer 1. der Verordnung (EU) 2016/679, also der Datenschutz-Grundverordnung (nachfolgend nur \"DSGVO\" genannt), gilt als \"Verarbeitung\" jeder mit oder ohne Hilfe automatisierter Verfahren ausgeführter Vorgang oder jede solche Vorgangsreihe im Zusammenhang mit personenbezogenen Daten, wie das Erheben, das Erfassen, die Organisation, das Ordnen, die Speicherung, die Anpassung oder Veränderung, das Auslesen, das Abfragen, die Verwendung, die Offenlegung durch Übermittlung, Verbreitung oder eine andere Form der Bereitstellung, den Abgleich oder die Verknüpfung, die Einschränkung, das Löschen oder die Vernichtung.",

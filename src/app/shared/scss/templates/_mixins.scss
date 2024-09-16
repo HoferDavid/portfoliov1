@@ -115,3 +115,9 @@
   font-size: clamp(3rem, 6vw, 6rem);
   font-weight: 700;
 }
+
+@mixin imprintHeader() {
+  font-family: "Syne";
+  font-size: clamp(1.5rem, 8vw, 4.875rem);
+  font-weight: 800;
+}

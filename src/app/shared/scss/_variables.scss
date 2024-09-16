@@ -13,6 +13,8 @@ $footerPadding: clamp(3rem, 7vw, 6rem) clamp(0.75rem, 7vw, 6rem);
 $gapBigInSection: clamp(4rem, 6vw, 6rem);
 $gapSmallInSection: clamp(2rem, 2vw, 3rem);
 
+$legalpadding: $mainPaddingHorizontal $mainPaddingHorizontal 4rem $mainPaddingHorizontal;
+
 // Other measurements
 $border: 4px solid $primary;
 

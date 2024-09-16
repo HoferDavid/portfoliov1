@@ -1,18 +1,151 @@
 {
     "menu": {
-        "navLinks": {
-            "about": "About Me",
-            "skills": "Skills",
-            "portfolio": "Portfolio",
-            "contact": "Contact"
-        }
+      "navLinks": {
+        "about": "About Me",
+        "skills": "Skills",
+        "portfolio": "Portfolio",
+        "contact": "Contact"
+      }
     },
     "about": {
         "title": "About Me",
-        "intro": "Hi, I am David",
-        "text": "",
+        "intro": "Hi, I am David!",
+        "slogan": "\"[...]For every problem, there's a solution![...]\"",
+        "paragraph1": {
+          "part1": "As a passionate Front-End Developer, I bring a trained eye for ",
+          "highlight": "details",
+          "part2": "and a deep fascination for interactive web design."
+        },
+        "paragraph2": {
+          "part1": "My ",
+          "highlight": "project experience",
+          "part2": ", both in teams and independently, allows me to efficiently drive the development process and create great user experiences that are sustainable and accessible."
+        },
+        "paragraph3": {
+          "part1": "Thanks to my ",
+          "highlight": "programming skills",
+          "part2": ", I strive to develop innovative solutions that meet the needs of users."
+        },
+        "outro": "If you think I would be a good fit for your projects, feel free to contact me!",
         "home": "Based in South Tyrol",
         "remote": "Open to work Remote",
         "button": "Let's talk"
+      },
+      "skills": {
+        "title": "Skills"
+      },
+      "portfolio": {
+        "title": "Portfolio",
+        "paragraph1": {
+          "part1": "In my projects, I use Angular, TypeScript and JavaScript to create appealing and functional user interfaces.",
+          "part2": "This website was developed using the Angular framework. Curious about the code? Head over to: ",
+          "highlight": "Website Codebase!",
+          "url": "https://github.com/HoferDavid/portfoliov1"
+        },
+        "projects": {
+          "join": {
+            "description": "Kanban-based project management tool designed to optimize workflows and foster team collaboration."
+          },
+          "polloloco": {
+            "description": "Object-oriented Jump-and-Run Game: Collect coins and Tabasco bottles with Pepe to defeat the crazy chicken!"
+          },
+          "pokedex": {
+            "description": "PokeAPI-powered Pokemon database to bring your childhood back to life!"
+          }
+        }
+      },
+      "contact": {
+        "title": "Say Hi!",
+        "intro": "You have a project I can help with?",
+        "description": "Let's talk about your ideas and how we can make them happen.",
+        "contactForm": {
+          "name": {
+            "placeholder": "Your Name",
+            "validation": "Name is required."
+          },
+          "mail": {
+            "placeholder": "Your Email",
+            "validation": "Email is required."
+          },
+          "message": {
+            "placeholder": "Your Message",
+            "validation": "Nothing to say? Please enter a message :)"
+          },
+          "privacy": {
+            "part1": "I have read the ",
+            "part2": "Privacy Policy",
+            "part3": " and agree to the processing of my data as described."
+          },
+          "button": "Submit"
+        },
+        "feedback": {
+          "successHeader": "Thank you for your message!",
+          "successSubheader": "I will get back to you shortly."
+      }
+    },
+    "myData": {
+      "name": "David Hofer",
+      "address": "Josef Weingartnerstrasse 79",
+      "city": "39022 Algund",
+      "country": "Südtirol/ Italien",
+      "phone": {
+        "phone": "Telefon: ",
+        "phoneNumber": "+39 3408959151"
+      },
+      "mail": {
+        "mail": "E-Mail: ",
+        "mailaddress": "info@davidhofer.com",
+        "mailText": "Hey David, I have an idea to discuss!"
+      },
+      "github": "https://github.com/HoferDavid",
+      "linkedin": "https://www.linkedin.com/in/davidhofer-dev"
+    },
+    "imprint": {
+        "title": "Imprint",
+        "notes": {
+          "title": "Realizing Ideas",
+          "paragraph1": "I am firmly convinced that with new technologies we can positively change the world and improve the lives of many people. Through innovative approaches and the use of modern solutions, we have the opportunity to tackle global challenges, promote sustainability and make everyday life easier for people.",
+          "paragraph2": "If you are interested in jointly developing projects that are not only technically outstanding, but also provide real added value for society, I look forward to working together."
+        }
+      },
+      "privacy": {
+        "title": "Privacy Policy",
+        "description": {
+          "paragraph1": "Personal data (hereinafter usually referred to as \"data\") is processed by us only within the framework of necessity and for the purpose of providing a functional and user-friendly website, including its contents and the services offered there.",
+          "paragraph2": "According to Art. 4 No. 1 of the Regulation (EU) 2016/679, i.e. the General Data Protection Regulation (hereinafter only \"GDPR\"), \"processing\" means any operation or series of operations carried out with or without the aid of automated procedures in connection with personal data, such as collection, recording, organization, ordering, storage, adaptation or alteration, retrieval, consultation, use, disclosure by transmission, dissemination or otherwise making available, alignment or association, restriction, erasure or destruction.",
+          "paragraph3": "With the following privacy policy, we inform you in particular about the type, scope, purpose, duration and legal basis of the processing of personal data, insofar as we either alone or jointly with others decide on the purposes and means of the processing. Furthermore, we inform you below about the third-party components used by us for optimization purposes as well as for the increase of the usage quality, insofar as this means that third parties process data in their own responsibility."
+        },
+        "structure": {
+          "description": "Our privacy policy is structured as follows:",
+          "paragraph1": "Information about us as the responsible party",
+          "paragraph2": "Rights of users and data subjects",
+          "paragraph3": "Information on data processing"
+        },
+        "section1": {
+          "title": "I. Information about us as the responsible party",
+          "description": "The responsible provider of this website in terms of data protection law is:"
+        },
+        "section2": {
+          "title": "II. Rights of users and data subjects",
+          "description": "With regard to the data processing described below in more detail, users and data subjects have the right to confirmation as to whether data concerning them is being processed, to obtain information about the data processed, to receive further information about the data processing, and to obtain copies of the data (cf. also Art. 15 GDPR); to have incorrect or incomplete data concerning them rectified or completed (cf. also Art. 16 GDPR); to have their data erased immediately (cf. also Art. 17 GDPR), or, alternatively, to demand the restriction of the processing of their data in accordance with Art. 18 GDPR; to receive their data in a structured, common and machine-readable format (cf. also Art. 20 GDPR), to object to the processing of their data in accordance with Art. 21 GDPR, and to lodge a complaint with the supervisory authority if they believe that their data is being processed by the provider in breach of data protection regulations (cf. also Art. 77 GDPR). Furthermore, the provider is obliged to inform all recipients to whom data has been disclosed by the provider about any rectification or erasure of data or restriction of processing carried out in accordance with Articles 16, 17 para. 1, 18 GDPR, unless this proves impossible or involves disproportionate effort. However, the user has a right to be informed about these recipients. Likewise, in accordance with Art. 21 GDPR, users and data subjects have the right to object to the provider's future processing of their data, insofar as the data is processed by the provider in accordance with Art. 6 para. 1 lit. f) GDPR. In particular, an objection to data processing for the purpose of direct marketing is permissible."
+        },
+        "section3": {
+          "title": "III. Information on data processing",
+          "description": "Your data processed when using our website will be deleted or blocked as soon as the purpose of storage ceases to apply, no statutory retention obligations prevent deletion, and the following information on individual processing procedures does not state otherwise.",
+          "contactInfo": {
+            "title": "Contact",
+            "paragraph1": "If you contact us via contact form or email, the data you provide will be used to process your request. Providing the data is necessary for processing and answering your request - without it, we cannot or can only partially answer your request.",
+            "paragraph2": "The legal basis for this processing is Art. 6 para. 1 lit. b) GDPR.",
+            "paragraph3": "Your data will be deleted once your request has been answered and there are no legal retention obligations preventing deletion, such as in the event of a subsequent contractual processing."
+          },
+          "linkedin": {
+            "title": "LinkedIn",
+            "description": "LinkedIn Ireland Unlimited Company, Wilton Plaza, Wilton Place, Dublin 2, Ireland, a subsidiary of LinkedIn Corporation, 1000 W. Maude Avenue, Sunnyvale, CA 94085 USA."
+          },
+          "github": {
+            "title": "GitHub",
+            "description": "GitHub, Inc., 88 Colin P Kelly Jr Street, San Francisco, CA 94107, USA, a subsidiary of Microsoft Corporation."
+        }
+      }
     }
-}
+  }

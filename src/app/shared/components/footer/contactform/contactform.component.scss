@@ -181,12 +181,12 @@ button:not(:disabled) {
   border-radius: 0.5rem;
   visibility: hidden;
   transition: transform 0.4s, top 0.4s;
-  box-shadow: 2px 2px 8px 0px #f1dbc7;
+  box-shadow: 2px 2px 8px 0px $highlight;
 }
 
 .feedbackPopupOpen {
   visibility: visible;
-  top: 50%;
+  top: 40%;
   transform: translate(-50%, -50%) scale(1);
 }
 

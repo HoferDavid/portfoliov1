@@ -12,6 +12,6 @@ import { RouterModule } from '@angular/router';
 export class ImprintComponent {
 
   ngOnInit() {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }

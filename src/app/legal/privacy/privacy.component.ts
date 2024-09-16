@@ -7,12 +7,11 @@ import { TranslateModule } from '@ngx-translate/core';
   standalone: true,
   imports: [TranslateModule, RouterModule],
   templateUrl: './privacy.component.html',
-  styleUrl: './../legal.scss'
+  styleUrl: './../legal.scss',
 })
 export class PrivacyComponent {
 
   ngOnInit() {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
-
 }

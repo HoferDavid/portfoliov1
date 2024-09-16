@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { ScrollService } from '../../../../services/scroll.service';
 import { HeaderComponent } from '../header.component';
+import { Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-popover',
@@ -12,11 +14,15 @@ import { HeaderComponent } from '../header.component';
 })
 export class PopoverComponent {
 
-  constructor(private scrollService: ScrollService, private header: HeaderComponent) {}
+  constructor(private scrollService: ScrollService, private header: HeaderComponent, private router: Router) {}
 
   scrollToSection(fragment: string) {
-    this.header.isPopoverOpen = false;
-    document.body.classList.remove('popoverOpen');
-    this.scrollService.scrollToFragment(fragment);
+    this.router.navigate(['/']).then(() => {
+      this.header.isPopoverOpen = false;
+      document.body.classList.remove('popoverOpen');
+      setTimeout(() => {
+        this.scrollService.scrollToFragment(fragment);
+      }, 100);
+    });
   }
 }

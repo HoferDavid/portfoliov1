@@ -77,6 +77,10 @@
         "part3": " gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu."
       },
       "button": "Senden"
+    },
+    "feedback": {
+      "successHeader": "Danke für deine Nachricht!",
+      "successSubheader": "Ich melde mich in Kürze zurück."
     }
   },
   "myData": {

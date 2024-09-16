@@ -42,14 +42,14 @@ export class ContactformComponent {
     },
   };
 
+
   onSubmit() {
     if (this.registrationForm.valid) {
       this.http
         .post(this.post.endPoint, this.post.body(this.registrationForm.value))
         .subscribe({
           next: (response) => {
-            // Add more functions here
-            console.log('send ok');
+            this.feedbackPopup();
             this.registrationForm.reset();
           },
           error: (error) => {
@@ -60,25 +60,12 @@ export class ContactformComponent {
     }
   }
 
-  onCheckboxChange() {
-    console.log('Checkbox status changed:', this.registrationForm.get('checkbox')?.value);
+
+  feedbackPopup() {
+    let popover = document.getElementById('feedbackPopup');
+    popover?.classList.add('feedbackPopupOpen');
+    setTimeout(() => {
+      popover?.classList.remove('feedbackPopupOpen');
+    }, 2000);
   }
 }
-
-// onSubmittest() {
-//   if (this.isChecked) {
-//     this.handleChecked();
-//   } else {
-//     this.handleUnchecked();
-//   }
-// }
-
-// handleChecked() {
-//   console.log('Checkbox is checked');
-//   // Weitere Logik für den gecheckten Zustand
-// }
-
-// handleUnchecked() {
-//   console.log('Checkbox is not checked');
-//   // Weitere Logik für den nicht-gecheckten Zustand
-// }

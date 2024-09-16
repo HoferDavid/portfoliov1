@@ -164,3 +164,39 @@ button:not(:disabled) {
     padding: clamp(1rem, 1vw, 1.25rem) clamp(2rem, 5vw, 6rem);
   }
 }
+
+
+
+
+
+.feedbackPopup {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  background-color: $background;
+  color: $primary;
+  padding: 3rem;
+  min-width: 18rem;
+  border-radius: 0.5rem;
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
+  box-shadow: 2px 2px 8px 0px #f1dbc7;
+}
+
+.feedbackPopupOpen {
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 2rem;
+
+  h2 {
+    color: $highlight;
+  }
+}

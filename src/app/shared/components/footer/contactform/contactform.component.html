@@ -36,7 +36,7 @@
 
 
   <label class="privacyContainer">
-    <input type="checkbox" formControlName="checkbox" (change)="onCheckboxChange()">
+    <input type="checkbox" formControlName="checkbox">
     <img [src]="registrationForm.get('checkbox')?.value ? 'assets/icons/checkboxChecked.svg' : 'assets/icons/checkbox.svg'"
          alt="checkbox" draggable="false">
     <div>
@@ -47,5 +47,13 @@
   </label>
 
   <button type="submit" [disabled]="!registrationForm.valid || !registrationForm.get('checkbox')?.value">{{ 'contact.contactForm.button' | translate }}</button>
+
+
+  <div class="feedbackPopup" id="feedbackPopup">
+    <div class="message">
+      <h2>{{ 'contact.feedback.successHeader' | translate }}</h2>
+      <span>{{ 'contact.feedback.successSubheader' | translate }}</span>
+    </div>
+  </div>
 
 </form>

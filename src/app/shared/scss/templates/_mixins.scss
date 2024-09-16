@@ -82,13 +82,13 @@
 
 @mixin projectNumber() {
   font-family: "Syne";
-  font-size: clamp(1.5rem, 2vw, 3rem);
+  font-size: clamp(1.5rem, 3vw, 3rem);
   font-weight: 700;
 }
 
 @mixin projectHeader() {
   font-family: "Syne";
-  font-size: clamp(2rem, 2vw, 3rem);
+  font-size: clamp(2rem, 3vw, 3rem);
   font-weight: 800;
 }
 

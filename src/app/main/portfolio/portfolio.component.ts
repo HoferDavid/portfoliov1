@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { Project } from '../../interfaces/projects.interface';
 
@@ -9,7 +9,7 @@ import { Project } from '../../interfaces/projects.interface';
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.scss']
 })
-export class PortfolioComponent implements OnInit, AfterViewInit {
+export class PortfolioComponent {
 
   projects: Project[] = [
     {
@@ -38,46 +38,48 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
     }
   ];
 
-  @ViewChild('videoContainer') videoContainer!: ElementRef;
 
-  ngOnInit(): void {}
 
-  ngAfterViewInit(): void {
-    this.setupIntersectionObserver();
-  }
+  // @ViewChild('videoContainer') videoContainer!: ElementRef;
 
-  setupIntersectionObserver() {
-    const options = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.01
-    };
+  // ngOnInit(): void {}
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        const videoElement = entry.target as HTMLVideoElement;
+  // ngAfterViewInit(): void {
+  //   this.setupIntersectionObserver();
+  // }
 
-        if (entry.isIntersecting) {
-          const dataSrc = videoElement.dataset['src'];
-          if (dataSrc) {
-            videoElement.src = dataSrc;
-            const playPromise = videoElement.play();
+  // setupIntersectionObserver() {
+  //   const options = {
+  //     root: null,
+  //     rootMargin: '0px',
+  //     threshold: 0.01
+  //   };
 
-            if (playPromise !== undefined) {
-              playPromise.then(() => {
-              }).catch((error) => {
-                console.log('Playback failed:', error);
-              });
-            }
-          }
-        } else {
-          videoElement.pause();
-        }
-      });
-    }, options);
-    const videos = this.videoContainer.nativeElement.querySelectorAll('video');
-    videos.forEach((video: HTMLVideoElement) => {
-      observer.observe(video);
-    });
-  }
+  //   const observer = new IntersectionObserver((entries) => {
+  //     entries.forEach(entry => {
+  //       const videoElement = entry.target as HTMLVideoElement;
+
+  //       if (entry.isIntersecting) {
+  //         const dataSrc = videoElement.dataset['src'];
+  //         if (dataSrc) {
+  //           videoElement.src = dataSrc;
+  //           const playPromise = videoElement.play();
+
+  //           if (playPromise !== undefined) {
+  //             playPromise.then(() => {
+  //             }).catch((error) => {
+  //               console.log('Playback failed:', error);
+  //             });
+  //           }
+  //         }
+  //       } else {
+  //         videoElement.pause();
+  //       }
+  //     });
+  //   }, options);
+  //   const videos = this.videoContainer.nativeElement.querySelectorAll('video');
+  //   videos.forEach((video: HTMLVideoElement) => {
+  //     observer.observe(video);
+  //   });
+  // }
 }

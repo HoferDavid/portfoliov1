@@ -10,20 +10,26 @@ import { GsapService } from '../../services/gsap.service';
   styleUrl: './about.component.scss'
 })
 export class AboutComponent implements OnInit {
+
   constructor(private gsapService: GsapService) {}
 
 
   ngOnInit(): void {
-
-//     this.gsapService.animateWithScrollTrigger('.imgContainer', {
-//       x: '0%',
-//       opacity: 1,
-//       duration: 2
-//     }, {
-//       start: "top bottom",
-//       end: "top center",
-//       scrub: true,
-//       markers: true
-//     });
+    const tl = this.gsapService.createTimeline('#aboutSection', [
+      // {
+      //   selector: '.textContainer',
+      //   properties: { opacity: 1, y: '0%', duration: 1 }
+      // },
+      {
+        selector: '.imgContainer',
+        properties: { opacity: 1, y: '0%', duration: 1 }
+      }
+    ], {
+      start: "top center",
+      end: "bottom center",
+      scrub: true,
+      markers: true
+    });
+    tl.play();
   }
 }

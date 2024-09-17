@@ -11,19 +11,16 @@ export class GsapService {
 
   constructor() { }
 
-  animate(selector: string, properties: any) {
-    gsap.to(selector, properties);
+  createTimeline(selector:string, animations: any[], scrollTriggerOptions: any) {
+    const timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: selector,
+        ...scrollTriggerOptions
+      }
+    });
+    animations.forEach(animation => {
+      timeline.to(animation.selector, animation.properties);
+    });
+    return timeline;
   }
-
-
-  // animateWithScrollTrigger(selector: string, properties: any, scrollTriggerOptions: any) {
-  //   gsap.to(selector, {
-  //     ...properties,
-  //     scrollTrigger: {
-  //       trigger: selector,
-  //       ...scrollTriggerOptions
-  //     }
-  //   });
-  // }
-
 }

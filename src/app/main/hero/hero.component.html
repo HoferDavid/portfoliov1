@@ -1,32 +1,53 @@
 <section #heroSection id="heroSection">
+  <div class="atf">
+    <h1>
+      Frontend <br />
+      Developer
+    </h1>
 
-    <div class="atf">
-        <h1>Frontend <br>
-        Developer</h1>
-
-        <div class="nameContainer">
-            <div class="stroke"></div>
-            <h3>David Hofer</h3>
-        </div>
+    <div class="nameContainer">
+      <div class="stroke"></div>
+      <h3 class="rotate">
+        <span>D</span>
+        <span>a</span>
+        <span>v</span>
+        <span>i</span>
+        <span>d</span>
+        <span style="display: inline-block">&nbsp;</span>
+        <span>H</span>
+        <span>o</span>
+        <span>f</span>
+        <span>e</span>
+        <span>r</span>
+      </h3>
     </div>
+  </div>
 
+  <button (click)="scrollToSection('#footerSection')">
+    {{ "about.button" | translate }}
+  </button>
 
-    <button (click)="scrollToSection('#footerSection')">{{ "about.button" | translate }}</button>
+  <div class="cta">
+    <a
+      class="mail"
+      [href]="
+        'mailto:' +
+        ('myData.mail.mailaddress' | translate) +
+        '?subject=' +
+        ('myData.mail.mailText' | translate)
+      "
+      >{{ "myData.mail.mailaddress" | translate }}</a
+    >
 
+    <div class="scrolldownContainer">
+      <div class="arrowContainer">
+        <img draggable="false" src="./assets/icons/arrowHero.svg" alt="" />
+      </div>
 
-    <div class="cta">
-        <a class="mail" [href]="'mailto:' + ( 'myData.mail.mailaddress' | translate ) + '?subject=' + ( 'myData.mail.mailText' | translate )">{{ "myData.mail.mailaddress" | translate }}</a>
-
-        <div class="scrolldownContainer">
-            <div class="arrowContainer">
-                <img draggable="false" src="./assets/icons/arrowHero.svg" alt="">
-            </div>
-
-            <div class="arrowText">
-                <span>Scroll</span>
-                <span>down</span>
-            </div>
-        </div>
+      <div class="arrowText">
+        <span>Scroll</span>
+        <span>down</span>
+      </div>
     </div>
-
+  </div>
 </section>

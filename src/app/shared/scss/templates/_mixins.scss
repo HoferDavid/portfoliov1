@@ -1,4 +1,4 @@
-@use "./../variables" as *;
+@use "_variables" as *;
 
 @mixin dFlex($jc: center, $ai: center, $fd: row, $gap: 0) {
   display: flex;

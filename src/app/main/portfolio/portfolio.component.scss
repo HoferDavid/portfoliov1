@@ -1,14 +1,17 @@
 @use "./../../../app/shared/scss/templates/" as *;
 
 section {
-  // padding: $sectionPaddingVertical;
   display: flex;
   flex-direction: column;
   gap: $gapSmallInSection;
+  overflow-x: hidden;
+
+  @media (min-width: 992px) {
+    overflow-x: unset;
+  }
 
   .sectionHeader {
     @include sectionHeader();
-    // margin-bottom: $gapSmallInSection;
   }
 }
 

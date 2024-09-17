@@ -17,10 +17,9 @@
             <div class="project">
                 <div class="media">
                     <video #video loop muted autoplay preload="auto" playsinline disablePictureInPicture controlsList="nodownload nofullscreen noremoteplayback" src="{{ project.media }}"></video>
-                    <!-- <video loop muted preload="none" playsinline disablePictureInPicture controlsList="nodownload nofullscreen noremoteplayback" [attr.data-src]="project.media" #videoElement></video> -->
                 </div>
 
-                <div class="info">
+                <div class="info" data-aos="fade-left" data-aos-offset="800" [attr.data-aos-delay]="projects.indexOf(project) * 500">
                     <div class="infoText">
                         <div>{{ project.name }}</div>
                         <span>{{ project.tech }}</span>

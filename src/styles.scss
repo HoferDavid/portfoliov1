@@ -9,7 +9,11 @@
 
 body {
   background-color: $background;
-  background-image: radial-gradient(circle at 3rem 3rem, $details 0.1rem, transparent 0);
+  background-image: radial-gradient(
+    circle at 3rem 3rem,
+    $details 0.1rem,
+    transparent 0
+  );
   background-size: 100px 100px;
   font-family: "Overpass";
   width: 100%;
@@ -63,4 +67,25 @@ body.popoverOpen {
   body {
     scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
   }
+}
+
+
+
+[data-aos="scaleUp"] {
+  opacity: 0;
+
+  &.aos-animate {
+    animation: scaleUpKf 2s ease 0s 1 normal forwards;
+  }
+}
+
+@keyframes scaleUpKf {
+    0% {
+        transform: scale(0);
+    opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+    opacity: 1;
+    }
 }

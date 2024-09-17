@@ -8,7 +8,7 @@
     <a [href]="'portfolio.paragraph1.url' | translate" target="_blank" rel="noopener noreferrer">{{ "portfolio.paragraph1.highlight" | translate }}</a>
   </div>
 
-  <div class="projectContainer">
+  <div class="projectContainer" #videoContainer>
     @for (project of projects; track project.name; let i = $index) {
 
         <div class="singleProject">
@@ -16,7 +16,7 @@
 
             <div class="project">
                 <div class="media">
-                    <video loop muted autoplay preload="auto" playsinline disablePictureInPicture controlsList="nodownload nofullscreen noremoteplayback" src="{{ project.media }}"></video>
+                    <video loop muted preload="none" playsinline disablePictureInPicture controlsList="nodownload nofullscreen noremoteplayback" [attr.data-src]="project.media" #videoElement></video>
                 </div>
 
                 <div class="info">

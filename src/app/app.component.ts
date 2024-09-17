@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/components/header/header.component';
@@ -23,3 +23,23 @@ export class AppComponent {
     translate.use('de');
   }
 }
+
+
+
+// export class AppComponent implements OnInit {
+//   title = 'portfoliov1';
+
+//   constructor(public translate: TranslateService) {
+//     translate.addLangs(['en', 'de']);
+//     translate.setDefaultLang('de');
+//     translate.use('de');
+//   }
+
+
+//   ngOnInit(): void {
+//     AOS.init({
+//       duration: 1000,
+//       once: true
+//     });
+//   }
+// }

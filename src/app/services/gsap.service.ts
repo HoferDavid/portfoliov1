@@ -4,6 +4,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+gsap.defaults({
+  ease: 'power4.out',
+  // duration: 2.5
+})
+
 @Injectable({
   providedIn: 'root'
 })

@@ -38,9 +38,6 @@ section {
   position: relative;
   margin-top: 1rem;
 
-  opacity: 0; // Startzustand für Animation
-  transition: opacity .5s ease-in-out; // Optional für sanften Übergang
-
   &::before {
     content: "";
     position: absolute;
@@ -48,6 +45,7 @@ section {
     height: 100%;
     border: $border;;
     transform: translate(-0.5rem, -0.75rem);
+    box-shadow: 5px 5px 15px 0px $details;
   }
 
   img {

@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-import { GsapService } from '../../services/gsap.service';
 
 @Component({
   selector: 'app-about',
@@ -9,27 +8,47 @@ import { GsapService } from '../../services/gsap.service';
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss'
 })
-export class AboutComponent implements OnInit {
+export class AboutComponent {
 
-  constructor(private gsapService: GsapService) {}
+  constructor() {}
 
-
-  ngOnInit(): void {
-    const tl = this.gsapService.createTimeline('#aboutSection', [
-      // {
-      //   selector: '.textContainer',
-      //   properties: { opacity: 1, y: '0%', duration: 1 }
-      // },
-      {
-        selector: '.imgContainer',
-        properties: { opacity: 1, y: '0%', duration: 1 }
-      }
-    ], {
-      start: "top center",
-      end: "bottom center",
-      scrub: true,
-      markers: true
-    });
-    tl.play();
-  }
 }
+
+
+
+
+
+
+// import { AfterViewInit, Component, OnInit } from '@angular/core';
+// import { TranslateModule } from '@ngx-translate/core';
+// import { GsapService } from '../../services/gsap.service';
+
+// @Component({
+//   selector: 'app-about',
+//   standalone: true,
+//   imports: [TranslateModule],
+//   templateUrl: './about.component.html',
+//   styleUrl: './about.component.scss'
+// })
+// export class AboutComponent implements AfterViewInit {
+
+//   constructor(private gsapService: GsapService) {}
+
+
+//   ngAfterViewInit(): void {
+//     const tl = this.gsapService.createTimeline('#aboutSection', [
+//       {
+//         selector: '.imgContainer',
+//         properties: { opacity: 1 }
+//       }
+//     ], {
+//       trigger: '.imgContainer',
+//       start: "top 80%",
+//       end: "bottom center",
+//       scrub: true,
+//       markers: true
+//     });
+//     tl.play();
+//     console.log('test');
+//   }
+// }

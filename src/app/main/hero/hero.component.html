@@ -1,7 +1,7 @@
 <section #heroSection id="heroSection">
   <div class="atf">
     <h1>
-      Frontend <br />
+      Frontend <br/>
       Developer
     </h1>
 
@@ -28,20 +28,11 @@
   </button>
 
   <div class="cta">
-    <a
-      class="mail"
-      [href]="
-        'mailto:' +
-        ('myData.mail.mailaddress' | translate) +
-        '?subject=' +
-        ('myData.mail.mailText' | translate)
-      "
-      >{{ "myData.mail.mailaddress" | translate }}</a
-    >
+    <a class="mail" [href]="'mailto:' + ('myData.mail.mailaddress' | translate) + '?subject=' + ('myData.mail.mailText' | translate)">{{ "myData.mail.mailaddress" | translate }}</a>
 
     <div class="scrolldownContainer" (click)="scrollToSection('#aboutSection')">
       <div class="arrowContainer">
-        <img draggable="false" src="./assets/icons/arrowHero.svg" alt="" />
+        <img draggable="false" src="./assets/icons/arrowHero.svg" alt="Arrow" />
       </div>
 
       <div class="arrowText">

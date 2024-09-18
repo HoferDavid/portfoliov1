@@ -6,7 +6,8 @@
 
     <div class="iconContainer">
       @for(tech of techStack; track tech) {
-      <figure data-aos="flip-left" [attr.data-aos-delay]="techStack.indexOf(tech) * 100">
+      <figure
+        data-aos="flip-left" [attr.data-aos-delay]="techStack.indexOf(tech) * 100">
         <img draggable="false" src="./assets/icons/{{ tech.icon }}.svg" alt="{{ tech.name }}"/>
         <figcaption>{{ tech.name }}</figcaption>
       </figure>

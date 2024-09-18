@@ -13,5 +13,4 @@ import { ArrowSeperatorComponent } from '../shared/components/arrow-seperator/ar
   styleUrl: './main.component.scss'
 })
 export class MainComponent {
-
 }

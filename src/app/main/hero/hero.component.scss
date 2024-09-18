@@ -156,7 +156,8 @@ a {
 }
 
 @keyframes rotate {
-  0%, 75% {
+  0%,
+  75% {
     transform: rotateY(360deg);
   }
 }

@@ -11,6 +11,12 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class PrivacyComponent {
 
+  /**
+   * Angular lifecycle hook that is called after data-bound properties of a directive are initialized.
+   * This method scrolls the window to the top of the page with a smooth scrolling behavior.
+   *
+   * @returns {void}
+   */
   ngOnInit() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }

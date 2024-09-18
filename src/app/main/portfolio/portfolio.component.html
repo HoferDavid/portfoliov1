@@ -2,8 +2,7 @@
   <h2 class="sectionHeader">{{ "portfolio.title" | translate }}</h2>
 
   <div class="textContainer">
-    <span>{{ "portfolio.paragraph1.part1" | translate }}</span>
-    <br /><br />
+    <span>{{ "portfolio.paragraph1.part1" | translate }}</span><br/><br/>
     <span>{{ "portfolio.paragraph1.part2" | translate }}</span>
     <a [href]="'portfolio.paragraph1.url' | translate" target="_blank" rel="noopener noreferrer">{{ "portfolio.paragraph1.highlight" | translate }}</a>
   </div>
@@ -16,7 +15,7 @@
 
             <div class="project">
                 <div class="media">
-                    <img [ngClass]="(i + 1) % 2 === 0 ? 'arrowEven' : 'arrowOdd'" src="assets/icons/arrowPortfolio.svg" [attr.data-aos]="i % 2 === 0 ? 'arrowRotateRight' : 'arrowRotateLeft'" [attr.data-aos-offset]="isMobile ? '200' : '800'" [attr.data-aos-delay]="500">
+                    <img [ngClass]="(i + 1) % 2 === 0 ? 'arrowEven' : 'arrowOdd'" src="assets/icons/arrowPortfolio.svg" [attr.data-aos]="i % 2 === 0 ? 'arrowRotateRight' : 'arrowRotateLeft'" [attr.data-aos-offset]="isMobile ? '200' : '800'" [attr.data-aos-delay]="500" alt="Arrow">
                     <video #video loop muted autoplay preload="auto" playsinline disablePictureInPicture controlsList="nodownload nofullscreen noremoteplayback" src="{{ project.media }}"></video>
                 </div>
 

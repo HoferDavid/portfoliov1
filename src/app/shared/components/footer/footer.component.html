@@ -10,20 +10,20 @@
   </div>
 
   <a class="arrow" (click)="scrollToSection('#heroSection')" draggable="false">
-    <img src="assets/icons/arrowFooter.svg" alt="" />
+    <img src="assets/icons/arrowFooter.svg" alt="Arrow" />
   </a>
 
   <div class="bottomContainer">
     <div class="logoContainer">
-      <img class="logo" (click)="scrollToSection('#heroSection')" src="assets/img/dhlogo.png" draggable="false" alt="logo"/>
+      <img class="logo" (click)="scrollToSection('#heroSection')" src="assets/img/dhlogo.png" draggable="false" alt="Logo"/>
       <span>©David Hofer</span>
     </div>
 
     <div class="links">
       <div class="socialContainer">
-        <a [href]="'myData.github' | translate" target="_blank" rel="noopener noreferrer"><img draggable="false" src="./assets/icons/github.svg" alt=""/></a>
-        <a [href]="'mailto:' + ('myData.mail.mailaddress' | translate) + '?subject=' + ('myData.mail.mailText' | translate)"><img draggable="false" src="./assets/icons/mail.svg" alt=""/></a>
-        <a [href]="'myData.linkedin' | translate" target="_blank" rel="noopener noreferrer"><img draggable="false" src="./assets/icons/linkedin.svg" alt=""/></a>
+        <a [href]="'myData.github' | translate" target="_blank" rel="noopener noreferrer"><img draggable="false" src="./assets/icons/github.svg" alt="Github"/></a>
+        <a [href]="'mailto:' + ('myData.mail.mailaddress' | translate) + '?subject=' + ('myData.mail.mailText' | translate)"><img draggable="false" src="./assets/icons/mail.svg" alt="Mail"/></a>
+        <a [href]="'myData.linkedin' | translate" target="_blank" rel="noopener noreferrer"><img draggable="false" src="./assets/icons/linkedin.svg" alt="Linkedin"/></a>
       </div>
 
       <a [routerLink]="['/imprint']" class="imprint">{{ "imprint.title" | translate }}</a>

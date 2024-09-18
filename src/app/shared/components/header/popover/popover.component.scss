@@ -67,8 +67,7 @@ a {
 
   a:hover {
     transform: scale(1.1);
-    filter: brightness(0) saturate(100%) invert(66%) sepia(34%) saturate(4288%)
-      hue-rotate(359deg) brightness(101%) contrast(105%);
+    @include highlightFilter();
   }
 
   img {

@@ -1,8 +1,8 @@
 // Colors
 $background: #FFFCF3;
 $primary: #181818;
-$details: #f1dbc7;
 $highlight: #FF9900;
+$details: #f1dbc7;
 
 // Spacing and Sizes
 $headerHeight: clamp(4rem, 7vw, 6rem);
@@ -17,6 +17,8 @@ $legalpadding: $mainPaddingHorizontal $mainPaddingHorizontal 4rem $mainPaddingHo
 
 // Other measurements
 $border: 4px solid $primary;
+
+$filter: brightness(0) saturate(100%) invert(66%) sepia(34%) saturate(4288%) hue-rotate(359deg) brightness(101%) contrast(105%);
 
 // Media sizes
 $photoSize: clamp(16rem, 40vw, 24rem);

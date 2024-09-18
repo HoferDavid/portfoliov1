@@ -1,5 +1,5 @@
-<section>
-    <img src="./assets/icons/arrowSeperatorRight.svg" alt=""/>
-
-
+<section [ngClass]="{ 'evenArrow': isEven, 'oddArrow': !isEven }">
+    <div class="arrowContainer">
+        <img [src]="isEven ? 'assets/icons/arrowSeperatorLeft.svg' : 'assets/icons/arrowSeperatorRight.svg'" [attr.data-aos]="isEven ? 'fade-down-right' : 'fade-down-left'" data-aos-duration="1000" alt="Scroll Arrow" class="scroll-arrow" />
+      </div>
 </section>

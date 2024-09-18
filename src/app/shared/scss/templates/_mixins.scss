@@ -124,6 +124,13 @@
   font-size: clamp(1rem, 6vw, 4rem);
   font-weight: 800;
   text-shadow: clamp(1px, 0.5vw, 3px) clamp(-1px, -0.5vw, -3px) clamp(0.5px, 0.2vw, 1px) $details;
+  transition: 0.2s;
+
+  &:hover {
+    color: $highlight;
+    text-shadow: clamp(1px, 0.5vw, 3px) clamp(-1px, -0.5vw, -3px) clamp(0.5px, 0.2vw, 1px) $primary;
+    transition: transform 0.25s ease-out;
+  }
 }
 
 @mixin navbarHeaders() {
@@ -137,4 +144,11 @@
   font-size: clamp(1.5rem, 8vw, 4.875rem);
   font-weight: 800;
   text-shadow: clamp(1px, 0.5vw, 3px) clamp(-1px, -0.5vw, -3px) clamp(0.5px, 0.2vw, 1px) $details;
+  transition: 0.2s;
+
+  &:hover {
+    color: $highlight;
+    text-shadow: clamp(1px, 0.5vw, 3px) clamp(-1px, -0.5vw, -3px) clamp(0.5px, 0.2vw, 1px) $primary;
+    transition: transform 0.25s ease-out;
+  }
 }

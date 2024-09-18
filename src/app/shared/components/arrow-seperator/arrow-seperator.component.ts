@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-arrow-seperator',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './arrow-seperator.component.html',
-  styleUrl: './arrow-seperator.component.scss'
+  styleUrls: ['./arrow-seperator.component.scss']
 })
 export class ArrowSeperatorComponent {
 
+  @Input() isEven: boolean = false;
 }

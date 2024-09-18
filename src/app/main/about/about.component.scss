@@ -7,6 +7,7 @@ section {
 
   .sectionHeader {
     @include sectionHeader();
+    width: fit-content;
   }
 }
 
@@ -37,16 +38,15 @@ section {
   justify-content: center;
   position: relative;
   margin-top: 1rem;
-  margin-left: 1rem;
 
-  &::before {
+  &:hover:before {
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
     border: $border;;
-    transform: translate(-0.5rem, -0.75rem);
-    box-shadow: 5px 5px 15px 0px $details;
+    transform: translate(-1rem, -1rem);
+    z-index: 1;
   }
 
   img {

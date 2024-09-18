@@ -20,6 +20,7 @@ import { TranslateModule } from '@ngx-translate/core';
 export class ContactformComponent {
   fb = inject(FormBuilder);
 
+  
   registrationForm = this.fb.group({
     name: ['', [Validators.required, Validators.minLength(3)]],
     email: ['', [Validators.required, Validators.email]],
@@ -27,9 +28,9 @@ export class ContactformComponent {
     checkbox: [false, [Validators.requiredTrue]],
   });
 
+
   http = inject(HttpClient);
 
-  mailTest = false; // After testing set to false or delete it
 
   post = {
     endPoint: 'https://xtestngc39evtg7cew085.davidhofer.com/sendMail.php', // change to davidhofer.com/sendMail.php

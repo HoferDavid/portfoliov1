@@ -17,6 +17,7 @@ section {
 
   h2 {
     @include imprintHeader();
+    width: fit-content;
   }
 
   .notes {
@@ -35,6 +36,7 @@ section {
 
   h2 {
     @include legalHeader();
+    width: fit-content;
   }
 }
 

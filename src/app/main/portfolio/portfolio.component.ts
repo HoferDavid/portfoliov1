@@ -43,49 +43,4 @@ export class PortfolioComponent implements OnInit {
       website: 'https://pokedex.davidhofer.com'
     }
   ];
-
-
-
-  // @ViewChild('videoContainer') videoContainer!: ElementRef;
-
-  // ngOnInit(): void {}
-
-  // ngAfterViewInit(): void {
-  //   this.setupIntersectionObserver();
-  // }
-
-  // setupIntersectionObserver() {
-  //   const options = {
-  //     root: null,
-  //     rootMargin: '0px',
-  //     threshold: 0.01
-  //   };
-
-  //   const observer = new IntersectionObserver((entries) => {
-  //     entries.forEach(entry => {
-  //       const videoElement = entry.target as HTMLVideoElement;
-
-  //       if (entry.isIntersecting) {
-  //         const dataSrc = videoElement.dataset['src'];
-  //         if (dataSrc) {
-  //           videoElement.src = dataSrc;
-  //           const playPromise = videoElement.play();
-
-  //           if (playPromise !== undefined) {
-  //             playPromise.then(() => {
-  //             }).catch((error) => {
-  //               console.log('Playback failed:', error);
-  //             });
-  //           }
-  //         }
-  //       } else {
-  //         videoElement.pause();
-  //       }
-  //     });
-  //   }, options);
-  //   const videos = this.videoContainer.nativeElement.querySelectorAll('video');
-  //   videos.forEach((video: HTMLVideoElement) => {
-  //     observer.observe(video);
-  //   });
-  // }
 }

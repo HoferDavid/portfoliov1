@@ -12,6 +12,7 @@ section {
 
   .sectionHeader {
     @include sectionHeader();
+    width: fit-content;
   }
 }
 

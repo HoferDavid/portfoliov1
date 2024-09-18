@@ -19,7 +19,7 @@
                     <video #video loop muted autoplay preload="auto" playsinline disablePictureInPicture controlsList="nodownload nofullscreen noremoteplayback" src="{{ project.media }}"></video>
                 </div>
 
-                <div class="info" data-aos="fade-left" data-aos-offset="800" [attr.data-aos-delay]="projects.indexOf(project) * 500">
+                <div class="info" [attr.data-aos]="i % 2 === 0 ? 'fadeLeftCustom' : 'fadeRightCustom'" [attr.data-aos-offset]="isMobile ? '0' : '1000'">
                     <div class="infoText">
                         <div>{{ project.name }}</div>
                         <span>{{ project.tech }}</span>

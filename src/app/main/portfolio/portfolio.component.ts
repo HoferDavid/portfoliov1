@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { Project } from '../../interfaces/projects.interface';
 
@@ -9,7 +9,13 @@ import { Project } from '../../interfaces/projects.interface';
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.scss']
 })
-export class PortfolioComponent {
+export class PortfolioComponent implements OnInit {
+
+  isMobile!: boolean;
+
+  ngOnInit(): void {
+    this.isMobile = window.innerWidth < 768;
+  }
 
   projects: Project[] = [
     {

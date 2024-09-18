@@ -102,6 +102,7 @@ section {
   display: flex;
   justify-content: center;
   position: relative;
+  z-index: 100;
 
   &::before {
     content: "";

@@ -89,3 +89,38 @@ body.popoverOpen {
     opacity: 1;
     }
 }
+
+
+
+
+
+
+@keyframes fadeLeftCustom {
+  0% {
+    opacity: 0;
+    transform: translateX(200px); /* Start von links */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* Endposition */
+  }
+}
+
+@keyframes fadeRightCustom {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px); /* Start von rechts */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* Endposition */
+  }
+}
+
+[data-aos="fadeLeftCustom"].aos-animate {
+  animation: fadeLeftCustom 1s ease-in-out forwards; /* Animation anwenden */
+}
+
+[data-aos="fadeRightCustom"].aos-animate {
+  animation: fadeRightCustom 1s ease-in-out forwards; /* Animation anwenden */
+}

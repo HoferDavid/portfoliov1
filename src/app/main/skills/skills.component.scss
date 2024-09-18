@@ -1,5 +1,12 @@
 @use "./../../../app/shared/scss/templates/" as *;
 
+fieldset {
+  border: $border;
+  border-top-color: black;
+  width: 100%;
+  box-shadow: 5px 5px 15px 0px $details;
+}
+
 legend {
   text-align: center;
   padding: 0 1rem;
@@ -9,39 +16,25 @@ legend {
   }
 }
 
-.wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: clamp(1rem, 6vw, 4rem) clamp(0rem, 1vw, 2rem);
-  gap: clamp(1rem, 7vw, 7rem);
-  align-items: center;
-}
-
-.container {
-  border: $border;
-  box-shadow: 5px 5px 15px 0px $details;
-  position: relative;
-  transform-style: preserve-3d;
-}
-
 .iconContainer {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: clamp(1rem, 8vw, 7rem);
-  position: relative;
-  transition: 0.2s;
-  padding: 0.25rem 0;
+  padding: clamp(1rem, 6vw, 4rem) clamp(0rem, 1vw, 2rem);
 
-  .imgBx {
+  figure {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 8px;
     width: clamp(5rem, 8vw, 12rem);
+
+    img {
+      height: $skillIconSize;
+    }
 
     figcaption {
       text-align: center;
@@ -50,32 +43,90 @@ legend {
   }
 }
 
-.container:hover .iconContainer {
-  transform: rotateY(25deg);
-}
 
-.container .iconContainer:hover ~ .iconContainer {
-  transform: rotateY(-25deg);
-}
 
-.container .iconContainer:hover {
-  transform: rotateY(0deg) scale(1.25);
-  box-shadow: 5px 5px 15px 0px $details;
-}
 
-.container .iconContainer .imgBx:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(180deg, $highlight, $details);
-  opacity: 0;
-  transition: 0.5s;
-  mix-blend-mode: multiply;
-}
 
-.container .iconContainer:hover .imgBx:before {
-  opacity: 1;
-}
+
+
+
+
+// legend {
+//   text-align: center;
+//   padding: 0 1rem;
+
+//   .sectionHeader {
+//     @include sectionHeader();
+//   }
+// }
+
+// .wrapper {
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: center;
+//   padding: clamp(1rem, 6vw, 4rem) clamp(0rem, 1vw, 2rem);
+//   gap: clamp(1rem, 7vw, 7rem);
+//   align-items: center;
+// }
+
+// .container {
+//   border: $border;
+//   box-shadow: 5px 5px 15px 0px $details;
+//   position: relative;
+//   transform-style: preserve-3d;
+// }
+
+// .iconContainer {
+//   display: flex;
+//   flex-wrap: wrap;
+//   align-items: center;
+//   justify-content: center;
+//   gap: clamp(1rem, 8vw, 7rem);
+//   position: relative;
+//   transition: 50ms;
+//   padding: 0.25rem 0;
+
+//   .imgBx {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     gap: 8px;
+//     width: clamp(5rem, 8vw, 12rem);
+
+//     figcaption {
+//       text-align: center;
+//       @include skillsCaption();
+//     }
+//   }
+// }
+
+// .container:hover .iconContainer {
+//   transform: rotateY(25deg);
+// }
+
+// .container .iconContainer:hover ~ .iconContainer {
+//   transform: rotateY(-25deg);
+// }
+
+// .container .iconContainer:hover {
+//   transform: rotateY(0deg) scale(1.1);
+//   box-shadow: 5px 5px 15px 0px $details;
+// }
+
+// .container .iconContainer .imgBx:before {
+//   content: "";
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background: linear-gradient(180deg, $highlight, $details);
+//   opacity: 0;
+//   transition: 50ms;
+//   mix-blend-mode: multiply;
+// }
+
+// .container .iconContainer:hover .imgBx:before {
+//   opacity: 1;
+// }

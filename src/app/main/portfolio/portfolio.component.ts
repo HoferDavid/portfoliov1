@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { Project } from '../../interfaces/projects.interface';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-portfolio',
   standalone: true,
-  imports: [TranslateModule],
+  imports: [TranslateModule, CommonModule],
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.scss']
 })
@@ -35,7 +36,7 @@ export class PortfolioComponent implements OnInit {
       website: 'https://elpolloloco.davidhofer.com/'
     },
     {
-      name: 'PokeDex',
+      name: 'Pokédex',
       tech: 'JavaScript | Rest-Api | CSS | HTML',
       description: 'portfolio.projects.pokedex.description',
       media: './assets/video/pokedex.mp4',

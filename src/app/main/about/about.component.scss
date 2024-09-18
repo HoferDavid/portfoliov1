@@ -38,6 +38,7 @@ section {
   justify-content: center;
   position: relative;
   margin-top: 1rem;
+  box-shadow: -5px -5px 15px 0px $details;
 
   &:hover:before {
     content: "";

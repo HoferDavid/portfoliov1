@@ -20,7 +20,7 @@ import { TranslateModule } from '@ngx-translate/core';
 export class ContactformComponent {
   fb = inject(FormBuilder);
 
-  
+
   registrationForm = this.fb.group({
     name: ['', [Validators.required, Validators.minLength(3)]],
     email: ['', [Validators.required, Validators.email]],

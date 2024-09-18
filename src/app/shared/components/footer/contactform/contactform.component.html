@@ -14,7 +14,7 @@
   <fieldset>
     <legend>{{ 'contact.contactForm.mail.placeholder' | translate }}</legend>
     <div class="inputWrapper">
-      <input id="email" type="email" formControlName="email" [placeholder]="( 'contact.contactForm.mail.placeholder' | translate )" autocomplete="off">
+      <input id="email" type="email" formControlName="email" [placeholder]="( 'contact.contactForm.mail.placeholder' | translate )" autocomplete="off" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
       <img *ngIf="registrationForm.get('email')?.touched" [src]="registrationForm.get('email')?.valid ? 'assets/icons/checkmark.png' : 'assets/icons/exclamationmark.png'" class="statusIcon" alt="">
     </div>
   </fieldset>

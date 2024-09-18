@@ -50,7 +50,7 @@
             "description": "Object-oriented Jump-and-Run Game: Collect coins and Tabasco bottles with Pepe to defeat the crazy chicken!"
           },
           "pokedex": {
-            "description": "PokeAPI-powered Pokemon database to bring your childhood back to life!"
+            "description": "PokéAPI-powered Pokémon database to bring your childhood back to life!"
           }
         }
       },

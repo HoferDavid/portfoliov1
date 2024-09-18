@@ -6,9 +6,9 @@ import { Component, Input } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './arrow-seperator.component.html',
-  styleUrls: ['./arrow-seperator.component.scss']
+  styleUrls: ['./arrow-seperator.component.scss'],
 })
 export class ArrowSeperatorComponent {
-
+  
   @Input() isEven: boolean = false;
 }

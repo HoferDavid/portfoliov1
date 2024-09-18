@@ -114,7 +114,6 @@ section {
   }
 }
 
-
 .arrowEven {
   height: 3rem;
   padding: 0.5rem;
@@ -130,10 +129,9 @@ section {
   }
 }
 
-
 [data-aos="arrowRotateRight"] {
   &.aos-animate {
-    animation: rotateRight45 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
+    animation: rotateRight45 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   }
 }
 
@@ -146,11 +144,9 @@ section {
   }
 }
 
-
-
 [data-aos="arrowRotateLeft"] {
   &.aos-animate {
-    animation: rotateLeft45 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: rotateLeft45 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   }
 }
 
@@ -162,10 +158,6 @@ section {
     transform: rotate(-45deg);
   }
 }
-
-
-
-
 
 .media {
   display: flex;
@@ -226,5 +218,35 @@ section {
 
   .projectBtn {
     @include button();
+  }
+}
+
+[data-aos="fadeLeftCustom"].aos-animate {
+  animation: fadeLeftCustom 1s ease-in-out forwards;
+}
+
+[data-aos="fadeRightCustom"].aos-animate {
+  animation: fadeRightCustom 1s ease-in-out forwards;
+}
+
+@keyframes fadeLeftCustom {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeRightCustom {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

@@ -1,25 +1,21 @@
-
 <section>
+  <nav>
+    <span (click)="scrollToSection('#aboutSection')">{{ "menu.navLinks.about" | translate }}</span>
+    <span (click)="scrollToSection('#skillsSection')">{{ "menu.navLinks.skills" | translate }}</span>
+    <span (click)="scrollToSection('#portfolioSection')">{{ "menu.navLinks.portfolio" | translate }}</span>
+    <span (click)="scrollToSection('#footerSection')">{{ "menu.navLinks.contact" | translate }}</span>
+  </nav>
 
-    <nav>
-        <span (click)="scrollToSection('#aboutSection')">{{ 'menu.navLinks.about' | translate }}</span>
-        <span (click)="scrollToSection('#skillsSection')">{{ 'menu.navLinks.skills' | translate }}</span>
-        <span (click)="scrollToSection('#portfolioSection')">{{ 'menu.navLinks.portfolio' | translate }}</span>
-        <span (click)="scrollToSection('#footerSection')">{{ 'menu.navLinks.contact' | translate }}</span>
-    </nav>
-
-
-    <div class="bottom">
-        <div class="contact">
-            <h2 class="sectionHeader">{{ "contact.title" | translate }}</h2>
-            <a class="mail" [href]="'mailto:' + ( 'myData.mail.mailaddress' | translate ) + '?subject=' + ( 'myData.mail.mailText' | translate )">{{ "myData.mail.mailaddress" | translate }}</a>
-        </div>
-
-        <div class="socialContainer">
-            <a [href]="( 'myData.github' | translate )" target="_blank" rel="noopener noreferrer"><img draggable="false" src="./assets/icons/github.svg" alt=""></a>
-            <a [href]="'mailto:' + ( 'myData.mail.mailaddress' | translate ) + '?subject=' + ( 'myData.mail.mailText' | translate )"><img draggable="false" src="./assets/icons/mail.svg" alt=""></a>
-            <a [href]="('myData.linkedin' | translate )" target="_blank" rel="noopener noreferrer"><img draggable="false" src="./assets/icons/linkedin.svg" alt=""></a>
-        </div>
+  <div class="bottom">
+    <div class="contact">
+      <h2 class="sectionHeader">{{ "contact.title" | translate }}</h2>
+      <a class="mail" [href]="'mailto:' + ('myData.mail.mailaddress' | translate) + '?subject=' + ('myData.mail.mailText' | translate)">{{ "myData.mail.mailaddress" | translate }}</a>
     </div>
 
+    <div class="socialContainer">
+      <a [href]="'myData.github' | translate" target="_blank" rel="noopener noreferrer"><img draggable="false" src="./assets/icons/github.svg" alt=""/></a>
+      <a [href]="'mailto:' + ('myData.mail.mailaddress' | translate) + '?subject=' + ('myData.mail.mailText' | translate)"><img draggable="false" src="./assets/icons/mail.svg" alt=""/></a>
+      <a [href]="'myData.linkedin' | translate" target="_blank" rel="noopener noreferrer" ><img draggable="false" src="./assets/icons/linkedin.svg" alt=""/></a>
+    </div>
+  </div>
 </section>

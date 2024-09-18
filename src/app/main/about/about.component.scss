@@ -45,7 +45,7 @@ section {
     position: absolute;
     width: 100%;
     height: 100%;
-    border: $border;;
+    border: $border;
     transform: translate(-1rem, -1rem);
     z-index: 1;
   }
@@ -55,7 +55,6 @@ section {
     position: relative;
   }
 }
-
 
 p {
   @include sectionText();
@@ -79,5 +78,24 @@ p {
     span {
       padding-top: 4px;
     }
+  }
+}
+
+[data-aos="scaleUp"] {
+  opacity: 0;
+
+  &.aos-animate {
+    animation: scaleUpKf 2s ease 0s 1 normal forwards;
+  }
+}
+
+@keyframes scaleUpKf {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { Project } from '../../interfaces/projects.interface';
 import { CommonModule } from '@angular/common';
@@ -10,12 +10,19 @@ import { CommonModule } from '@angular/common';
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.scss']
 })
-export class PortfolioComponent implements OnInit {
+export class PortfolioComponent implements OnInit, AfterViewInit {
 
   isMobile!: boolean;
 
+  @ViewChildren('video') videos!: QueryList<ElementRef<HTMLVideoElement>>;
+
   ngOnInit(): void {
     this.isMobile = window.innerWidth < 768;
+  }
+
+  ngAfterViewInit(): void {
+    // this.playVideos();
+    window.addEventListener('scroll', this.onScroll.bind(this));
   }
 
   projects: Project[] = [
@@ -44,4 +51,15 @@ export class PortfolioComponent implements OnInit {
       website: 'https://pokedex.davidhofer.com'
     }
   ];
+
+
+  private onScroll() {
+    this.videos.forEach(video => {
+      const rect = video.nativeElement.getBoundingClientRect();
+      if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+        video.nativeElement.play().catch(err => console.error('failed to play:', err)
+        );
+      }
+    });
+  }
 }

@@ -1,35 +1,32 @@
 @use "./../../../../app/shared/scss/templates/" as *;
 
-
 section {
-    display: flex;
-    justify-content: center;
-    padding: 3rem 0 0 0;
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0 0 0;
+
+  img {
+    height: 100px;
+    filter: drop-shadow(1px 1px 1px $details);
+  }
+
+  @media (min-width: 576px) {
+    justify-content: flex-end;
+    padding: 3rem 6rem 0 0rem;
 
     img {
-        height: 100px;
-        filter: drop-shadow(1px 1px 1px $details);
+      height: 160px;
     }
-
-    @media (min-width: 576px) {
-        justify-content: flex-end;
-        padding: 3rem 6rem 0 0rem;
-
-        img {
-            height: 160px;
-        }
-    }
+  }
 }
 
-
 .evenArrow {
+  @media (min-width: 576px) {
+    justify-content: flex-start;
+    padding: 3rem 0 0 6rem;
 
-    @media (min-width: 576px) {
-        justify-content: flex-start;
-        padding: 3rem 0 0 6rem;
-
-        img {
-            height: 160px;
-        }
+    img {
+      height: 160px;
     }
+  }
 }

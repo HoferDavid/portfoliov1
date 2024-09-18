@@ -80,6 +80,7 @@ a {
 
 .scrolldownContainer {
   @include dFlex($fd: column, $gap: 8px);
+  cursor: pointer;
 
   .arrowContainer {
     overflow: hidden;
@@ -117,6 +118,7 @@ a {
 .rotate span {
   display: inline-flex;
   animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
 }
 
 .rotate span:nth-of-type(1) {
@@ -154,8 +156,7 @@ a {
 }
 
 @keyframes rotate {
-  0%,
-  75% {
+  0%, 75% {
     transform: rotateY(360deg);
   }
 }

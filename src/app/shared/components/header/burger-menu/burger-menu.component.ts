@@ -5,9 +5,9 @@ import { Component, Input } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './burger-menu.component.html',
-  styleUrl: './burger-menu.component.scss'
+  styleUrl: './burger-menu.component.scss',
 })
 export class BurgerMenuComponent {
-
+  
   @Input() isOpened = false;
 }

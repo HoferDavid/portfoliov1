@@ -17,11 +17,6 @@ footer {
     text-shadow: clamp(1px, 0.4vw, 2px) clamp(-1px, -0.4vw, -2px) clamp(0.5px, 0.2vw, 1px) $highlight;
     transition: 0.2s;
     width: fit-content;
-
-    &:hover {
-      transition: transform 0.25s ease-out;
-      text-shadow: clamp(1px, 0.4vw, 2px) clamp(-1px, -0.4vw, -2px) clamp(0.5px, 0.2vw, 1px) $details;
-    }
   }
 }
 

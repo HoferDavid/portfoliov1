@@ -2,12 +2,13 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormBuilder, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contactform',
   standalone: true,
-  imports: [FormsModule, TranslateModule, CommonModule, ReactiveFormsModule],
+  imports: [FormsModule, TranslateModule, CommonModule, ReactiveFormsModule, RouterModule],
   templateUrl: './contactform.component.html',
   styleUrl: './contactform.component.scss',
 })
@@ -81,7 +82,6 @@ export class ContactformComponent {
           error: (error) => {
             console.error(error);
           },
-          complete: () => console.info('send post complete'),
         });
     }
   }

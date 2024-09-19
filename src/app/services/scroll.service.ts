@@ -12,7 +12,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class ScrollService {
-  
+
   /**
    * Scrolls the window to a specific fragment on the page.
    * This method calculates the scroll position based on the fragment identifier,
@@ -26,7 +26,7 @@ export class ScrollService {
     if (element) {
       const headerOffset =
         document.getElementById('headerSection')?.offsetHeight || 0;
-      let offset = headerOffset < 80 ? 32 : 48;
+      let offset = headerOffset < 80 ? 8 : 16;
       const elementPosition =
         element.getBoundingClientRect().top + window.scrollY;
       const scrollPosition = elementPosition - headerOffset - offset;

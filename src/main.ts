@@ -19,7 +19,7 @@ function initializeAOS() {
 
   AOS.init({
     offset: offsetValue,
-    duration: 1000,
+    duration: 500,
     once: true,
     easing: 'ease-in-out',
   });

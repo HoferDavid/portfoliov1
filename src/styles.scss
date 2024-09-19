@@ -68,3 +68,15 @@ body.popoverOpen {
     scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
   }
 }
+
+
+[data-aos="sectionHeader"] {
+  color: $primary;
+  text-shadow: clamp(1px, 0.5vw, 3px) clamp(-1px, -0.5vw, -3px) clamp(0.5px, 0.2vw, 1px) $details;
+  transition: color 0.5s ease-out, text-shadow 0.5s ease-out;
+}
+
+[data-aos="sectionHeader"].aos-animate {
+  color: $highlight;
+  text-shadow: clamp(1px, 0.5vw, 3px) clamp(-1px, -0.5vw, -3px) clamp(0.5px, 0.2vw, 1px) $primary !important;
+}

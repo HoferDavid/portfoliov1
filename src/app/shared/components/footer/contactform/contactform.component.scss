@@ -119,10 +119,13 @@ textarea {
   font-size: 0.875rem;
   margin-top: 1.5rem;
   align-items: center;
-  cursor: pointer;
 
   input {
     display: none;
+  }
+
+  img {
+    cursor: pointer;
   }
 
   .privacy {
@@ -164,10 +167,6 @@ button:not(:disabled) {
     padding: clamp(1rem, 1vw, 1.25rem) clamp(2rem, 5vw, 6rem);
   }
 }
-
-
-
-
 
 .feedbackPopup {
   position: absolute;

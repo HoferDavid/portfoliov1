@@ -40,7 +40,7 @@
     <img [src]="registrationForm.get('checkbox')?.value ? 'assets/icons/checkboxChecked.svg' : 'assets/icons/checkbox.svg'" alt="Checkbox" draggable="false">
     <div>
       <span>{{ 'contact.contactForm.privacy.part1' | translate }}</span>
-      <a class="privacy" href="privacy">{{ 'contact.contactForm.privacy.part2' | translate }}</a>
+      <a class="privacy" routerLink="/privacy">{{ 'contact.contactForm.privacy.part2' | translate }}</a>
       <span>{{ 'contact.contactForm.privacy.part3' | translate }}</span>
     </div>
   </label>

@@ -6,4 +6,6 @@ main {
   display: flex;
   flex-direction: column;
   gap: clamp(2rem, 4vw, 4rem);
+  max-width: 1440px;
+  margin: 0 auto;
 }

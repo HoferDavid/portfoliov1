@@ -1,19 +1,23 @@
 <header #headerSection id="headerSection">
-  <img class="logo" (click)="scrollToSection('#heroSection')" src="assets/img/dhlogo.png" draggable="false" alt="Logo"/>
 
-  <div class="menuContainer">
-    <div class="languages">
-      <span (click)="switchLanguage('en')" [class.activeLanguage]="activeLanguage === 'en'">eng</span>
-      <div class="stroke"></div>
-      <span (click)="switchLanguage('de')" [class.activeLanguage]="activeLanguage === 'de'">de</span>
-    </div>
+  <div class="wrapper">
+    <img class="logo" (click)="scrollToSection('#heroSection')" src="assets/img/dhlogo.png" draggable="false" alt="Logo"/>
 
-    <button (click)="togglePopover()">
-      <app-burger-menu [isOpened]="isPopoverOpen"></app-burger-menu>
-    </button>
+    <div class="menuContainer">
+      <div class="languages">
+        <span (click)="switchLanguage('en')" [class.activeLanguage]="activeLanguage === 'en'">eng</span>
+        <div class="stroke"></div>
+        <span (click)="switchLanguage('de')" [class.activeLanguage]="activeLanguage === 'de'">de</span>
+      </div>
 
-    <div [class.popoverOpen]="isPopoverOpen" [class.popoverClose]="!isPopoverOpen" class="popoverContainer" id="popover">
-      <app-popover></app-popover>
+      <button (click)="togglePopover()">
+        <app-burger-menu [isOpened]="isPopoverOpen"></app-burger-menu>
+      </button>
+
+      <div [class.popoverOpen]="isPopoverOpen" [class.popoverClose]="!isPopoverOpen" class="popoverContainer" id="popover">
+        <app-popover></app-popover>
+      </div>
     </div>
   </div>
+
 </header>

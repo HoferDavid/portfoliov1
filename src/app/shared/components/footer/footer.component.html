@@ -1,32 +1,36 @@
 <footer #footerSection id="footerSection">
-  <h2 class="sectionHeader">{{ "contact.title" | translate }}</h2>
 
-  <div class="contact">
-    <div class="intro">{{ "contact.intro" | translate }}</div>
+  <div class="wrapper">
+    <h2 class="sectionHeader">{{ "contact.title" | translate }}</h2>
 
-    <div class="description">{{ "contact.description" | translate }}</div>
+    <div class="contact">
+      <div class="intro">{{ "contact.intro" | translate }}</div>
 
-    <app-contactform></app-contactform>
-  </div>
+      <div class="description">{{ "contact.description" | translate }}</div>
 
-  <a class="arrow" (click)="scrollToSection('#heroSection')" draggable="false">
-    <img src="assets/icons/arrowFooter.svg" alt="Arrow" />
-  </a>
-
-  <div class="bottomContainer">
-    <div class="logoContainer">
-      <img class="logo" (click)="scrollToSection('#heroSection')" src="assets/img/dhlogo.png" draggable="false" alt="Logo"/>
-      <span>©David Hofer</span>
+      <app-contactform></app-contactform>
     </div>
 
-    <div class="links">
-      <div class="socialContainer">
-        <a [href]="'myData.github' | translate" target="_blank" rel="noopener noreferrer"><img draggable="false" src="./assets/icons/github.svg" alt="Github"/></a>
-        <a [href]="'mailto:' + ('myData.mail.mailaddress' | translate) + '?subject=' + ('myData.mail.mailText' | translate)"><img draggable="false" src="./assets/icons/mail.svg" alt="Mail"/></a>
-        <a [href]="'myData.linkedin' | translate" target="_blank" rel="noopener noreferrer"><img draggable="false" src="./assets/icons/linkedin.svg" alt="Linkedin"/></a>
+    <a class="arrow" (click)="scrollToSection('#heroSection')" draggable="false">
+      <img src="assets/icons/arrowFooter.svg" alt="Arrow" />
+    </a>
+
+    <div class="bottomContainer">
+      <div class="logoContainer">
+        <img class="logo" (click)="scrollToSection('#heroSection')" src="assets/img/dhlogo.png" draggable="false" alt="Logo"/>
+        <span>©David Hofer</span>
       </div>
 
-      <a routerLink="/imprint" class="imprint">{{ "imprint.title" | translate }}</a>
+      <div class="links">
+        <div class="socialContainer">
+          <a [href]="'myData.github' | translate" target="_blank" rel="noopener noreferrer"><img draggable="false" src="./assets/icons/github.svg" alt="Github"/></a>
+          <a [href]="'mailto:' + ('myData.mail.mailaddress' | translate) + '?subject=' + ('myData.mail.mailText' | translate)"><img draggable="false" src="./assets/icons/mail.svg" alt="Mail"/></a>
+          <a [href]="'myData.linkedin' | translate" target="_blank" rel="noopener noreferrer"><img draggable="false" src="./assets/icons/linkedin.svg" alt="Linkedin"/></a>
+        </div>
+
+        <a routerLink="/imprint" class="imprint">{{ "imprint.title" | translate }}</a>
+      </div>
     </div>
   </div>
+
 </footer>

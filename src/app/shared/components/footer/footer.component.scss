@@ -1,23 +1,29 @@
 @use "./../../../../app/shared/scss/templates/" as *;
 
 footer {
-  padding: $footerPadding;
-  gap: $gapSmallInSection;
   background-color: $primary;
   color: $background;
-  width: 100%;
-  margin: 0 auto;
   clip-path: polygon(0 0, 100% clamp(3rem, 8vw, 12rem), 100% 100%, 0 100%);
-  display: flex;
-  flex-direction: column;
-  position: relative;
 
   .sectionHeader {
     @include sectionHeader();
-    text-shadow: clamp(1px, 0.4vw, 2px) clamp(-1px, -0.4vw, -2px) clamp(0.5px, 0.2vw, 1px) $highlight;
+    text-shadow: clamp(1px, 0.4vw, 2px) clamp(-1px, -0.4vw, -2px)
+      clamp(0.5px, 0.2vw, 1px) $highlight;
     transition: 0.2s;
     width: fit-content;
   }
+}
+
+.wrapper {
+  max-width: 1440px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 100%;
+  padding: $footerPadding;
+  gap: $gapSmallInSection;
+  position: relative;
 }
 
 .contact {

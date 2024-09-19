@@ -7,6 +7,9 @@ section {
   flex-direction: column;
   gap: clamp(2rem, 4vh, 4rem);
   @include sectionText();
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1440px;
 }
 
 .imprint {

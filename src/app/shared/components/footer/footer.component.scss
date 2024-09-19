@@ -5,6 +5,10 @@ footer {
   color: $background;
   clip-path: polygon(0 0, 100% clamp(3rem, 8vw, 12rem), 100% 100%, 0 100%);
 
+  @media (min-width: 768px) {
+    width: calc(100vw - 4px);
+  }
+
   .sectionHeader {
     @include sectionHeader();
     text-shadow: clamp(1px, 0.4vw, 2px) clamp(-1px, -0.4vw, -2px)

@@ -6,20 +6,28 @@ section {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  max-width: 1440px;
+  // max-width: 1440px;
   margin: 0 auto;
   justify-content: space-between;
+  align-items: center;
+}
+
+.footerContainer {
+  background-color: $primary;
+  color: $background;
+  clip-path: polygon(0 0, 100% clamp(3rem, 8vw, 10rem), 100% 100%, 0 100%);
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 
 .bottom {
-  background-color: $primary;
-  color: $background;
   width: 100%;
+  max-width: 1440px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   margin-top: auto;
-  clip-path: polygon(0 0, 100% clamp(3rem, 8vw, 10rem), 100% 100%, 0 100%);
   padding: $mainPaddingHorizontal;
   padding-top: clamp(3rem, 4vw, 6rem);
 
@@ -95,8 +103,9 @@ nav {
   flex-direction: column;
   align-items: center;
   @include navbarHeaders();
-  padding: clamp(3rem, 6vw, 6rem) 0;
+  padding: clamp(3rem, 6vw, 6rem) 0 0 0;
   gap: 2rem;
+  max-width: 1440px;
 
   span {
     position: relative;

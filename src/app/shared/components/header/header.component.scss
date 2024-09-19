@@ -1,7 +1,7 @@
 @use "./../../scss/templates/" as *;
 
 header {
-  width: 100vw;
+  width: 100%;
   @include dFlex();
   position: sticky;
   top: 0;

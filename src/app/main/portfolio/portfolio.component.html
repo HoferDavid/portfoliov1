@@ -15,8 +15,8 @@
 
             <div class="project">
                 <div class="media">
-                    <img [ngClass]="(i + 1) % 2 === 0 ? 'arrowEven' : 'arrowOdd'" src="assets/icons/arrowPortfolio.svg" [attr.data-aos]="i % 2 === 0 ? 'arrowRotateRight' : 'arrowRotateLeft'" [attr.data-aos-offset]="isMobile ? '200' : '600'"alt="Arrow">
-                    <video #video loop muted autoplay preload="auto" playsinline disablePictureInPicture controlsList="nodownload nofullscreen noremoteplayback" src="{{ project.media }}"></video>
+                    <img [ngClass]="(i + 1) % 2 === 0 ? 'arrowEven' : 'arrowOdd'" src="assets/icons/arrowPortfolio.svg" [attr.data-aos]="i % 2 === 0 ? 'arrowRotateRight' : 'arrowRotateLeft'" [attr.data-aos-offset]="isMobile ? '200' : '300'"alt="Arrow">
+                    <video #video autoplay loop muted preload="auto" playsinline disablePictureInPicture controlsList="nodownload nofullscreen noremoteplayback"><source src="{{ project.media }}" type="video/mp4"></video>
                 </div>
 
                 <div class="info" [attr.data-aos]="i % 2 === 0 ? 'fadeLeftCustom' : 'fadeRightCustom'" [attr.data-aos-offset]="isMobile ? '200' : '300'">

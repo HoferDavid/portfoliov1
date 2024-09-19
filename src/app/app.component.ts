@@ -25,7 +25,7 @@ import { ImprintComponent } from './legal/imprint/imprint.component';
 export class AppComponent {
   title = 'portfoliov1';
 
-  
+
   /**
    * Constructor for the component/service.
    * Initializes the TranslateService with supported languages and sets the default language.

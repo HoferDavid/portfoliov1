@@ -40,12 +40,20 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
 
 
   /**
-   * Lifecycle hook that is called after the view has been initialized.
-   * Sets up a scroll event listener to manage video playback.
+   * Lifecycle hook that is called after the component's view has been fully initialized.
+   * This method mutes all video elements in the component and attempts to play them automatically.
+   * If autoplay fails, an error message is logged to the console.
+   * Additionally, it sets up a scroll event listener to handle scroll-related actions.
    *
-   * @returns {void}
+   * @returns {void} This method does not return a value.
    */
   ngAfterViewInit(): void {
+    this.videos.forEach((video) => {
+      video.nativeElement.muted = true;
+      video.nativeElement.play().catch((err) => {
+        console.error('Autoplay failed:', err);
+      });
+    });
     window.addEventListener('scroll', this.onScroll.bind(this));
   }
 

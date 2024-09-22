@@ -5,7 +5,7 @@ footer {
   color: $background;
   clip-path: polygon(0 0, 100% clamp(3rem, 8vw, 12rem), 100% 100%, 0 100%);
 
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     width: calc(100vw - 4px);
   }
 

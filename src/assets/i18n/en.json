@@ -12,22 +12,17 @@
         "intro": "Hi, I am David!",
         "slogan": "\"[...]For every problem, there's a solution![...]\"",
         "paragraph1": {
-          "part1": "As a passionate Front-End Developer, I bring a trained eye for ",
-          "highlight": "details",
-          "part2": "and a deep fascination for interactive web design."
+          "part1": "As a dedicated Frontend Developer, I possess a keen eye for ",
+          "highlight": "detail",
+          "part2": "and a strong passion for interactive web design."
         },
         "paragraph2": {
           "part1": "My ",
           "highlight": "project experience",
-          "part2": ", both in teams and independently, allows me to efficiently drive the development process and create great user experiences that are sustainable and accessible."
-        },
-        "paragraph3": {
-          "part1": "Thanks to my ",
-          "highlight": "programming skills",
-          "part2": ", I strive to develop innovative solutions that meet the needs of users."
+          "part2": ", includes working in teams as well as independently across a wide range of business applications."
         },
         "outro": "If you think I would be a good fit for your projects, feel free to contact me!",
-        "home": "Based in Meran",
+        "home": "Based in Algund",
         "remote": "Open to work Remote",
         "button": "Let's talk"
       },

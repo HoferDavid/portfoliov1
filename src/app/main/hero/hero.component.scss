@@ -3,6 +3,10 @@
 section {
   height: calc(100dvh - var(--headerHeight));
   @include dFlex($jc: space-evenly, $fd: column);
+
+  @media screen and (max-width: 992px) and (orientation: landscape) {
+    margin-bottom: 12rem;
+  }
 }
 
 .atf {

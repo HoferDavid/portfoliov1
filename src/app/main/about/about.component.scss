@@ -39,8 +39,9 @@ section {
   position: relative;
   margin-top: 1rem;
   box-shadow: -5px -5px 15px 0px $details;
+  margin-left: 1rem;
 
-  &:hover:before {
+  &:before {
     content: "";
     position: absolute;
     width: 100%;
